@@ -1,0 +1,61 @@
+/* frontend/src/css/pages/Profile.css */
+/* Estilos para la página de Profile (perfil de usuario) */
+
+/* ===================================================================== */
+/* === PÁGINA DE PERFIL === */
+/* ===================================================================== */
+/* Contenedor principal que centra el contenido del perfil */
+.profile-page {
+  min-height: calc(100vh - 200px); /* Altura mínima (100vh menos header/footer aprox.) */
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+}
+
+/* ===================================================================== */
+/* === CONTENEDOR DEL PERFIL === */
+/* ===================================================================== */
+/* Contenedor que organiza los elementos del perfil en columna */
+.profile-container {
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Elementos en columna */
+  align-items: center; /* Centra horizontalmente los elementos */
+  width: 100%; /* Ancho completo */
+}
+
+/* ===================================================================== */
+/* === BOTONES DE ALTERNANCIA (LOGIN/REGISTER) === */
+/* ===================================================================== */
+/* Contenedor de los botones de alternancia entre Login y Register */
+.profile-toggle-buttons {
+  width: 100%; /* Ancho completo */
+  max-width: 28rem; /* Ancho máximo de 448px */
+  display: flex; /* Usa flexbox */
+  justify-content: center; /* Centra los botones */
+  border-bottom: 2px solid var(--contrast-color); /* Borde inferior con color de acento */
+  margin-bottom: 2rem; /* Margen inferior */
+}
+
+/* === BOTÓN DE ALTERNANCIA === */
+/* Estilo individual de cada botón (Login/Register) */
+.toggle-button {
+  flex: 1; /* Ambos botones ocupan el mismo espacio */
+  padding: 0.75rem 0; /* Espaciado interno vertical */
+  font-size: 1.125rem; /* Tamaño mediano (18px) */
+  font-weight: 700; /* Texto en negrita */
+  transition: all 0.2s ease-in-out; /* Transiciones suaves */
+  border-top-left-radius: 0.5rem; /* Bordes redondeados arriba a la izquierda */
+  border-top-right-radius: 0.5rem; /* Bordes redondeados arriba a la derecha */
+  color: var(--sub-color); /* Color de texto según el tema */
+}
+
+/* Estado hover del botón */
+.toggle-button:hover {
+  background-color: var(--dark-bg); /* Fondo alternativo al pasar el mouse */
+}
+
+/* Estado activo del botón (pestaña seleccionada) */
+.toggle-button.active {
+  background-color: var(--contrast-color); /* Fondo con color de acento */
+  color: var(--main-color); /* Color de texto invertido para contraste */
+}

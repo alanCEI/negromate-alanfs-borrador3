@@ -1,0 +1,109 @@
+/* frontend/src/css/pages/CustomClothing.css */
+/* Estilos para la página de Custom Clothing (ropa personalizada) */
+
+/* ===================================================================== */
+/* === GRID DE LA GALERÍA DE ROPA === */
+/* ===================================================================== */
+/* Grid responsivo que se adapta automáticamente al espacio disponible */
+.clothing-gallery-grid {
+    display: grid; /* Usa CSS Grid */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Columnas que se ajustan automáticamente */
+    gap: 1.5rem; /* Espaciado entre items */
+}
+
+/* ===================================================================== */
+/* === ITEM DE LA GALERÍA === */
+/* ===================================================================== */
+/* Cada prenda de ropa en la galería */
+.clothing-gallery-item {
+    position: relative; /* Permite posicionar el overlay de forma absoluta */
+    overflow: hidden; /* Oculta el desbordamiento de la imagen al hacer zoom */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero al pasar el mouse */
+    aspect-ratio: 4 / 5; /* Proporción vertical tipo retrato (4:5) */
+}
+
+/* === IMAGEN DEL ITEM === */
+/* Imagen de la prenda */
+.clothing-gallery-item-image {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    object-fit: cover; /* Cubre todo el contenedor manteniendo proporción */
+    transition: transform 0.3s ease; /* Transición suave para efecto zoom */
+}
+
+/* Efecto hover: zoom en la imagen */
+.clothing-gallery-item:hover .clothing-gallery-item-image {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% */
+}
+
+/* === OVERLAY DEL ITEM === */
+/* Capa con gradiente que aparece al hacer hover */
+.clothing-gallery-item-overlay {
+    position: absolute; /* Posicionamiento absoluto para cubrir toda la imagen */
+    inset: 0; /* Cubre toda la imagen */
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* Gradiente de negro a transparente */
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.3s ease; /* Transición suave de opacidad */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Elementos en columna */
+    justify-content: flex-end; /* Alinea elementos al final (abajo) */
+    padding: 1rem; /* Espaciado interno */
+}
+
+/* Efecto hover: muestra el overlay */
+.clothing-gallery-item:hover .clothing-gallery-item-overlay {
+    opacity: 1; /* Completamente visible */
+}
+
+/* === TÍTULO DEL ITEM === */
+/* Nombre de la prenda */
+.clothing-gallery-item-title {
+    color: white; /* Color blanco para contraste */
+    font-size: 1.25rem; /* Tamaño mediano (20px) */
+    font-weight: 700; /* Texto en negrita */
+    transform: translateY(1rem); /* Desplazado hacia abajo por defecto */
+    transition: transform 0.3s ease; /* Transición suave de posición */
+}
+
+/* Efecto hover: título sube a su posición normal */
+.clothing-gallery-item:hover .clothing-gallery-item-title {
+    transform: translateY(0); /* Posición normal */
+}
+
+/* === DESCRIPCIÓN DEL ITEM === */
+/* Descripción de la prenda */
+.clothing-gallery-item-desc {
+    color: white; /* Color blanco para contraste */
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.3s ease 0.1s; /* Transición suave con delay de 0.1s */
+}
+
+/* Efecto hover: muestra la descripción */
+.clothing-gallery-item:hover .clothing-gallery-item-desc {
+    opacity: 1; /* Completamente visible */
+}
+
+/* ===================================================================== */
+/* === MODAL DE IMAGEN === */
+/* ===================================================================== */
+/* Overlay oscuro de pantalla completa para mostrar imágenes ampliadas */
+.modal-overlay {
+    position: fixed; /* Posición fija respecto al viewport */
+    inset: 0; /* Cubre toda la pantalla */
+    background-color: rgba(0,0,0,0.8); /* Fondo negro con 80% de opacidad */
+    z-index: 100; /* Aparece por encima de otros elementos */
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    padding: 1rem; /* Espaciado interno */
+}
+
+/* === IMAGEN DEL MODAL === */
+/* Imagen ampliada dentro del modal */
+.modal-image {
+    max-width: 90%; /* Ancho máximo del 90% del viewport */
+    max-height: 90%; /* Alto máximo del 90% del viewport */
+    object-fit: contain; /* Mantiene la proporción de la imagen */
+    border-radius: 0.5rem; /* Bordes redondeados */
+}

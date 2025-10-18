@@ -1,0 +1,134 @@
+/* frontend/src/css/index.css */
+/* Archivo de estilos globales y variables CSS para temas */
+
+/* Importa la fuente Spartan de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+
+/* === TEMA CLARO === */
+body.light-theme {
+  /* Variables CSS para el tema claro (por defecto) */
+  --main-color: #FFFFFF; /* Color de fondo principal (blanco) */
+  --dark-bg: #F0F0F0; /* Color de fondo alternativo (gris claro) */
+  --sub-color: #1A1B1F; /* Color de texto principal (negro) */
+  --contrast-color: #0021D7; /* Color de acento/destacado (azul) */
+  --sub-contrast: #001cbe; /* Color de acento secundario (azul más oscuro) */
+  --border-color: #D1D5DB; /* Color de bordes (gris) */
+  --error-bg: #FEE2E2; /* Color de fondo para errores (rojo claro) */
+  --error-text: #B91C1C; /* Color de texto para errores (rojo oscuro) */
+}
+
+/* === TEMA OSCURO === */
+body.dark-theme {
+  /* Variables CSS para el tema oscuro */
+  --main-color: #1A1B1F; /* Color de fondo principal (negro) */
+  --dark-bg: #111215; /* Color de fondo alternativo (negro más oscuro) */
+  --sub-color: #E3E3E3; /* Color de texto principal (gris claro) */
+  --contrast-color: #DFFF00; /* Color de acento/destacado (amarillo neón) */
+  --sub-contrast: #C8E600; /* Color de acento secundario (amarillo más oscuro) */
+  --border-color: #4B5563; /* Color de bordes (gris oscuro) */
+  --error-bg: #3b2424; /* Color de fondo para errores (rojo oscuro) */
+  --error-text: #fca5a5; /* Color de texto para errores (rojo claro) */
+}
+
+/* === ESTILOS BASE DEL BODY === */
+body {
+  font-family: 'Spartan', sans-serif; /* Fuente principal del sitio */
+  background-color: var(--main-color); /* Fondo dinámico según el tema */
+  color: var(--sub-color); /* Color de texto dinámico según el tema */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave al cambiar de tema */
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.container {
+  width: 90%; /* Ancho del 90% del viewport */
+  max-width: 1280px; /* Ancho máximo para pantallas grandes */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 0 1rem; /* Padding lateral */
+}
+
+/* === SECCIÓN GENÉRICA === */
+.section {
+  padding: 4rem 0; /* Espaciado vertical de 4rem arriba y abajo */
+}
+
+/* === TÍTULO DE SECCIÓN === */
+.section-title {
+  font-size: 2.5rem; /* Tamaño de fuente grande (40px) */
+  font-weight: 700; /* Fuente en negrita */
+  text-align: center; /* Texto centrado */
+  margin-bottom: 3rem; /* Margen inferior de 3rem */
+  color: var(--contrast-color); /* Color de acento según el tema */
+}
+
+/* === MENSAJES DE CARGA Y ERROR === */
+.loading-message,
+.error-message {
+  text-align: center; /* Texto centrado */
+  padding: 5rem 1rem; /* Espaciado interno generoso */
+  font-size: 1.25rem; /* Tamaño de fuente mediano (20px) */
+}
+
+/* Estilos específicos para mensajes de error */
+.error-message {
+  color: var(--error-text); /* Color de texto de error */
+  background-color: var(--error-bg); /* Color de fondo de error */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  margin-bottom: 1rem; /* Margen inferior */
+}
+
+/* === BOTÓN GENÉRICO === */
+.button {
+  display: inline-block; /* Comportamiento de bloque en línea */
+  background-color: var(--contrast-color); /* Fondo con color de acento */
+  color: var(--main-color); /* Texto con color de fondo principal (contraste) */
+  font-weight: 700; /* Texto en negrita */
+  padding: 0.75rem 2rem; /* Espaciado interno */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  text-align: center; /* Texto centrado */
+  cursor: pointer; /* Cursor de puntero al pasar el mouse */
+  transition: all 0.2s ease-in-out; /* Transición suave en todos los cambios */
+  border: none; /* Sin borde */
+}
+
+/* Estado hover del botón */
+.button:hover {
+  background-color: var(--sub-contrast); /* Color de acento secundario al pasar el mouse */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Estado deshabilitado del botón */
+.button:disabled {
+  opacity: 0.6; /* Reduce la opacidad */
+  cursor: not-allowed; /* Cursor de no permitido */
+}
+
+/* === GRUPO DE FORMULARIO === */
+.form-group {
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Elementos en columna */
+}
+
+/* Etiquetas dentro de grupos de formulario */
+.form-group label {
+  margin-bottom: 0.5rem; /* Margen inferior */
+  font-weight: 500; /* Peso de fuente medio */
+}
+
+/* === INPUT DE FORMULARIO === */
+.form-input {
+  padding: 0.75rem; /* Espaciado interno */
+  border: 1px solid var(--border-color); /* Borde con color de borde del tema */
+  border-radius: 0.375rem; /* Bordes ligeramente redondeados */
+  background-color: var(--dark-bg); /* Fondo alternativo del tema */
+  color: var(--sub-color); /* Color de texto del tema */
+}
+
+/* Estado focus del input */
+.form-input:focus {
+  outline: 2px solid var(--contrast-color); /* Borde de enfoque con color de acento */
+  border-color: transparent; /* Borde original transparente */
+}
+
+/* === ESTILOS DE TEXTO === */
+strong, b { font-weight: 700; } /* Texto en negrita */
+u { text-decoration: underline; } /* Texto subrayado */

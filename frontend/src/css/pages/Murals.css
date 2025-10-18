@@ -1,0 +1,72 @@
+/* frontend/src/css/pages/Murals.css */
+/* Estilos para la página de Murals (murales) */
+
+/* ===================================================================== */
+/* === GRID DE LA GALERÍA DE MURALES === */
+/* ===================================================================== */
+/* Grid responsivo que se adapta automáticamente al espacio disponible */
+.murals-gallery-grid {
+    display: grid; /* Usa CSS Grid */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Columnas que se ajustan automáticamente */
+    gap: 1.5rem; /* Espaciado entre items */
+}
+
+/* ===================================================================== */
+/* === ITEM DE LA GALERÍA === */
+/* ===================================================================== */
+/* Cada mural en la galería */
+.murals-gallery-item {
+    position: relative; /* Permite posicionar el overlay de forma absoluta */
+    overflow: hidden; /* Oculta el desbordamiento de la imagen al hacer zoom */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero al pasar el mouse */
+    aspect-ratio: 16 / 9; /* Proporción horizontal tipo panorámica (16:9) */
+}
+
+/* === IMAGEN DEL ITEM === */
+/* Imagen del mural */
+.murals-gallery-item-image {
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    object-fit: cover; /* Cubre todo el contenedor manteniendo proporción */
+    transition: transform 0.3s ease; /* Transición suave para efecto zoom */
+}
+
+/* Efecto hover: zoom en la imagen */
+.murals-gallery-item:hover .murals-gallery-item-image {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% */
+}
+
+/* === OVERLAY DEL ITEM === */
+/* Capa oscura que aparece al hacer hover */
+.murals-gallery-item-overlay {
+    position: absolute; /* Posicionamiento absoluto para cubrir toda la imagen */
+    inset: 0; /* Cubre toda la imagen */
+    background-color: rgba(0,0,0,0); /* Transparente por defecto */
+    transition: background-color 0.3s ease; /* Transición suave del fondo */
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    padding: 1rem; /* Espaciado interno */
+}
+
+/* Efecto hover: oscurece el overlay */
+.murals-gallery-item:hover .murals-gallery-item-overlay {
+    background-color: rgba(0,0,0,0.6); /* Fondo negro con 60% de opacidad */
+}
+
+/* === TÍTULO DEL ITEM === */
+/* Nombre del mural */
+.murals-gallery-item-title {
+    color: white; /* Color blanco para contraste */
+    font-size: 1.25rem; /* Tamaño mediano (20px) */
+    font-weight: 700; /* Texto en negrita */
+    text-align: center; /* Texto centrado */
+    opacity: 0; /* Invisible por defecto */
+    transition: opacity 0.3s ease; /* Transición suave de opacidad */
+}
+
+/* Efecto hover: muestra el título */
+.murals-gallery-item:hover .murals-gallery-item-title {
+    opacity: 1; /* Completamente visible */
+}

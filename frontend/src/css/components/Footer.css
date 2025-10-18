@@ -1,0 +1,80 @@
+/* frontend/src/css/components/Footer.css */
+/* Estilos para el componente Footer (pie de página) */
+
+/* ===================================================================== */
+/* === CONTENEDOR PRINCIPAL DEL FOOTER === */
+/* ===================================================================== */
+.footer {
+  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
+  color: var(--sub-color); /* Color de texto según el tema */
+  padding: 1.5rem 0; /* Espaciado interno vertical */
+  margin-top: auto; /* Empuja el footer al final de la página (sticky footer) */
+}
+
+/* ===================================================================== */
+/* === LÍNEA DIVISORIA DEL FOOTER === */
+/* ===================================================================== */
+.footer-divider {
+  border-color: var(--contrast-color); /* Color de la línea horizontal según el tema */
+  margin-bottom: 1.5rem; /* Margen inferior */
+}
+
+/* ===================================================================== */
+/* === CONTENIDO DEL FOOTER === */
+/* ===================================================================== */
+.footer-content {
+  display: flex; /* Usa flexbox para distribuir elementos */
+  justify-content: space-between; /* Espacia elementos en extremos opuestos */
+  align-items: center; /* Centra verticalmente los elementos */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  gap: 1rem; /* Espaciado entre elementos */
+}
+
+/* ===================================================================== */
+/* === TEXTO DE COPYRIGHT === */
+/* ===================================================================== */
+.footer-copy {
+  font-size: 0.875rem; /* Texto pequeño (14px) */
+  text-align: center; /* Texto centrado */
+}
+
+/* ===================================================================== */
+/* === ENLACES DEL FOOTER === */
+/* ===================================================================== */
+.footer-links {
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centra verticalmente */
+  gap: 1rem; /* Espaciado entre enlaces */
+  flex-wrap: wrap; /* Permite que los enlaces se envuelvan en pantallas pequeñas */
+  justify-content: center; /* Centra los enlaces horizontalmente */
+}
+
+/* Estilos para los enlaces dentro del footer */
+.footer-links a {
+  transition: color 0.2s; /* Transición suave de color */
+}
+
+/* Estado hover de los enlaces del footer */
+.footer-links a:hover {
+  color: var(--contrast-color); /* Color de acento al pasar el mouse */
+}
+
+/* ===================================================================== */
+/* === BOTÓN DE CAMBIO DE TEMA === */
+/* ===================================================================== */
+.theme-toggle-button {
+  border: 1px solid var(--contrast-color); /* Borde con color de acento */
+  color: #B91C1C; /* Color rojo para el texto */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  font-size: 0.875rem; /* Texto pequeño (14px) */
+  font-family: 'Spartan', sans-serif; /* Fuente consistente con el sitio */
+  transition: background-color 0.2s, color 0.2s; /* Transiciones suaves */
+}
+
+/* Estado hover del botón de cambio de tema */
+.theme-toggle-button:hover {
+  background-color: var(--main-color); /* Fondo principal del tema */
+  color: var(--contrast-color); /* Color de acento para el texto */
+}
+

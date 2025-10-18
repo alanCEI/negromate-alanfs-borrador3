@@ -1,0 +1,103 @@
+/* frontend/src/css/queries.css */
+/* Archivo de media queries para diseño responsive */
+
+/* ===================================================================== */
+/* === MÓVILES (320px - 480px) === */
+/* ===================================================================== */
+@media (min-width: 320px) and (max-width: 480px) {
+    /* Reduce el tamaño del título de sección en pantallas pequeñas */
+    .section-title {
+        font-size: 2rem; /* 32px en lugar de 40px */
+    }
+
+    /* Reorganiza el footer y el contenido "About Us" en columna para móviles */
+    .footer-content, .about-us-content {
+        flex-direction: column; /* Elementos en columna en lugar de fila */
+        gap: 1.5rem; /* Espaciado entre elementos */
+        text-align: center; /* Centra el texto */
+    }
+}
+
+/* ===================================================================== */
+/* === MENÚ MÓVIL (hasta 960px) === */
+/* ===================================================================== */
+@media (max-width: 960px) {
+    /* Oculta el menú de navegación desktop */
+    .header .desktop-nav {
+        display: none;
+    }
+
+    /* Muestra el contenedor del menú móvil (icono hamburguesa) */
+    .header .mobile-menu-container {
+        display: flex;
+    }
+
+    /* Estilos para el menú de navegación móvil desplegable */
+    .header .mobile-nav {
+        display: flex; /* Usa flexbox */
+        flex-direction: column; /* Enlaces en columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+        width: 100%; /* Ancho completo */
+        position: absolute; /* Posicionamiento absoluto */
+        top: 100%; /* Se posiciona justo debajo del header */
+        left: 0; /* Alineado a la izquierda */
+        background-color: var(--main-color); /* Fondo según el tema */
+        padding: 1rem 0; /* Espaciado interno vertical */
+        gap: 0.5rem; /* Espaciado entre enlaces */
+        border-bottom: 1px solid var(--dark-bg); /* Borde inferior */
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); /* Sombra para profundidad */
+        z-index: 100; /* Se muestra por encima de otros elementos */
+    }
+}
+
+/* ===================================================================== */
+/* === TABLETS (768px - 1023px) === */
+/* ===================================================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Grids de productos, galería y precios con 2 columnas en tablets */
+    .products-grid, .gallery-grid, .price-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual ancho */
+    }
+
+    /* Layouts de carrito, diseño gráfico y "About Us" con 1 columna en tablets */
+    .shopping-cart-layout, .graphic-design-layout, .about-us-content {
+       grid-template-columns: 1fr; /* Una sola columna */
+    }
+}
+
+/* ===================================================================== */
+/* === LAPTOPS Y DESKTOPS (desde 1024px) === */
+/* ===================================================================== */
+@media (min-width: 1024px) {
+   /* Grids de productos, galería y precios con 3 columnas en pantallas grandes */
+   .products-grid, .gallery-grid, .price-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho */
+   }
+
+   /* Contenido "About Us" con 2 columnas en pantallas grandes */
+   .about-us-content {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas de igual ancho */
+        gap: 3rem; /* Mayor espaciado entre columnas */
+        align-items: center; /* Centra verticalmente los elementos */
+   }
+}
+
+/* ===================================================================== */
+/* === DESKTOPS GRANDES (desde 1328px) === */
+/* ===================================================================== */
+@media (min-width: 1328px) {
+    /* Aumenta el tamaño del título de sección en pantallas muy grandes */
+    .section-title {
+        font-size: 3rem; /* 48px para mejor impacto visual */
+    }
+}
+
+/* ===================================================================== */
+/* === PANTALLAS EXTRA GRANDES (desde 2560px) === */
+/* ===================================================================== */
+@media (min-width: 2560px) {
+    /* Aumenta el ancho máximo del contenedor para pantallas 4K */
+    .container {
+        max-width: 1800px; /* Más espacio horizontal en pantallas grandes */
+    }
+}

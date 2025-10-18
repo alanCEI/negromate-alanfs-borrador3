@@ -1,0 +1,70 @@
+/* frontend/src/css/components/Login.css */
+/* Estilos específicos para el componente de Login */
+
+/* ===================================================================== */
+/* === CONTENEDOR DEL FORMULARIO DE LOGIN === */
+/* ===================================================================== */
+.login-form-container {
+  width: 100%; /* Ancho completo del contenedor padre */
+  max-width: 28rem; /* Ancho máximo de 448px */
+  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
+  padding: 2rem; /* Espaciado interno generoso */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); /* Sombra para profundidad */
+  border: 2px solid var(--contrast-color); /* Borde con color de acento */
+  color: var(--sub-color); /* Color de texto según el tema */
+}
+
+/* ===================================================================== */
+/* === TÍTULO DEL FORMULARIO === */
+/* ===================================================================== */
+.login-form-container h2 {
+  font-size: 1.875rem; /* Tamaño grande (30px) */
+  font-weight: 700; /* Texto en negrita */
+  text-align: center; /* Texto centrado */
+  margin-bottom: 1.5rem; /* Margen inferior */
+  color: var(--sub-color); /* Color de texto según el tema */
+}
+
+/* ===================================================================== */
+/* === FORMULARIO DE LOGIN === */
+/* ===================================================================== */
+.login-form {
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Elementos en columna */
+  gap: 1.5rem; /* Espaciado entre campos */
+}
+
+/* Código comentado: estilos alternativos para las etiquetas */
+/*
+.login-form .form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--dark-bg);
+  margin-bottom: 0.25rem;
+}
+*/
+
+/* ===================================================================== */
+/* === INPUTS DEL FORMULARIO === */
+/* ===================================================================== */
+/* Estilos para los campos de entrada (email, password) */
+.login-form .form-group input {
+  margin-top: 0.25rem; /* Margen superior */
+  display: block; /* Comportamiento de bloque */
+  width: 100%; /* Ancho completo */
+  padding: 0.5rem 0.75rem; /* Espaciado interno */
+  background-color: white; /* Fondo blanco para los inputs */
+  border: 1px solid var(--border-color); /* Borde según el tema */
+  border-radius: 0.375rem; /* Bordes ligeramente redondeados */
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); /* Sombra sutil */
+  color: var(--dark-bg); /* Color de texto oscuro */
+}
+
+/* Estado focus de los inputs */
+.login-form .form-group input:focus {
+  outline: none; /* Elimina el outline por defecto del navegador */
+  border-color: var(--sub-contrast); /* Borde con color de acento secundario */
+  box-shadow: 0 0 0 2px var(--sub-contrast); /* Sombra de enfoque con color de acento */
+}

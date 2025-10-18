@@ -1,0 +1,79 @@
+/* frontend/src/css/components/Products.css */
+/* Estilos para el componente Products (grid de categorías de productos) */
+
+/* ===================================================================== */
+/* === SECCIÓN DE PRODUCTOS === */
+/* ===================================================================== */
+/* Contenedor de la sección de productos */
+.products-section {
+  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
+  color: var(--sub-color); /* Color de texto según el tema */
+}
+
+/* ===================================================================== */
+/* === GRID DE PRODUCTOS === */
+/* ===================================================================== */
+/* Grid responsivo para mostrar las categorías de productos */
+.products-grid {
+  display: grid; /* Usa CSS Grid */
+  grid-template-columns: 1fr; /* Una columna en móvil (se ajusta con media queries) */
+  gap: 2rem; /* Espaciado entre tarjetas */
+}
+
+/* ===================================================================== */
+/* === TARJETA DE CATEGORÍA === */
+/* ===================================================================== */
+/* Tarjeta individual de categoría con imagen y efecto hover */
+.category-card {
+  display: block; /* Comportamiento de bloque */
+  position: relative; /* Permite posicionar el overlay de forma absoluta */
+  overflow: hidden; /* Oculta el desbordamiento de la imagen al hacer zoom */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); /* Sombra para profundidad */
+  aspect-ratio: 1 / 1; /* Mantiene proporción cuadrada (1:1) */
+}
+
+/* === IMAGEN DE LA TARJETA === */
+/* Imagen de fondo de la categoría */
+.category-card-image {
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  object-fit: cover; /* Cubre todo el contenedor manteniendo proporción */
+  transition: transform 0.5s ease; /* Transición suave para el efecto zoom */
+}
+
+/* Efecto hover: zoom en la imagen */
+.category-card:hover .category-card-image {
+  transform: scale(1.1); /* Aumenta el tamaño al 110% */
+}
+
+/* === OVERLAY DE LA TARJETA === */
+/* Capa oscura semitransparente sobre la imagen */
+.category-card-overlay {
+  position: absolute; /* Posicionamiento absoluto para cubrir toda la tarjeta */
+  inset: 0; /* Cubre toda la tarjeta */
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con 60% de opacidad */
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centra verticalmente el título */
+  justify-content: center; /* Centra horizontalmente el título */
+  transition: background-color 0.3s ease; /* Transición suave del fondo */
+}
+
+/* Efecto hover: overlay más oscuro */
+.category-card:hover .category-card-overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* Aumenta opacidad al 70% */
+}
+
+/* === TÍTULO DE LA TARJETA === */
+/* Título de la categoría mostrado sobre la imagen */
+.category-card-title {
+  font-size: 1.875rem; /* Tamaño grande (30px) */
+  font-weight: 700; /* Texto en negrita */
+  color: white; /* Color blanco para contraste */
+  transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+}
+
+/* Efecto hover: título ligeramente más grande */
+.category-card:hover .category-card-title {
+  transform: scale(1.05); /* Aumenta el tamaño al 105% */
+}

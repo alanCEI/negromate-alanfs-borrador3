@@ -1,0 +1,40 @@
+/* frontend/src/css/components/Form.css */
+/* Estilos genéricos para contenedores de formularios */
+
+/* ===================================================================== */
+/* === CONTENEDOR DEL FORMULARIO === */
+/* ===================================================================== */
+/* Contenedor genérico para formularios con estilos consistentes */
+.form-container {
+  width: 100%; /* Ancho completo del contenedor padre */
+  max-width: 28rem; /* Ancho máximo de 448px */
+  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
+  padding: 2rem; /* Espaciado interno generoso */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+  border: 2px solid var(--contrast-color); /* Borde con color de acento */
+  color: var(--sub-color); /* Color de texto según el tema */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Transiciones suaves al cambiar de tema */
+}
+
+/* ===================================================================== */
+/* === TÍTULO DEL FORMULARIO === */
+/* ===================================================================== */
+/* Título del formulario (h2) */
+.form-container h2 {
+  font-size: 1.875rem; /* Tamaño grande (30px) */
+  font-weight: 700; /* Texto en negrita */
+  text-align: center; /* Texto centrado */
+  margin-bottom: 1.5rem; /* Margen inferior */
+  color: var(--sub-color); /* Color de texto según el tema */
+}
+
+/* ===================================================================== */
+/* === FORMULARIO === */
+/* ===================================================================== */
+/* Estructura del formulario con elementos en columna */
+.form {
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Elementos en columna */
+  gap: 1.5rem; /* Espaciado entre campos del formulario */
+}

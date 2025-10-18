@@ -1,0 +1,53 @@
+/* frontend/src/css/reset.css */
+/* Archivo de reset CSS para normalizar estilos entre navegadores */
+
+/* Selector universal: aplica box-sizing border-box y elimina márgenes y padding en todos los elementos */
+*, *::before, *::after {
+  box-sizing: border-box; /* Incluye padding y border en el ancho/alto total del elemento */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina padding por defecto */
+}
+
+/* Configuración del elemento HTML raíz */
+html {
+  font-size: 16px; /* Base explícita para consistencia entre navegadores */
+  scroll-behavior: smooth; /* Desplazamiento suave al hacer scroll */
+  -webkit-text-size-adjust: 100%; /* Previene zoom automático en iOS */
+  -moz-text-size-adjust: 100%; /* Previene zoom automático en Firefox */
+  text-size-adjust: 100%; /* Previene zoom automático en otros navegadores */
+}
+
+/* Configuración del body */
+body {
+  min-height: 100vh; /* Altura mínima del viewport completo */
+  line-height: 1.5; /* Espaciado entre líneas para mejor legibilidad */
+}
+
+/* Elimina los estilos de lista (bullets/números) de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Elimina el subrayado y hereda el color de los enlaces */
+a {
+  text-decoration: none; /* Sin subrayado */
+  color: inherit; /* Hereda el color del elemento padre */
+}
+
+/* Configura elementos multimedia como bloques con ancho máximo del 100% */
+img, picture, video, canvas, svg {
+  display: block; /* Los convierte en elementos de bloque */
+  max-width: 100%; /* No exceden el ancho del contenedor padre */
+}
+
+/* Los elementos de formulario heredan la fuente del documento */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Estilos base para botones */
+button {
+  cursor: pointer; /* Muestra el cursor de puntero al pasar sobre botones */
+  border: none; /* Elimina el borde por defecto */
+  background-color: transparent; /* Fondo transparente por defecto */
+}

@@ -1,0 +1,138 @@
+/* frontend/src/css/pages/Contact.css */
+/* Estilos para la página de Contact (formulario de contacto) */
+
+/* ===================================================================== */
+/* === PÁGINA DE CONTACTO === */
+/* ===================================================================== */
+/* Contenedor principal que centra el formulario verticalmente */
+.contact-page {
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  min-height: calc(100vh - 200px); /* Altura mínima (100vh menos el header/footer aprox.) */
+}
+
+/* ===================================================================== */
+/* === CONTENEDOR DEL CONTACTO === */
+/* ===================================================================== */
+.contact-container {
+  max-width: 42rem; /* Ancho máximo de 672px */
+}
+
+/* ===================================================================== */
+/* === ENCABEZADO DEL CONTACTO === */
+/* ===================================================================== */
+.contact-header {
+  text-align: center; /* Texto centrado */
+  margin-bottom: 2rem; /* Margen inferior */
+}
+
+/* Título principal (h1) */
+.contact-header h1 {
+  font-size: 2.5rem; /* Tamaño grande (40px) */
+  font-weight: 700; /* Texto en negrita */
+  margin-bottom: 0.5rem; /* Margen inferior */
+  color: var(--contrast-color); /* Color de acento */
+}
+
+/* Párrafo descriptivo */
+.contact-header p {
+  font-size: 1.125rem; /* Tamaño mediano (18px) */
+}
+
+/* ===================================================================== */
+/* === FORMULARIO DE CONTACTO === */
+/* ===================================================================== */
+/* Contenedor del formulario con colores invertidos */
+.contact-form {
+  background-color: var(--sub-color); /* Fondo invertido (oscuro en tema claro, claro en tema oscuro) */
+  color: var(--dark-bg); /* Color de texto invertido */
+  padding: 2rem; /* Espaciado interno generoso */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); /* Sombra para profundidad */
+  border: 2px solid var(--contrast-color); /* Borde con color de acento */
+  display: flex; /* Usa flexbox */
+  flex-direction: column; /* Elementos en columna */
+  gap: 1.5rem; /* Espaciado entre campos */
+}
+
+/* === ETIQUETAS DEL FORMULARIO === */
+.contact-form .form-group label {
+  display: block; /* Comportamiento de bloque */
+  font-size: 0.875rem; /* Texto pequeño (14px) */
+  font-weight: 500; /* Peso de fuente medio */
+  margin-bottom: 0.25rem; /* Margen inferior */
+}
+
+/* === INPUTS Y TEXTAREAS === */
+/* Estilos para campos de entrada y áreas de texto */
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+  margin-top: 0.25rem; /* Margen superior */
+  display: block; /* Comportamiento de bloque */
+  width: 100%; /* Ancho completo */
+  padding: 0.5rem 0.75rem; /* Espaciado interno */
+  background-color: white; /* Fondo blanco */
+  border: 1px solid #D1D5DB; /* Borde gris */
+  border-radius: 0.375rem; /* Bordes ligeramente redondeados */
+  color: var(--sub-color); /* Color de texto según el tema */
+}
+
+/* Estado focus de inputs y textareas */
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+  outline: none; /* Elimina el outline por defecto del navegador */
+  border-color: var(--sub-contrast); /* Borde con color de acento secundario */
+  box-shadow: 0 0 0 2px var(--sub-contrast); /* Sombra de enfoque con color de acento */
+}
+
+/* === FIELDSET Y LEGEND === */
+/* Estilos para la leyenda de fieldsets (categorías de servicio) */
+.contact-form .fieldset legend {
+  font-size: 0.875rem; /* Texto pequeño (14px) */
+  font-weight: 500; /* Peso de fuente medio */
+  margin-bottom: 0.5rem; /* Margen inferior */
+}
+
+/* === GRUPO DE RADIO BUTTONS === */
+/* Contenedor de radio buttons en fila */
+.contact-form .radio-group {
+  display: flex; /* Usa flexbox */
+  gap: 1rem; /* Espaciado entre opciones */
+}
+
+/* === ETIQUETAS DE RADIO === */
+/* Etiquetas que incluyen el radio button y su texto */
+.contact-form .radio-label {
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centra verticalmente */
+  gap: 0.5rem; /* Espaciado entre el radio y el texto */
+}
+
+/* ===================================================================== */
+/* === MENSAJE DE ÉXITO === */
+/* ===================================================================== */
+/* Contenedor del mensaje que se muestra tras enviar el formulario exitosamente */
+.contact-success-message {
+  min-height: calc(100vh - 200px); /* Altura mínima (100vh menos header/footer) */
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  text-align: center; /* Texto centrado */
+}
+
+/* Caja del mensaje de éxito */
+.contact-success-box {
+  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
+  padding: 2rem; /* Espaciado interno generoso */
+  border-radius: 0.5rem; /* Bordes redondeados */
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); /* Sombra para profundidad */
+}
+
+/* Título del mensaje de éxito */
+.contact-success-box h2 {
+  font-size: 1.875rem; /* Tamaño grande (30px) */
+  font-weight: 700; /* Texto en negrita */
+  color: var(--contrast-color); /* Color de acento */
+  margin-bottom: 1rem; /* Margen inferior */
+}

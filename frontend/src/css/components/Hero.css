@@ -1,0 +1,69 @@
+/* frontend/src/css/components/Hero.css */
+/* Estilos para el componente Hero (sección principal de bienvenida) */
+
+/* ===================================================================== */
+/* === SECCIÓN HERO === */
+/* ===================================================================== */
+/* Contenedor principal del hero con imagen de fondo y efecto parallax */
+.hero-section {
+  position: relative; /* Permite posicionar elementos internos de forma absoluta */
+  height: 100vh; /* Altura del 100% del viewport */
+  width: 100%; /* Ancho completo */
+  overflow: hidden; /* Oculta contenido que sobresale */
+  display: flex; /* Usa flexbox para centrar contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  background-size: cover; /* La imagen de fondo cubre todo el contenedor */
+  background-attachment: fixed; /* Efecto Parallax: la imagen se mantiene fija al hacer scroll */
+  background-position: center; /* Centra la imagen de fondo */
+}
+
+/* ===================================================================== */
+/* === OVERLAY OSCURO === */
+/* ===================================================================== */
+/* Capa oscura semitransparente sobre la imagen de fondo para mejorar la legibilidad */
+.hero-overlay {
+  position: absolute; /* Posicionamiento absoluto para cubrir toda la sección */
+  inset: 0; /* Equivalente a top: 0, right: 0, bottom: 0, left: 0 */
+  background-color: black; /* Fondo negro */
+  opacity: 0.5; /* 50% de transparencia */
+}
+
+/* ===================================================================== */
+/* === CONTENEDOR DEL LOGO === */
+/* ===================================================================== */
+/* Contenedor del logo principal del hero */
+.hero-logo-container {
+  z-index: 10; /* Aparece por encima del overlay */
+  transition: all 0.5s ease-in-out; /* Transición suave para animaciones */
+}
+
+/* Estado "scrolled": cuando el usuario hace scroll, el logo se escala y desaparece */
+.hero-logo-container.scrolled {
+  transform: scale(1.25); /* Aumenta el tamaño al 125% */
+  opacity: 0; /* Se vuelve completamente transparente */
+}
+
+/* ===================================================================== */
+/* === LOGO DEL HERO === */
+/* ===================================================================== */
+/* Logo principal mostrado en el centro del hero */
+.hero-logo {
+  width: 16rem; /* Ancho de 256px en pantallas pequeñas */
+  height: 16rem; /* Alto de 256px */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
+  border: 4px solid #DFFF00; /* Borde amarillo neón */
+  border-radius: 9999px; /* Totalmente redondeado (circular) */
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); /* Sombra pronunciada para profundidad */
+}
+
+/* ===================================================================== */
+/* === MEDIA QUERY PARA TABLETS Y DESKTOP === */
+/* ===================================================================== */
+/* Aumenta el tamaño del logo en pantallas medianas y grandes */
+@media (min-width: 768px) {
+  .hero-logo {
+    width: 20rem; /* Ancho de 320px en tablets y desktop */
+    height: 20rem; /* Alto de 320px */
+  }
+}
