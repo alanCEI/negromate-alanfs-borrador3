@@ -1,7 +1,6 @@
 ### Variables
 @api_url = http://localhost:3000/api
-# Token del usuario ADMIN (admin@negromate.com / admin123)
-# Válido hasta: 2026-01-15 (90 días)
+
 @jwt_token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZjJiMDI1MTlkNWJkMjFjZDQ2YjZjYyIsImlhdCI6MTc2MDczNjI3NywiZXhwIjoxNzY4NTEyMjc3fQ.OZJq4R1MgI_RkNX_PAGGXhJ8j_U8KtE1gx98I7O99rM
 @user_id = 68f2b02519d5bd21cd46b6cc
 @product_id = 68f2b7374f9e18e96989ddd6
@@ -12,9 +11,8 @@
 # AUTH ROUTES
 #//////////////////////////////
 
-### Iniciar sesión como ADMIN (para renovar token)
-# Usuario: admin@negromate.com
-# Password: admin123
+### Iniciar sesión como ADMIN (renovar token)
+
 POST {{api_url}}/auth/login
 Content-Type: application/json
 
@@ -48,7 +46,7 @@ Authorization: Bearer {{jwt_token}}
 
 
 #//////////////////////////////
-# USER ROUTES (Admin only)
+# USER ROUTES (Admin)
 #//////////////////////////////
 
 ### Obtener todos los usuarios
@@ -59,7 +57,7 @@ Authorization: Bearer {{jwt_token}}
 GET {{api_url}}/users/{{user_id}}
 Authorization: Bearer {{jwt_token}}
 
-### Actualizar un usuario (Admin o el propio usuario)
+### Actualizar un usuario (Admin o usuario)
 PUT {{api_url}}/users/{{user_id}}
 Authorization: Bearer {{jwt_token}}
 Content-Type: application/json
@@ -82,13 +80,13 @@ Authorization: Bearer {{jwt_token}}
 ### Obtener todos los productos
 GET {{api_url}}/products
 
-### Obtener productos de la categoría "Murals"
+### Obtener productos de la categoría Murals
 GET {{api_url}}/products?category=Murals
 
 ### Obtener un producto por ID
 GET {{api_url}}/products/{{product_id}}
 
-### Crear un nuevo producto (Solo Admin)
+### Crear un nuevo producto (Admin)
 POST {{api_url}}/products
 Authorization: Bearer {{jwt_token}}
 Content-Type: application/json
@@ -102,7 +100,7 @@ Content-Type: application/json
     "details": ["Detalle 1", "Detalle 2"]
 }
 
-### Actualizar un producto (Solo Admin)
+### Actualizar un producto (Admin)
 PUT {{api_url}}/products/{{product_id}}
 Authorization: Bearer {{jwt_token}}
 Content-Type: application/json
@@ -113,7 +111,7 @@ Content-Type: application/json
     "description": "Nueva descripción"
 }
 
-### Eliminar un producto (Solo Admin)
+### Eliminar un producto (Admin)
 DELETE {{api_url}}/products/{{product_id}}
 Authorization: Bearer {{jwt_token}}
 
@@ -122,7 +120,7 @@ Authorization: Bearer {{jwt_token}}
 # ORDER ROUTES
 #//////////////////////////////
 
-### Obtener todas las órdenes (Solo Admin)
+### Obtener todas las órdenes (Admin)
 GET {{api_url}}/orders
 Authorization: Bearer {{jwt_token}}
 
@@ -148,7 +146,7 @@ Content-Type: application/json
     ]
 }
 
-### Actualizar el estado de una orden (Solo Admin)
+### Actualizar el estado de una orden (Admin)
 PUT {{api_url}}/orders/{{order_id}}
 Authorization: Bearer {{jwt_token}}
 Content-Type: application/json
@@ -157,7 +155,7 @@ Content-Type: application/json
     "status": "completed"
 }
 
-### Eliminar una orden (Solo Admin)
+### Eliminar una orden (Admin)
 DELETE {{api_url}}/orders/{{order_id}}
 Authorization: Bearer {{jwt_token}}
 
@@ -166,17 +164,17 @@ Authorization: Bearer {{jwt_token}}
 # CONTENT ROUTES
 #//////////////////////////////
 
-### Obtener todo el contenido (Solo Admin)
+### Obtener todo el contenido (Admin)
 GET {{api_url}}/content
 Authorization: Bearer {{jwt_token}}
 
-### Obtener contenido de la sección "aboutUs"
+### Obtener contenido de la sección aboutUs
 GET {{api_url}}/content/aboutUs
 
-### Obtener galería de "Murals"
+### Obtener galería de Murals
 GET {{api_url}}/content/gallery-murals
 
-### Crear nuevo contenido (Solo Admin)
+### Crear nuevo contenido (Admin)
 POST {{api_url}}/content
 Authorization: Bearer {{jwt_token}}
 Content-Type: application/json
@@ -187,7 +185,7 @@ Content-Type: application/json
     "body": "Contenido de la sección"
 }
 
-### Actualizar contenido por ID (Solo Admin)
+### Actualizar contenido por ID (Admin)
 PUT {{api_url}}/content/{{content_id}}
 Authorization: Bearer {{jwt_token}}
 Content-Type: application/json
@@ -197,6 +195,6 @@ Content-Type: application/json
     "body": "Contenido actualizado"
 }
 
-### Eliminar contenido por ID (Solo Admin)
+### Eliminar contenido por ID (Admin)
 DELETE {{api_url}}/content/{{content_id}}
 Authorization: Bearer {{jwt_token}}
