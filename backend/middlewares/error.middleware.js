@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Middleware Global de Manejo de Errores
- *
+ * ============================================
  */
 
 // Middleware de manejo de errores

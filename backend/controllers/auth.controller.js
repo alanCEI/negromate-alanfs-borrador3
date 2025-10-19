@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Controlador de Autenticación
- *
+ * ============================================
  */
 
 import User from "../db/models/User.model.js";

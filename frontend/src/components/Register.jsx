@@ -1,8 +1,13 @@
+/**
+ * ============================================
+ * Componente del formulario de registro
+ * ============================================
+ */
+
 import { useState } from "react";
 import { useAuth } from "@/context/AuthContext";
 import "@/css/components/Form.css";
 
-// Componente del formulario de registro
 const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");

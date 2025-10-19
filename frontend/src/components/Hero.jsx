@@ -1,7 +1,12 @@
+/**
+ * ============================================
+ * Componente del Hero
+ * ============================================
+ */
+
 import { useState, useEffect } from "react";
 import "@/css/components/Hero.css";
 
-// Componente del Hero
 const Hero = () => {
   const [scrolled, setScrolled] = useState(false);
 

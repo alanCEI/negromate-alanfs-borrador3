@@ -1,7 +1,12 @@
+/**
+ * ==================================================================
+ * Componente de protección de rutas para usuarios no autenticados
+ * ==================================================================
+ */
+
 import { Navigate, Outlet } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 
-// Componente de protección de rutas para usuarios no autenticados
 const GuestRoute = () => {
   const { user, loading } = useAuth();
   // Mensaje de carga

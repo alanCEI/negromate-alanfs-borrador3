@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Página principal LandingPage de inicio de Negromate Creatives
- *
+ * ============================================
  */
 
 import Hero from "@/components/Hero";

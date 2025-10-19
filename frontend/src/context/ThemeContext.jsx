@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================================
  * Contexto para gestionar el tema de la app (claro/oscuro).
- *
+ * ============================================================
  */
 
 import React, { createContext, useState, useEffect, useContext } from "react";

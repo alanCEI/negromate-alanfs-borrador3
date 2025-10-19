@@ -1,6 +1,6 @@
 /**
  * ============================================
- * DEFINICIÓN DE RUTAS DE LA API
+ * RUTAS DE LA API
  * ============================================
  */
 
@@ -48,6 +48,7 @@ import {
 
 // Crear el router principal de Express
 const router = express.Router();
+
 /**
  * ========================================
  * RUTAS DE AUTENTICACIÓN
@@ -59,6 +60,7 @@ router.post("/auth/register", registerUser);
 router.post("/auth/login", loginUser);
 // Obtener perfil del usuario autenticado
 router.get("/auth/profile", authMiddleware, getUserProfile);
+
 /**
  * ========================================
  * RUTAS DE USUARIOS
@@ -72,6 +74,7 @@ router.get("/users/:id", authMiddleware, adminMiddleware, getUserById);
 router.put("/users/:id", authMiddleware, updateUser);
 // Eliminar un usuario
 router.delete("/users/:id", authMiddleware, adminMiddleware, deleteUser);
+
 /**
  * ========================================
  * RUTAS DE PRODUCTOS
@@ -89,12 +92,12 @@ router.post("/products", authMiddleware, adminMiddleware, createProduct);
 router.put("/products/:id", authMiddleware, adminMiddleware, updateProduct);
 // Eliminar un producto
 router.delete("/products/:id", authMiddleware, adminMiddleware, deleteProduct);
+
 /**
  * ========================================
  * RUTAS DE ÓRDENES
  * ========================================
  */
-
 // Obtener todas las órdenes del sistema
 router.get("/orders", authMiddleware, adminMiddleware, getAllOrders);
 // Obtener órdenes del usuario autenticado
@@ -107,6 +110,7 @@ router.post("/orders", authMiddleware, createOrder);
 router.put("/orders/:id", authMiddleware, adminMiddleware, updateOrderStatus);
 // Eliminar una orden
 router.delete("/orders/:id", authMiddleware, adminMiddleware, deleteOrder);
+
 /**
  * ========================================
  * RUTAS DE CONTENIDO

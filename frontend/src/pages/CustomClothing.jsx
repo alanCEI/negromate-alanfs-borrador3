@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Página de Ropa Personalizada
- *
+ * ============================================
  */
 
 import { useState, useEffect } from "react";
@@ -45,9 +45,9 @@ const PriceCard = ({ product }) => {
 };
 
 /**
- *
+ * ============================================
  * Componente "CustomClothing"
- *
+ * ============================================
  */
 const CustomClothing = () => {
   const [products, setProducts] = useState([]);

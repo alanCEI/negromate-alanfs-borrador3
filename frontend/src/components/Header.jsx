@@ -1,10 +1,15 @@
+/**
+ * ============================================
+ * Componente del Header
+ * ============================================
+ */
+
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
 import { useCart } from "@/context/CartContext";
 import "@/css/components/Header.css";
 
-// Componente del Header
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { user, logout } = useAuth();
@@ -19,7 +24,11 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  // NavLinks
+/**
+ * ============================================
+ * NavLinks
+ * ============================================
+ */
   const NavLinks = () => (
     <>
       <NavLink to="/about" className={navLinkClass} onClick={handleMenuClick}>

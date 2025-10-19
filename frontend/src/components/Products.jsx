@@ -1,7 +1,12 @@
+/**
+ * ==============================================
+ * Configuración de las categorías de los servicios
+ * ==============================================
+ */
+
 import { Link } from "react-router-dom";
 import "@/css/components/Products.css";
 
-// Configuración de las categorías de los servicios
 const productCategories = [
   {
     title: "Diseño Gráfico",
@@ -15,7 +20,12 @@ const productCategories = [
   },
   { title: "Murales", path: "/murals", image: "/images/goiko.webp" },
 ];
-// Componente de servicios/productos
+
+/**
+ * ============================================
+ * Componente de servicios/productos
+ * ============================================
+ */
 const Products = () => {
   return (
     <section className="section products-section">

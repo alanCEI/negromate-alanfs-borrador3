@@ -1,8 +1,13 @@
+/**
+ * ==============================================
+ * Componente del formulario de inicio de sesión
+ * ==============================================
+ */
+
 import { useState } from "react";
 import { useAuth } from "@/context/AuthContext";
 import "@/css/components/Form.css";
 
-// Componente del formulario de inicio de sesión
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

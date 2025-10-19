@@ -1,7 +1,12 @@
+/**
+ * ============================================
+ * Componente del Footer
+ * ============================================
+ */
+
 import { useTheme } from "@/context/ThemeContext";
 import "@/css/components/Footer.css";
 
-// Componente del Footer
 const Footer = () => {
   const { theme, toggleTheme } = useTheme();
 

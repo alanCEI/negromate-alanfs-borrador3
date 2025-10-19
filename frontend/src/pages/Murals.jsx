@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Página de Murals "Murales"
- *
+ * ============================================
  */
 
 import { useState, useEffect } from "react";
@@ -11,9 +11,9 @@ import "@/css/pages/Murals.css";
 import "@/css/pages/GraphicDesign.css";
 
 /**
- *
+ * ===================================================================
  * Componente PriceCard - Tarjeta de producto con precio y detalles
- *
+ * ===================================================================
  */
 const PriceCard = ({ product }) => {
   const { addToCart } = useCart();
@@ -48,9 +48,9 @@ const PriceCard = ({ product }) => {
 };
 
 /**
- *
+ * ============================================
  * Componente principal Murals
- *
+ * ============================================
  */
 const Murals = () => {
   const [products, setProducts] = useState([]);

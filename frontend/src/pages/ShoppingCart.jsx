@@ -1,7 +1,7 @@
 /**
- *
+ * ==============================================
  *  Página del ShoppingCart "Carrito de compras"
- *
+ * ==============================================
  */
 
 import { useCart } from "@/context/CartContext";

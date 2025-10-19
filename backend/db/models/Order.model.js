@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Esquema del Item de la Orden
- *
+ * ============================================
  */
 
 import mongoose from "mongoose";
@@ -24,9 +24,9 @@ const orderItemSchema = new Schema({
   },
 });
 /**
- *
+ * ============================================
  * Esquema del Orden
- *
+ * ============================================
  */
 const orderSchema = new Schema(
   {

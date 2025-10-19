@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Componente Principal de la App
- *
+ * ============================================
  */
 
 import { Routes, Route } from "react-router-dom";

@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Controlador de Productos
- *
+ * ============================================
  */
 
 import Product from "../db/models/Product.model.js";

@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Controlador de Contenido
- *
+ * ============================================
  */
 
 import Content from "../db/models/Content.model.js";

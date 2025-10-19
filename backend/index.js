@@ -1,4 +1,4 @@
-/**
+/** 
  * ============================================
  * SERVIDOR PRINCIPAL DE NEGROMATE CREATIVES
  * ============================================
@@ -13,6 +13,7 @@ import apiRoutes from "./routes/index.routes.js";
 
 // Iniciar Express
 const app = express();
+
 /**
  * ============================================
  * CONFIGURACIÓN DE MIDDLEWARES
@@ -26,6 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Archivos estáticos
 app.use(express.static("public"));
+
 /**
  * ============================================
  * DEFINICIÓN DE RUTAS
@@ -37,6 +39,7 @@ app.get("/", (req, res) => {
 });
 // Rutas de la API
 app.use("/api", apiRoutes);
+
 /**
  * ============================================
  * MIDDLEWARE DE MANEJO DE ERRORES

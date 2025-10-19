@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Página AboutUs "Sobre Nosotros"
- *
+ * ============================================
  */
 
 import { useState, useEffect } from "react";

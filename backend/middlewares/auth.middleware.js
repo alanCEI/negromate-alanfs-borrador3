@@ -1,7 +1,7 @@
 /**
- *
+ * ============================================
  * Middlewares de Autenticación y Autorización
- *
+ * ============================================
  */
 
 import jwt from "jsonwebtoken";

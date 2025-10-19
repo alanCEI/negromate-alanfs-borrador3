@@ -1,7 +1,7 @@
 /**
- *
+ * ===============================================
  * Contexto para gestionar el carrito de compras
- *
+ * ===============================================
  */
 
 import React, { createContext, useState, useEffect, useContext } from "react";

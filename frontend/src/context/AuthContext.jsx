@@ -1,7 +1,7 @@
 /**
- *
+ * =====================================================
  * Contexto para manejar la autenticación de usuarios
- *
+ * =====================================================
  */
 
 import React, { createContext, useState, useEffect, useContext } from "react";
