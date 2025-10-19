@@ -4,7 +4,6 @@
  *
  */
 
-// Configuración
 const BASE_URL = import.meta.env.VITE_API_URL;
 // Maneja las respuestas de la API
 const handleResponse = async (response) => {
