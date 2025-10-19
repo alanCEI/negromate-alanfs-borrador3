@@ -53,10 +53,11 @@
 }
 /* TÍTULO DE LA TARJETA */
 .category-card-title {
-  font-size: 1.875rem; 
-  font-weight: 700; 
-  color: white; 
-  transition: transform 0.3s ease; 
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 /* Hover */
 .category-card:hover .category-card-title {
