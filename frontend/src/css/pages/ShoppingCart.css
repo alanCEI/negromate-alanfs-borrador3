@@ -1,4 +1,3 @@
-/* frontend/src/css/pages/ShoppingCart.css */
 /* Estilos para la página de Shopping Cart (carrito de compras) */
 
 /* ===================================================================== */
@@ -7,174 +6,143 @@
 .cart-page {
   min-height: calc(100vh - 200px); /* Altura mínima (100vh menos header/footer aprox.) */
 }
-
 /* ===================================================================== */
 /* === CARRITO VACÍO === */
 /* ===================================================================== */
-/* Mensaje mostrado cuando el carrito está vacío */
 .cart-empty {
-  text-align: center; /* Texto centrado */
-  padding: 2.5rem 0; /* Espaciado interno vertical */
-  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
-  border-radius: 0.5rem; /* Bordes redondeados */
+  text-align: center; 
+  padding: 2.5rem 0; 
+  background-color: var(--dark-bg); 
+  border-radius: 0.5rem; 
 }
-
 /* Párrafo del mensaje de carrito vacío */
 .cart-empty p {
-  font-size: 1.25rem; /* Tamaño mediano (20px) */
-  margin-bottom: 1rem; /* Margen inferior */
+  font-size: 1.25rem; 
+  margin-bottom: 1rem; 
 }
-
 /* ===================================================================== */
 /* === LAYOUT DEL CARRITO === */
 /* ===================================================================== */
-/* Grid que organiza los items y el resumen del carrito */
 .cart-layout {
-  display: grid; /* Usa CSS Grid */
-  grid-template-columns: 1fr; /* Una columna en móvil (se ajusta con media queries) */
-  gap: 2rem; /* Espaciado entre columnas */
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 2rem; 
 }
-
 /* ===================================================================== */
 /* === CONTENEDOR DE ITEMS === */
 /* ===================================================================== */
-/* Contenedor de la lista de productos en el carrito */
 .cart-items-container {
-  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
-  padding: 1.5rem; /* Espaciado interno */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  display: flex; /* Usa flexbox */
-  flex-direction: column; /* Elementos en columna */
-  gap: 1rem; /* Espaciado entre items */
+  background-color: var(--dark-bg); 
+  padding: 1.5rem; 
+  border-radius: 0.5rem;
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
 }
-
 /* ===================================================================== */
 /* === ITEM DEL CARRITO === */
 /* ===================================================================== */
-/* Cada producto individual en el carrito */
 .cart-item {
-  display: flex; /* Usa flexbox */
-  flex-direction: column; /* Elementos en columna */
-  gap: 1rem; /* Espaciado entre elementos */
-  justify-content: space-between; /* Distribuye el espacio */
-  border-bottom: 1px solid #4a4a4a; /* Borde inferior gris */
-  padding-bottom: 1rem; /* Espaciado interno inferior */
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+  justify-content: space-between; 
+  border-bottom: 1px solid #4a4a4a; 
+  padding-bottom: 1rem; 
 }
-
 /* Último item sin borde inferior */
 .cart-item:last-child {
-  border-bottom: none; /* Sin borde */
-  padding-bottom: 0; /* Sin espaciado inferior */
+  border-bottom: none; 
+  padding-bottom: 0; /
 }
-
-/* === INFORMACIÓN DEL ITEM === */
-/* Contenedor de imagen y detalles del producto */
+/* INFORMACIÓN DEL ITEM */
 .cart-item-info {
-  display: flex; /* Usa flexbox */
-  align-items: center; /* Centra verticalmente */
-  gap: 1rem; /* Espaciado entre imagen y detalles */
-  width: 100%; /* Ancho completo */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%; 
 }
-
 /* Imagen del producto */
 .cart-item-image {
-  width: 5rem; /* Ancho fijo (80px) */
-  height: 5rem; /* Alto fijo (80px) */
-  object-fit: cover; /* Cubre el contenedor manteniendo proporción */
-  border-radius: 0.25rem; /* Bordes ligeramente redondeados */
+  width: 5rem; 
+  height: 5rem; 
+  object-fit: cover; 
+  border-radius: 0.25rem; 
 }
-
 /* Título del producto */
 .cart-item-details h3 {
-  font-weight: 700; /* Texto en negrita */
-  font-size: 1.125rem; /* Tamaño mediano (18px) */
+  font-weight: 700; 
+  font-size: 1.125rem; 
 }
-
-/* Información adicional del producto (precio unitario, categoría, etc.) */
+/* Información adicional del producto */
 .cart-item-details p {
-  font-size: 0.875rem; /* Texto pequeño (14px) */
-  color: #9CA3AF; /* Gris claro */
+  font-size: 0.875rem; 
+  color: #9CA3AF; /
 }
-
-/* === ACCIONES DEL ITEM === */
-/* Contenedor de controles de cantidad y botón de eliminar */
+/* ACCIONES DEL ITEM */
 .cart-item-actions {
-  display: flex; /* Usa flexbox */
-  align-items: center; /* Centra verticalmente */
-  gap: 1rem; /* Espaciado entre elementos */
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; 
 }
-
 /* Input de cantidad */
 .cart-item-quantity {
-  width: 4rem; /* Ancho fijo (64px) */
-  text-align: center; /* Texto centrado */
-  background-color: #FFFFFF; /* Fondo blanco */
-  border: 1px solid var(--border-color); /* Borde según el tema */
-  border-radius: 0.25rem; /* Bordes ligeramente redondeados */
-  padding: 0.25rem; /* Espaciado interno */
+  width: 4rem; 
+  text-align: center; 
+  background-color: #FFFFFF; 
+  border: 1px solid var(--border-color); 
+  border-radius: 0.25rem; 
+  padding: 0.25rem; 
 }
-
-/* === BOTÓN DE ELIMINAR === */
-/* Botón para remover el producto del carrito */
+/* BOTÓN DE ELIMINAR */
 .cart-item-remove button {
-  color: #EF4444; /* Color rojo */
+  color: #EF4444;
 }
-
-/* Estado hover del botón de eliminar */
+/* Hover */
 .cart-item-remove button:hover {
-  color: #F87171; /* Rojo más claro */
+  color: #F87171;
 }
-
 /* Icono del botón de eliminar */
 .cart-item-remove svg {
-  width: 1.5rem; /* Ancho fijo (24px) */
-  height: 1.5rem; /* Alto fijo (24px) */
+  width: 1.5rem; 
+  height: 1.5rem; 
 }
-
 /* ===================================================================== */
 /* === RESUMEN DEL CARRITO === */
 /* ===================================================================== */
-/* Panel lateral con el resumen y total del carrito */
 .cart-summary {
-  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
-  padding: 1.5rem; /* Espaciado interno */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  align-self: flex-start; /* Se alinea al inicio del contenedor */
-  position: sticky; /* Se mantiene fijo al hacer scroll */
-  top: 6rem; /* Pegado a 6rem desde arriba (debajo del header) */
+  background-color: var(--dark-bg); 
+  padding: 1.5rem; 
+  border-radius: 0.5rem; 
+  align-self: flex-start; 
+  position: sticky; 
+  top: 6rem; 
 }
-
 /* Título del resumen */
 .cart-summary h2 {
-  font-size: 1.5rem; /* Tamaño grande (24px) */
-  font-weight: 700; /* Texto en negrita */
-  margin-bottom: 1.5rem; /* Margen inferior */
-  border-bottom: 1px solid #4a4a4a; /* Borde inferior gris */
-  padding-bottom: 1rem; /* Espaciado interno inferior */
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  margin-bottom: 1.5rem; 
+  border-bottom: 1px solid #4a4a4a; 
+  padding-bottom: 1rem; 
 }
-
-/* === FILA DEL RESUMEN === */
-/* Fila con información como subtotal, impuestos, etc. */
+/* FILA DEL RESUMEN */
 .cart-summary-row {
-  display: flex; /* Usa flexbox */
-  justify-content: space-between; /* Espacia contenido en extremos opuestos */
-  margin-bottom: 1rem; /* Margen inferior */
+  display: flex; 
+  justify-content: space-between; 
+  margin-bottom: 1rem; 
 }
-
-/* === TOTAL DEL RESUMEN === */
-/* Fila del total destacada */
+/* TOTAL DEL RESUMEN */
 .cart-summary-total {
-  display: flex; /* Usa flexbox */
-  justify-content: space-between; /* Espacia contenido en extremos opuestos */
-  font-weight: 700; /* Texto en negrita */
-  font-size: 1.25rem; /* Tamaño mediano (20px) */
-  border-top: 1px solid #4a4a4a; /* Borde superior gris */
-  padding-top: 1rem; /* Espaciado interno superior */
+  display: flex; 
+  justify-content: space-between; 
+  font-weight: 700; 
+  font-size: 1.25rem; 
+  border-top: 1px solid #4a4a4a; 
+  padding-top: 1rem; 
 }
-
-/* === BOTÓN DE CHECKOUT === */
-/* Botón para proceder al pago */
+/* BOTÓN DE CHECKOUT */
 .cart-summary .button {
-  width: 100%; /* Ancho completo */
-  margin-top: 1.5rem; /* Margen superior */
+  width: 100%; 
+  margin-top: 1.5rem; 
 }

@@ -1,213 +1,187 @@
-/* frontend/src/css/components/Header.css */
-/* Estilos para el componente Header (navegación principal) */
+/* Estilos para el componente Header */
 
 /* ===================================================================== */
 /* === CONTENEDOR PRINCIPAL DEL HEADER === */
 /* ===================================================================== */
 .header {
-  background-color: var(--main-color); /* Fondo según el tema activo */
-  position: sticky; /* Se mantiene fijo al hacer scroll */
-  top: 0; /* Pegado en la parte superior */
-  z-index: 50; /* Aparece por encima de otros elementos */
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
-  border-bottom: 1px solid var(--dark-bg); /* Borde inferior decorativo */
+  background-color: var(--main-color); 
+  position: sticky; 
+  top: 0; 
+  z-index: 50; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+  border-bottom: 1px solid var(--dark-bg); 
 }
-
-/* Contenido interno del header (logo + navegación) */
+/* Contenido del header */
 .header-content {
-  display: flex; /* Usa flexbox para alinear elementos */
-  justify-content: space-between; /* Logo a la izquierda, nav a la derecha */
-  align-items: center; /* Centra verticalmente los elementos */
-  padding: 1rem; /* Espaciado interno */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem; 
 }
-
 /* ===================================================================== */
 /* === LOGO DEL HEADER === */
 /* ===================================================================== */
 .header-logo img {
-  height: 2rem; /* Altura fija de 32px */
-  width: auto; /* Ancho automático para mantener proporción */
-  transition: transform 0.2s ease-in-out; /* Transición suave para efecto hover */
+  height: 2rem; 
+  width: auto; 
+  transition: transform 0.2s ease-in-out;
 }
-
-/* Efecto hover en el logo: aumenta ligeramente de tamaño */
+/* Hover */
 .header-logo:hover img {
-  transform: scale(1.05); /* Escala al 105% */
+  transform: scale(1.05); 
 }
-
 /* ===================================================================== */
 /* === NAVEGACIÓN DESKTOP === */
 /* ===================================================================== */
 .desktop-nav {
-  display: flex; /* Usa flexbox */
-  align-items: center; /* Centra verticalmente los elementos */
-  gap: 1rem; /* Espaciado entre enlaces */
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; 
 }
-
 /* Estilos para los enlaces de navegación */
 .nav-link {
-  padding: 0.5rem 1rem; /* Espaciado interno */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  transition: color 0.2s, background-color 0.2s; /* Transiciones suaves */
-  color: var(--sub-color); /* Color de texto según el tema */
-  font-weight: 700; /* Texto en negrita */
+  padding: 0.5rem 1rem; 
+  border-radius: 0.5rem; 
+  transition: color 0.2s, background-color 0.2s; 
+  color: var(--sub-color); 
+  font-weight: 700; 
 }
-
 /* Estado hover de los enlaces */
 .nav-link:hover {
-  background-color: var(--dark-bg); /* Fondo alternativo del tema */
-  color: var(--contrast-color); /* Color de acento del tema */
+  background-color: var(--dark-bg); 
+  color: var(--contrast-color); 
 }
-
-/* Estado activo de los enlaces (página actual) */
+/* Estado activo de los enlaces */
 .nav-link.active {
-  background-color: var(--dark-bg); /* Mismo fondo que hover */
-  color: var(--contrast-color); /* Color de acento para destacar */
+  background-color: var(--dark-bg); 
+  color: var(--contrast-color);
 }
-
 /* ===================================================================== */
 /* === BOTÓN DE CERRAR SESIÓN === */
 /* ===================================================================== */
 .logout-button {
-  padding: 0.5rem 1rem; /* Espaciado interno */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  color: var(--sub-color); /* Color de texto según el tema */
-  font-weight: 700; /* Texto en negrita */
-  transition: background-color 0.2s, color 0.2s; /* Transiciones suaves */
+  padding: 0.5rem 1rem; 
+  border-radius: 0.5rem; 
+  color: var(--sub-color); 
+  font-weight: 700; 
+  transition: background-color 0.2s, color 0.2s; 
 }
-
-/* Estado hover del botón de logout: fondo rojo para indicar acción de salida */
+/* Hover */
 .logout-button:hover {
-  background-color: #ef4444; /* Rojo de advertencia */
-  color: white; /* Texto blanco para contraste */
+  background-color: #ef4444; 
+  color: white; 
 }
-
 /* ===================================================================== */
 /* === ICONO DEL CARRITO === */
 /* ===================================================================== */
 .cart-link {
-  position: relative; /* Permite posicionar el contador de forma absoluta */
-  padding: 0.5rem; /* Espaciado interno */
-  border-radius: 9999px; /* Totalmente redondeado (circular) */
-  color: var(--sub-color); /* Color de icono según el tema */
-  display: inline-flex; /* Asegura comportamiento consistente */
-  align-items: center; /* Centra el icono verticalmente */
-  justify-content: center; /* Centra el icono horizontalmente */
-  flex-shrink: 0; /* Evita que el contenedor se reduzca */
+  position: relative; 
+  padding: 0.5rem; 
+  border-radius: 9999px; 
+  color: var(--sub-color); 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-shrink: 0; 
 }
-
-/* Estado hover del enlace del carrito */
+/* Hover */
 .cart-link:hover {
-  background-color: var(--dark-bg); /* Fondo alternativo del tema */
+  background-color: var(--dark-bg); 
 }
-
 /* Icono SVG del carrito */
 .cart-icon {
-  height: 1.75rem; /* 28px - Tamaño fijo más grande */
-  width: 1.75rem; /* 28px */
-  min-height: 1.75rem; /* Asegura tamaño mínimo */
-  min-width: 1.75rem; /* Asegura tamaño mínimo */
-  flex-shrink: 0; /* Evita que se reduzca en contenedores flex */
+  height: 1.75rem; 
+  width: 1.75rem; 
+  min-height: 1.75rem; 
+  min-width: 1.75rem; 
+  flex-shrink: 0; 
 }
-
-/* Badge contador de productos en el carrito */
+/* Contador de productos en el carrito de compras*/
 .cart-count {
-  position: absolute; /* Posicionamiento absoluto respecto a .cart-link */
-  top: 0; /* Esquina superior */
-  right: 0; /* Esquina derecha */
-  display: inline-flex; /* Flexbox para centrar el número */
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  padding: 0 0.5rem; /* Espaciado interno horizontal */
-  font-size: 0.75rem; /* Texto pequeño (12px) */
-  font-weight: bold; /* Texto en negrita */
-  line-height: 1; /* Altura de línea ajustada */
-  color: #fee2e2; /* Texto claro sobre fondo rojo */
-  background-color: #dc2626; /* Rojo oscuro para destacar */
-  border-radius: 9999px; /* Totalmente redondeado (píldora) */
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 0 0.5rem; 
+  font-size: 0.75rem; 
+  font-weight: bold; 
+  line-height: 1; 
+  color: #fee2e2; 
+  background-color: #dc2626; 
+  border-radius: 9999px; 
 }
-
 /* ===================================================================== */
 /* === MENÚ MÓVIL === */
 /* ===================================================================== */
-/* Contenedor del botón hamburguesa - oculto por defecto, se muestra en móvil */
 .mobile-menu-container {
-  display: none; /* Oculto en desktop (se muestra con media queries) */
-  align-items: center; /* Centra verticalmente */
+  display: none;
+  align-items: center; 
 }
-
-/* Botón hamburguesa para abrir/cerrar el menú móvil */
+/* Botón hamburguesa */
 .mobile-menu-button {
-  color: var(--sub-color); /* Color según el tema */
-  display: inline-flex; /* Flexbox para centrar el icono */
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
-  padding: 0.5rem; /* Espaciado interno */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  flex-shrink: 0; /* Evita que el botón se reduzca */
+  color: var(--sub-color); 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 0.5rem; 
+  border-radius: 0.5rem; 
+  flex-shrink: 0; 
 }
-
-/* Estado hover del botón hamburguesa */
+/* Hover */
 .mobile-menu-button:hover {
-  background-color: var(--dark-bg); /* Fondo alternativo del tema */
+  background-color: var(--dark-bg); 
 }
-
 /* Icono hamburguesa (SVG) */
 .menu-icon {
-  height: 2rem; /* Tamaño más grande y visible (32px) */
-  width: 2rem; /* 32px */
-  min-height: 2rem; /* Asegura tamaño mínimo */
-  min-width: 2rem; /* Asegura tamaño mínimo */
-  flex-shrink: 0; /* Evita que se reduzca en contenedores flex */
+  height: 2rem; 
+  width: 2rem; 
+  min-height: 2rem; 
+  min-width: 2rem; 
+  flex-shrink: 0; 
 }
-
-/* Contador de productos en el carrito (versión móvil) */
+/* Contador de productos en el carrito (móvil) */
 .cart-count-mobile {
-  position: absolute; /* Posicionamiento absoluto */
-  top: 0; /* Esquina superior */
-  right: 0; /* Esquina derecha */
-  width: 1rem; /* Ancho fijo (16px) */
-  height: 1rem; /* Alto fijo (16px) */
-  font-size: 0.75rem; /* Texto pequeño (12px) */
-  color: white; /* Texto blanco */
-  background-color: #ef4444; /* Fondo rojo */
-  border-radius: 9999px; /* Totalmente redondeado (circular) */
-  display: flex; /* Flexbox para centrar */
-  align-items: center; /* Centra verticalmente */
-  justify-content: center; /* Centra horizontalmente */
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  width: 1rem; 
+  height: 1rem; 
+  font-size: 0.75rem; 
+  color: white; 
+  background-color: #ef4444; 
+  border-radius: 9999px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
-
 /* ===================================================================== */
 /* === MEDIA QUERY PARA PANTALLAS PEQUEÑAS === */
 /* ===================================================================== */
-/* Asegura tamaño consistente de iconos en todas las resoluciones */
 @media (max-width: 768px) {
   /* Mantiene el tamaño del icono del carrito en móvil */
   .cart-icon {
-    height: 1.75rem; /* Mantiene el mismo tamaño en móvil (28px) */
-    width: 1.75rem; /* 28px */
-    min-height: 1.75rem; /* Tamaño mínimo */
-    min-width: 1.75rem; /* Tamaño mínimo */
+    height: 1.75rem; 
+    width: 1.75rem; 
+    min-height: 1.75rem; 
+    min-width: 1.75rem; 
   }
-
   /* Evita que el enlace del carrito se reduzca en pantallas pequeñas */
   .cart-link {
     flex-shrink: 0;
   }
-
   /* Mantiene el tamaño del icono hamburguesa en móvil */
   .menu-icon {
-    height: 2rem; /* Mantiene el mismo tamaño en móvil (32px) */
-    width: 2rem; /* 32px */
-    min-height: 2rem; /* Tamaño mínimo */
-    min-width: 2rem; /* Tamaño mínimo */
+    height: 2rem; 
+    width: 2rem; 
+    min-height: 2rem; 
+    min-width: 2rem; 
   }
-
   /* Evita que el botón de menú móvil se reduzca */
   .mobile-menu-button {
     flex-shrink: 0;
   }
-
   /* Evita que el contenedor del menú móvil se reduzca */
   .mobile-menu-container {
     flex-shrink: 0;

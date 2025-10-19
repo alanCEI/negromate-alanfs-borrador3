@@ -1,39 +1,34 @@
-/* frontend/src/css/components/ContactInfo.css */
-/* Estilos para el componente ContactInfo (información de contacto en landing page) */
+/* Estilos para el componente ContactInfo */
 
 /* ===================================================================== */
 /* === SECCIÓN DE INFORMACIÓN DE CONTACTO === */
 /* ===================================================================== */
 .contact-info-section {
-  text-align: center; /* Centra todo el texto */
+  text-align: center;
 }
-
 /* ===================================================================== */
 /* === TÍTULO DE CONTACTO === */
 /* ===================================================================== */
 .contact-info-title {
-  font-size: 2.25rem; /* Tamaño grande (36px) */
-  font-weight: 700; /* Texto en negrita */
-  margin-bottom: 1rem; /* Margen inferior */
+  font-size: 2.25rem; 
+  font-weight: 700; 
+  margin-bottom: 1rem; 
 }
-
 /* ===================================================================== */
 /* === TEXTO DE CONTACTO === */
 /* ===================================================================== */
 .contact-info-text {
-  font-size: 1.25rem; /* Tamaño mediano (20px) */
-  margin-bottom: 2rem; /* Margen inferior */
-  max-width: 42rem; /* Ancho máximo de 672px para mejor legibilidad */
-  margin-left: auto; /* Centra horizontalmente */
-  margin-right: auto; /* Centra horizontalmente */
+  font-size: 1.25rem; 
+  margin-bottom: 2rem; 
+  max-width: 42rem; 
+  margin-left: auto; 
+  margin-right: auto; 
 }
-
 /* ===================================================================== */
 /* === MEDIA QUERY PARA TABLETS Y DESKTOP === */
 /* ===================================================================== */
-/* Aumenta el tamaño del título en pantallas medianas y grandes */
 @media (min-width: 768px) {
   .contact-info-title {
-    font-size: 2.5rem; /* Tamaño más grande (40px) en tablets y desktop */
+    font-size: 2.5rem;
   }
 }

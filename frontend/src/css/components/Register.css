@@ -1,36 +1,33 @@
-/* frontend/src/css/components/Register.css */
-/* Estilos específicos para el componente de Register (registro de usuarios) */
+/* Estilos para el componente de Register */
 
 /* ===================================================================== */
 /* === CONTENEDOR DEL FORMULARIO DE REGISTRO === */
 /* ===================================================================== */
 .register-form-container {
-  width: 100%; /* Ancho completo del contenedor padre */
-  max-width: 28rem; /* Ancho máximo de 448px */
-  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
-  padding: 2rem; /* Espaciado interno generoso */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); /* Sombra para profundidad */
-  border: 2px solid var(--contrast-color); /* Borde con color de acento */
-  color: var(--sub-color); /* Color de texto según el tema */
+  width: 100%; 
+  max-width: 28rem; 
+  background-color: var(--dark-bg); 
+  padding: 2rem; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+  border: 2px solid var(--contrast-color); 
+  color: var(--sub-color); 
 }
-
 /* ===================================================================== */
 /* === TÍTULO DEL FORMULARIO === */
 /* ===================================================================== */
 .register-form-container h2 {
-  font-size: 1.875rem; /* Tamaño grande (30px) */
-  font-weight: 700; /* Texto en negrita */
-  text-align: center; /* Texto centrado */
-  margin-bottom: 1.5rem; /* Margen inferior */
-  color: var(--sub-color); /* Color de texto según el tema */
+  font-size: 1.875rem; 
+  font-weight: 700; 
+  text-align: center; 
+  margin-bottom: 1.5rem; 
+  color: var(--sub-color);
 }
-
 /* ===================================================================== */
 /* === FORMULARIO DE REGISTRO === */
 /* ===================================================================== */
 .register-form {
-  display: flex; /* Usa flexbox */
-  flex-direction: column; /* Elementos en columna */
-  gap: 1.5rem; /* Espaciado entre campos del formulario */
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.5rem; 
 }

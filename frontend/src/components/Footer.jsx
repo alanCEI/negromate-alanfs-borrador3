@@ -3,7 +3,6 @@ import "@/css/components/Footer.css";
 
 // Componente del Footer
 const Footer = () => {
-  // Tema actual y la función para alternarlo desde ThemeContext
   const { theme, toggleTheme } = useTheme();
 
   return (

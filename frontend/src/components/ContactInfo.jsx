@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "@/css/components/ContactInfo.css";
 
-// Componente de sección de llamada para contacto
+// Componente de sección para contacto
 const ContactInfo = () => {
   return (
     <section className="section contact-info-section">

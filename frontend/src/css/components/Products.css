@@ -1,79 +1,64 @@
-/* frontend/src/css/components/Products.css */
-/* Estilos para el componente Products (grid de categorías de productos) */
+/* Estilos para el componente Products */
 
 /* ===================================================================== */
 /* === SECCIÓN DE PRODUCTOS === */
 /* ===================================================================== */
-/* Contenedor de la sección de productos */
 .products-section {
-  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
-  color: var(--sub-color); /* Color de texto según el tema */
+  background-color: var(--dark-bg); 
+  color: var(--sub-color); 
 }
-
 /* ===================================================================== */
 /* === GRID DE PRODUCTOS === */
 /* ===================================================================== */
-/* Grid responsivo para mostrar las categorías de productos */
 .products-grid {
-  display: grid; /* Usa CSS Grid */
-  grid-template-columns: 1fr; /* Una columna en móvil (se ajusta con media queries) */
-  gap: 2rem; /* Espaciado entre tarjetas */
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 2rem; 
 }
-
 /* ===================================================================== */
 /* === TARJETA DE CATEGORÍA === */
 /* ===================================================================== */
-/* Tarjeta individual de categoría con imagen y efecto hover */
 .category-card {
-  display: block; /* Comportamiento de bloque */
-  position: relative; /* Permite posicionar el overlay de forma absoluta */
-  overflow: hidden; /* Oculta el desbordamiento de la imagen al hacer zoom */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); /* Sombra para profundidad */
-  aspect-ratio: 1 / 1; /* Mantiene proporción cuadrada (1:1) */
+  display: block; 
+  position: relative; 
+  overflow: hidden; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+  aspect-ratio: 1 / 1; 
 }
-
-/* === IMAGEN DE LA TARJETA === */
-/* Imagen de fondo de la categoría */
+/* IMAGEN DE LA TARJETA */
 .category-card-image {
-  width: 100%; /* Ancho completo */
-  height: 100%; /* Alto completo */
-  object-fit: cover; /* Cubre todo el contenedor manteniendo proporción */
-  transition: transform 0.5s ease; /* Transición suave para el efecto zoom */
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  transition: transform 0.5s ease; 
 }
-
-/* Efecto hover: zoom en la imagen */
+/* Hover */
 .category-card:hover .category-card-image {
-  transform: scale(1.1); /* Aumenta el tamaño al 110% */
+  transform: scale(1.1); 
 }
-
-/* === OVERLAY DE LA TARJETA === */
-/* Capa oscura semitransparente sobre la imagen */
+/* OVERLAY DE LA TARJETA */
 .category-card-overlay {
-  position: absolute; /* Posicionamiento absoluto para cubrir toda la tarjeta */
-  inset: 0; /* Cubre toda la tarjeta */
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con 60% de opacidad */
-  display: flex; /* Usa flexbox */
-  align-items: center; /* Centra verticalmente el título */
-  justify-content: center; /* Centra horizontalmente el título */
-  transition: background-color 0.3s ease; /* Transición suave del fondo */
+  position: absolute;
+  inset: 0; 
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  transition: background-color 0.3s ease; 
 }
-
-/* Efecto hover: overlay más oscuro */
+/* Hover */
 .category-card:hover .category-card-overlay {
-  background-color: rgba(0, 0, 0, 0.7); /* Aumenta opacidad al 70% */
+  background-color: rgba(0, 0, 0, 0.7); 
 }
-
-/* === TÍTULO DE LA TARJETA === */
-/* Título de la categoría mostrado sobre la imagen */
+/* TÍTULO DE LA TARJETA */
 .category-card-title {
-  font-size: 1.875rem; /* Tamaño grande (30px) */
-  font-weight: 700; /* Texto en negrita */
-  color: white; /* Color blanco para contraste */
-  transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+  font-size: 1.875rem; 
+  font-weight: 700; 
+  color: white; 
+  transition: transform 0.3s ease; 
 }
-
-/* Efecto hover: título ligeramente más grande */
+/* Hover */
 .category-card:hover .category-card-title {
-  transform: scale(1.05); /* Aumenta el tamaño al 105% */
+  transform: scale(1.05); 
 }

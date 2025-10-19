@@ -1,172 +1,142 @@
-/* frontend/src/css/pages/GraphicDesign.css */
 /* Estilos para la página de Graphic Design (diseño gráfico) */
 
 /* ===================================================================== */
 /* === LAYOUT DE LA GALERÍA === */
 /* ===================================================================== */
-/* Grid responsivo que organiza la sidebar y el área principal */
 .gallery-layout {
-  display: grid; /* Usa CSS Grid */
-  grid-template-columns: 1fr; /* Una columna en móvil (se ajusta con media queries) */
-  gap: 2rem; /* Espaciado entre columnas */
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 2rem; 
 }
-
 /* ===================================================================== */
 /* === SIDEBAR DE LA GALERÍA === */
 /* ===================================================================== */
-/* Barra lateral con la lista de proyectos/marcas */
 .gallery-sidebar {
-  display: flex; /* Usa flexbox */
-  flex-direction: column; /* Elementos en columna */
-  gap: 1rem; /* Espaciado entre items */
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
 }
-
-/* === ITEM DE LA GALERÍA (SIDEBAR) === */
-/* Cada proyecto/marca en la sidebar */
+/* ITEM DE LA GALERÍA (SIDEBAR) */
 .gallery-item {
-  cursor: pointer; /* Cursor de puntero al pasar el mouse */
-  padding: 1rem; /* Espaciado interno */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  transition: all 0.2s ease-in-out; /* Transiciones suaves */
-  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
+  cursor: pointer; 
+  padding: 1rem; 
+  border-radius: 0.5rem; 
+  transition: all 0.2s ease-in-out; 
+  background-color: var(--dark-bg); 
 }
-
-/* Estado hover del item */
+/* Hover */
 .gallery-item:hover {
-  background-color: #4a4a4a; /* Gris más claro que dark-bg */
+  background-color: #4a4a4a; 
 }
-
 /* Estado seleccionado del item */
 .gallery-item.selected {
-  background-color: var(--contrast-color); /* Fondo con color de acento */
-  color: var(--main-color); /* Color de texto invertido para contraste */
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); /* Sombra para profundidad */
+  background-color: var(--contrast-color); 
+  color: var(--main-color); 
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
 }
-
 /* Nombre de la marca/proyecto en el item */
 .gallery-item-brand {
-  font-weight: 700; /* Texto en negrita */
-  font-size: 1.125rem; /* Tamaño mediano (18px) */
+  font-weight: 700; 
+  font-size: 1.125rem; 
 }
-
 /* ===================================================================== */
 /* === ÁREA PRINCIPAL DE LA GALERÍA === */
 /* ===================================================================== */
-/* Área que muestra la imagen y detalles del proyecto seleccionado */
 .gallery-main {
-  position: sticky; /* Se mantiene fijo al hacer scroll */
-  top: 6rem; /* Pegado a 6rem desde arriba (debajo del header) */
-  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
-  padding: 1.5rem; /* Espaciado interno */
-  border-radius: 0.5rem; /* Bordes redondeados */
+  position: sticky; 
+  top: 6rem; 
+  background-color: var(--dark-bg); 
+  padding: 1.5rem; 
+  border-radius: 0.5rem; 
 }
-
-/* === IMAGEN PRINCIPAL === */
-/* Imagen del proyecto seleccionado */
+/* IMAGEN PRINCIPAL */
 .gallery-main-image {
-  width: 100%; /* Ancho completo */
-  height: auto; /* Alto automático para mantener proporción */
-  object-fit: cover; /* Cubre el contenedor manteniendo proporción */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  margin-bottom: 1rem; /* Margen inferior */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  border-radius: 0.5rem; 
+  margin-bottom: 1rem; 
 }
-
-/* === NOMBRE DE LA MARCA PRINCIPAL === */
-/* Nombre del proyecto mostrado en el área principal */
+/* NOMBRE DE LA MARCA PRINCIPAL */
 .gallery-main-brand {
-  font-size: 1.5rem; /* Tamaño grande (24px) */
-  font-weight: 700; /* Texto en negrita */
-  color: var(--contrast-color); /* Color de acento */
-  margin-bottom: 0.5rem; /* Margen inferior */
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  color: var(--contrast-color); 
+  margin-bottom: 0.5rem; 
 }
-
 /* ===================================================================== */
 /* === SECCIÓN DE TARJETAS DE PRECIOS === */
 /* ===================================================================== */
 .price-card-section {
-  background-color: var(--dark-bg); /* Fondo alternativo según el tema */
+  background-color: var(--dark-bg); 
 }
-
-/* === GRID DE TARJETAS DE PRECIOS === */
-/* Grid que organiza las tarjetas de precios de servicios */
+/* GRID DE TARJETAS DE PRECIOS */
 .price-cards-grid {
-  display: grid; /* Usa CSS Grid */
-  grid-template-columns: 1fr; /* Una columna en móvil (se ajusta con media queries) */
-  gap: 2rem; /* Espaciado entre tarjetas */
-  max-width: 72rem; /* Ancho máximo de 1152px */
-  margin: 0 auto; /* Centra horizontalmente */
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 2rem; 
+  max-width: 72rem; 
+  margin: 0 auto; 
 }
-
 /* ===================================================================== */
 /* === TARJETA DE PRECIO === */
 /* ===================================================================== */
-/* Tarjeta individual con información de un servicio/paquete */
 .price-card {
-  background-color: var(--main-color); /* Fondo principal según el tema */
-  padding: 2rem; /* Espaciado interno generoso */
-  border-radius: 0.5rem; /* Bordes redondeados */
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); /* Sombra para profundidad */
-  display: flex; /* Usa flexbox */
-  flex-direction: column; /* Elementos en columna */
-  border: 2px solid var(--contrast-color); /* Borde con color de acento */
+  background-color: var(--main-color); 
+  padding: 2rem; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); 
+  display: flex; 
+  flex-direction: column; 
+  border: 2px solid var(--contrast-color); 
 }
-
-/* === NOMBRE DEL PAQUETE === */
+/* NOMBRE DEL PAQUETE */
 .price-card-name {
-  font-size: 1.5rem; /* Tamaño grande (24px) */
-  font-weight: 700; /* Texto en negrita */
-  color: var(--contrast-color); /* Color de acento */
-  margin-bottom: 1rem; /* Margen inferior */
-  text-align: center; /* Texto centrado */
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  color: var(--contrast-color);
+  margin-bottom: 1rem; 
+  text-align: center; 
 }
-
-/* === DESCRIPCIÓN DEL PAQUETE === */
+/* DESCRIPCIÓN DEL PAQUETE */
 .price-card-description {
-  text-align: center; /* Texto centrado */
-  margin-bottom: 1.5rem; /* Margen inferior */
-  color: var(--sub-contrast); /* Color de acento secundario */
+  text-align: center;
+  margin-bottom: 1.5rem; 
+  color: var(--sub-contrast); 
 }
-
-/* === PRECIO === */
-/* Precio del servicio destacado */
+/* PRECIO */
 .price-card-price {
-  font-size: 3rem; /* Tamaño muy grande (48px) */
-  font-weight: 700; /* Texto en negrita */
-  text-align: center; /* Texto centrado */
-  margin-bottom: 1.5rem; /* Margen inferior */
-  color: var(--contrast-color); /* Color de acento */
+  font-size: 3rem; 
+  font-weight: 700; 
+  text-align: center; 
+  margin-bottom: 1.5rem;
+  color: var(--contrast-color); 
 }
-
-/* === LISTA DE DETALLES === */
-/* Lista de características/beneficios del servicio */
+/* LISTA DE DETALLES */
 .price-card-details {
-  list-style: none; /* Sin viñetas */
-  margin-bottom: 2rem; /* Margen inferior */
-  flex-grow: 1; /* Crece para ocupar espacio disponible (empuja el botón al final) */
-  display: flex; /* Usa flexbox */
-  flex-direction: column; /* Elementos en columna */
-  gap: 0.75rem; /* Espaciado entre items */
+  list-style: none; 
+  margin-bottom: 2rem; 
+  flex-grow: 1; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.75rem; 
 }
-
 /* Cada item de la lista de detalles */
 .price-card-details li {
-  display: flex; /* Usa flexbox */
-  align-items: flex-start; /* Alinea elementos al inicio verticalmente */
+  display: flex; 
+  align-items: flex-start;
 }
-
-/* Icono check (SVG) antes de cada detalle */
+/* Icono check (SVG) */
 .price-card-details svg {
-  width: 1.25rem; /* Ancho fijo (20px) */
-  height: 1.25rem; /* Alto fijo (20px) */
-  color: var(--contrast-color); /* Color de acento */
-  margin-right: 0.5rem; /* Margen derecho */
-  flex-shrink: 0; /* Evita que el icono se reduzca */
-  margin-top: 0.25rem; /* Margen superior para alineación */
+  width: 1.25rem; 
+  height: 1.25rem; 
+  color: var(--contrast-color); 
+  margin-right: 0.5rem; 
+  flex-shrink: 0; 
+  margin-top: 0.25rem; 
 }
-
-/* === BOTÓN DE ACCIÓN === */
-/* Botón "Agregar al carrito" dentro de la tarjeta */
+/* BOTÓN DE ACCIÓN */
 .price-card .button {
-  margin-top: auto; /* Empuja el botón al final de la tarjeta */
-  width: 100%; /* Ancho completo */
+  margin-top: auto; 
+  width: 100%;
 }
