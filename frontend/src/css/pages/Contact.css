@@ -48,30 +48,30 @@
   gap: 1.5rem; 
 }
 /* ETIQUETAS DEL FORMULARIO */
-.contact-form .form-group label {
+.contact-form label {
   display: block;
-  font-size: 0.875rem; 
-  font-weight: 500; 
-  margin-bottom: 0.25rem; 
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
 }
 /* INPUTS Y TEXTAREAS */
-.contact-form .form-group input,
-.contact-form .form-group textarea {
-  margin-top: 0.25rem; 
-  display: block; 
-  width: 100%; 
-  padding: 0.5rem 0.75rem; 
+.contact-form input,
+.contact-form textarea {
+  margin-top: 0.25rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
   background-color: white;
   border: 1px solid #D1D5DB;
-  border-radius: 0.375rem; 
-  color: var(--sub-color); 
+  border-radius: 0.375rem;
+  color: var(--sub-color);
 }
 /* Estado focus de inputs y textareas */
-.contact-form .form-group input:focus,
-.contact-form .form-group textarea:focus {
-  outline: none; 
-  border-color: var(--sub-contrast); 
-  box-shadow: 0 0 0 2px var(--sub-contrast); 
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--sub-contrast);
+  box-shadow: 0 0 0 2px var(--sub-contrast);
 }
 /* FIELDSET Y LEGEND */
 .contact-form .fieldset legend {
