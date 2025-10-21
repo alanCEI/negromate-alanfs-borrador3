@@ -143,47 +143,16 @@
 }
 /* Contador de productos en el carrito (móvil) */
 .cart-count-mobile {
-  position: absolute; 
-  top: 0; 
-  right: 0; 
-  width: 1rem; 
-  height: 1rem; 
-  font-size: 0.75rem; 
-  color: white; 
-  background-color: #ef4444; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.75rem;
+  color: white;
+  background-color: #ef4444;
   border-radius: 9999px;
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-}
-/* ===================================================================== */
-/* === MEDIA QUERY PARA PANTALLAS PEQUEÑAS === */
-/* ===================================================================== */
-@media (max-width: 768px) {
-  /* Mantiene el tamaño del icono del carrito en móvil */
-  .cart-icon {
-    height: 1.75rem; 
-    width: 1.75rem; 
-    min-height: 1.75rem; 
-    min-width: 1.75rem; 
-  }
-  /* Evita que el enlace del carrito se reduzca en pantallas pequeñas */
-  .cart-link {
-    flex-shrink: 0;
-  }
-  /* Mantiene el tamaño del icono hamburguesa en móvil */
-  .menu-icon {
-    height: 2rem; 
-    width: 2rem; 
-    min-height: 2rem; 
-    min-width: 2rem; 
-  }
-  /* Evita que el botón de menú móvil se reduzca */
-  .mobile-menu-button {
-    flex-shrink: 0;
-  }
-  /* Evita que el contenedor del menú móvil se reduzca */
-  .mobile-menu-container {
-    flex-shrink: 0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -66,6 +66,7 @@ const Contact = () => {
               value={formData.user}
               onChange={handleChange}
               required
+              className="contact-form-input"
             />
           </div>
           {/* Campo email */}
@@ -78,6 +79,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              className="contact-form-input"
             />
           </div>
           {/* Campo teléfono */}
@@ -89,6 +91,7 @@ const Contact = () => {
               name="tel"
               value={formData.tel}
               onChange={handleChange}
+              className="contact-form-input"
             />
           </div>
           {/* Botones para seleccionar tipo de cliente */}
@@ -131,6 +134,7 @@ const Contact = () => {
               value={formData.info}
               onChange={handleChange}
               placeholder="Coméntanos brevemente sobre tu proyecto..."
+              className="contact-form-input"
             ></textarea>
           </div>
           {/* Botón de envío */}

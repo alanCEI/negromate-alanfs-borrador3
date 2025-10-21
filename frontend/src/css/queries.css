@@ -79,3 +79,48 @@
         max-width: 1800px;
     }
 }
+/* ===================================================================== */
+/* === MEDIA QUERIES DE COMPONENTES === */
+/* ===================================================================== */
+
+/* Header - Pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Mantiene el tamaño del icono del carrito en móvil */
+  .cart-icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    min-height: 1.75rem;
+    min-width: 1.75rem;
+  }
+  /* Evita que el enlace del carrito se reduzca en pantallas pequeñas */
+  .cart-link {
+    flex-shrink: 0;
+  }
+  /* Mantiene el tamaño del icono hamburguesa en móvil */
+  .menu-icon {
+    height: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+  /* Evita que el botón de menú móvil se reduzca */
+  .mobile-menu-button {
+    flex-shrink: 0;
+  }
+  /* Evita que el contenedor del menú móvil se reduzca */
+  .mobile-menu-container {
+    flex-shrink: 0;
+  }
+}
+
+/* Hero - Tablets y Desktop */
+@media (min-width: 768px) {
+  .hero-logo {
+    width: 20rem;
+    height: 20rem;
+  }
+  /* ContactInfo - Título más grande en tablets y desktop */
+  .contact-info-title {
+    font-size: 2.5rem;
+  }
+}

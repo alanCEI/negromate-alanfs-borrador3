@@ -44,20 +44,20 @@
 /* ===================================================================== */
 /* === INPUTS DEL FORMULARIO === */
 /* ===================================================================== */
-.login-form .form-group input {
-  margin-top: 0.25rem; 
-  display: block; 
-  width: 100%; 
-  padding: 0.5rem 0.75rem; 
-  background-color: white; 
-  border: 1px solid var(--border-color); 
-  border-radius: 0.375rem; 
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); 
-  color: var(--dark-bg); 
+.login-form-input {
+  margin-top: 0.25rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+  color: var(--dark-bg);
 }
-/* Estado focus de los inputs */
-.login-form .form-group input:focus {
-  outline: none; 
-  border-color: var(--sub-contrast); 
-  box-shadow: 0 0 0 2px var(--sub-contrast); 
+/* Estado focus de los inputs - Usa clase de utilidad */
+.login-form-input:focus {
+  outline: none;
+  border-color: var(--sub-contrast);
+  box-shadow: 0 0 0 2px var(--sub-contrast);
 }

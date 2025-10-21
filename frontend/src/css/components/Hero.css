@@ -40,19 +40,10 @@
 /* === LOGO DEL HERO === */
 /* ===================================================================== */
 .hero-logo {
-  width: 16rem; 
-  height: 16rem; 
-  object-fit: contain; 
-  border: 4px solid #DFFF00; 
-  border-radius: 9999px; 
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
-}
-/* ===================================================================== */
-/* === MEDIA QUERY PARA TABLETS Y DESKTOP === */
-/* ===================================================================== */
-@media (min-width: 768px) {
-  .hero-logo {
-    width: 20rem; 
-    height: 20rem; 
-  }
+  width: 16rem;
+  height: 16rem;
+  object-fit: contain;
+  border: 4px solid #DFFF00;
+  border-radius: 9999px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }

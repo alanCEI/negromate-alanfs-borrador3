@@ -52,8 +52,8 @@
 }
 /* Último item sin borde inferior */
 .cart-item:last-child {
-  border-bottom: none; 
-  padding-bottom: 0; /
+  border-bottom: none;
+  padding-bottom: 0;
 }
 /* INFORMACIÓN DEL ITEM */
 .cart-item-info {
@@ -76,8 +76,8 @@
 }
 /* Información adicional del producto */
 .cart-item-details p {
-  font-size: 0.875rem; 
-  color: #9CA3AF; /
+  font-size: 0.875rem;
+  color: #9CA3AF;
 }
 /* ACCIONES DEL ITEM */
 .cart-item-actions {

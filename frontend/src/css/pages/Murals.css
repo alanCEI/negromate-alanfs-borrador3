@@ -12,11 +12,11 @@
 /* === ITEM DE LA GALERÍA === */
 /* ===================================================================== */
 .murals-gallery-item {
-    position: relative; 
+    position: relative;
     overflow: hidden;
-    border-radius: 0.5rem; 
-    cursor: pointer; 
-    aspect-ratio: 16 / 9; /
+    border-radius: 0.5rem;
+    cursor: pointer;
+    aspect-ratio: 16 / 9;
 }
 /* IMAGEN DEL ITEM */
 .murals-gallery-item-image {
