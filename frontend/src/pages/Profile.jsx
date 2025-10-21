@@ -13,22 +13,22 @@ const Profile = () => {
   const [showLogin, setShowLogin] = useState(true);
 
   return (
-    <section className="section profile-page">
-      <div className="container profile-container">
+    <section className="section ProfilePage">
+      <div className="container ProfilePage-container">
         <div className="w-full max-w-md">
           {/* Botones para cambiar entre Login y Register */}
-          <div className="profile-toggle-buttons">
+          <div className="ProfilePage-toggleButtons">
             {/* Botón para mostrar Login cuando showLogin es true */}
             <button
               onClick={() => setShowLogin(true)}
-              className={`toggle-button ${showLogin ? "active" : ""}`}
+              className={`ToggleButton ${showLogin ? "is-active" : ""}`}
             >
               Iniciar Sesión
             </button>
             {/* Botón para mostrar Register cuando showLogin es false */}
             <button
               onClick={() => setShowLogin(false)}
-              className={`toggle-button ${!showLogin ? "active" : ""}`}
+              className={`ToggleButton ${!showLogin ? "is-active" : ""}`}
             >
               Registrarse
             </button>

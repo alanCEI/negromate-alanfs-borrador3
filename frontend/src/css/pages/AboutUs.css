@@ -1,62 +1,75 @@
-/* About Us (Sobre Nosotros) */
+/* About Us (Sobre Nosotros) - SUIT CSS */
 
 /* ===================================================================== */
 /* === PÁRRAFO PRINCIPAL DE ABOUT US === */
 /* ===================================================================== */
-/* Usa clases de utilidad: text-center max-w-4xl leading-relaxed bg-sub p-8 rounded-lg shadow-lg */
-.about-us-main-paragraph {
+.AboutUs-mainParagraph {
   margin: 0 auto 4rem auto;
   color: var(--main-color);
   border: 4px solid var(--contrast-color);
+  text-align: center;
+  max-width: 64rem;
+  line-height: 1.75;
+  background-color: var(--sub-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 /* ===================================================================== */
 /* === CONTENIDO DE ABOUT US === */
 /* ===================================================================== */
-.about-us-content {
-  display: grid; 
-  grid-template-columns: 1fr; 
-  gap: 2rem; 
-  max-width: 72rem; 
-  margin: 0 auto; 
+.AboutUs-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
 }
 /* ===================================================================== */
 /* === FIGURA DEL ARTISTA === */
 /* ===================================================================== */
-.artist-figure {
+.Artist-figure {
   max-width: 28rem;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 /* IMAGEN DEL ARTISTA */
-.artist-image {
-  border-radius: 0.5rem; 
-  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); 
-  width: 100%; 
-  border: 4px solid var(--contrast-color); 
+.Artist-image {
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2);
+  width: 100%;
+  border: 4px solid var(--contrast-color);
 }
 /* CAPTION */
-.artist-figcaption {
-  text-align: center; 
-  margin-top: 1rem; 
-  display: flex; 
-  justify-content: space-around; 
-  color: var(--sub-color); 
+.Artist-figcaption {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  color: var(--sub-color);
 }
 /* Hover de los enlaces en el caption */
-.artist-figcaption a:hover {
-  color: var(--contrast-color); 
+.Artist-figcaption a:hover {
+  color: var(--contrast-color);
 }
 /* ===================================================================== */
 /* === INFORMACIÓN DEL ARTISTA === */
 /* ===================================================================== */
-/* Usa clases de utilidad: bg-dark p-8 rounded-lg flex flex-col gap-6 */
+.Artist-info {
+  background-color: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 /* TÍTULO DE LA INFORMACIÓN */
-.artist-info-title {
-  font-size: 1.875rem; 
-  font-weight: 700; 
-  text-align: center; 
-  color: var(--contrast-color); 
+.Artist-infoTitle {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--contrast-color);
 }
 /* PÁRRAFOS DE INFORMACIÓN */
-.artist-info p {
-  line-height: 1.75; 
+.Artist-info p {
+  line-height: 1.75;
 }

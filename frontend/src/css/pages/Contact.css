@@ -1,54 +1,53 @@
-/* Estilos para la página de Contact */
+/* Estilos para la página de Contact - SUIT CSS */
 
 /* ===================================================================== */
 /* === PÁGINA DE CONTACTO === */
 /* ===================================================================== */
-.contact-page {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  min-height: calc(100vh - 200px); 
+.ContactPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
 }
 /* ===================================================================== */
 /* === CONTENEDOR DEL CONTACTO === */
 /* ===================================================================== */
-.contact-container {
-  max-width: 42rem; /* Ancho máximo de 672px */
+.ContactPage-container {
+  max-width: 42rem;
 }
 /* ===================================================================== */
 /* === ENCABEZADO DEL CONTACTO === */
 /* ===================================================================== */
-.contact-header {
-  text-align: center; 
+.ContactPage-header {
+  text-align: center;
   margin-bottom: 2rem;
 }
 /* Título principal (h1) */
-.contact-header h1 {
-  font-size: 2.5rem; 
-  font-weight: 700; 
-  margin-bottom: 0.5rem; 
-  color: var(--contrast-color); 
+.ContactPage-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--contrast-color);
 }
 /* Párrafo descriptivo */
-.contact-header p {
-  font-size: 1.125rem; 
+.ContactPage-header p {
+  font-size: 1.125rem;
 }
 /* ===================================================================== */
 /* === FORMULARIO DE CONTACTO === */
 /* ===================================================================== */
-/* Usa clases de utilidad: bg-sub p-8 rounded-lg shadow-lg border-accent flex flex-col gap-6 */
-.contact-form {
+.ContactForm {
   color: var(--dark-bg);
 }
 /* ETIQUETAS DEL FORMULARIO */
-.contact-form .form-group label {
+.ContactForm .form-group label {
   display: block;
-  font-size: 0.875rem; 
-  font-weight: 500; 
-  margin-bottom: 0.25rem; 
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
 }
 /* INPUTS Y TEXTAREAS */
-.contact-form-input {
+.ContactForm-input {
   margin-top: 0.25rem;
   display: block;
   width: 100%;
@@ -58,50 +57,50 @@
   border-radius: 0.375rem;
   color: var(--sub-color);
 }
-/* Estado focus de inputs y textareas - Usa clase de utilidad */
-.contact-form-input:focus {
+/* Estado focus de inputs y textareas */
+.ContactForm-input:focus {
   outline: none;
   border-color: var(--sub-contrast);
   box-shadow: 0 0 0 2px var(--sub-contrast);
 }
 /* FIELDSET Y LEGEND */
-.contact-form .fieldset legend {
-  font-size: 0.875rem; 
-  font-weight: 500; 
-  margin-bottom: 0.5rem; 
+.ContactForm .fieldset legend {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 /* GRUPO DE RADIO BUTTONS */
-.contact-form .radio-group {
+.ContactForm .radio-group {
   display: flex;
   gap: 1rem;
 }
 /* ETIQUETAS DE RADIO */
-.contact-form .radio-label {
+.ContactForm .radio-label {
   display: flex;
-  align-items: center; 
-  gap: 0.5rem; 
+  align-items: center;
+  gap: 0.5rem;
 }
 /* ===================================================================== */
 /* === MENSAJE DE ÉXITO === */
 /* ===================================================================== */
-.contact-success-message {
-  min-height: calc(100vh - 200px); 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  text-align: center; 
+.ContactPage-successMessage {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 /* Caja del mensaje de éxito */
-.contact-success-box {
-  background-color: var(--dark-bg); 
-  padding: 2rem; 
-  border-radius: 0.5rem; 
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+.ContactPage-successBox {
+  background-color: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
 }
 /* Título del mensaje de éxito */
-.contact-success-box h2 {
-  font-size: 1.875rem; 
-  font-weight: 700; 
-  color: var(--contrast-color); 
-  margin-bottom: 1rem; 
+.ContactPage-successBox h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--contrast-color);
+  margin-bottom: 1rem;
 }

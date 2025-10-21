@@ -1,41 +1,41 @@
-/* Media Queries */
+/* Media Queries - SUIT CSS */
 
 /* ===================================================================== */
 /* === MÓVILES (320px - 480px) === */
 /* ===================================================================== */
 @media (min-width: 320px) and (max-width: 480px) {
-    .section-title {
+    .Section-title {
         font-size: 2rem;
     }
-    .footer-content, .about-us-content {
-        flex-direction: column; 
-        gap: 1.5rem; 
-        text-align: center; 
+    .Footer-content, .AboutUs-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
     }
 }
 /* ===================================================================== */
 /* === MENÚ MÓVIL (hasta 960px) === */
 /* ===================================================================== */
 @media (max-width: 960px) {
-    .header .desktop-nav {
+    .Header .Header-desktopNav {
         display: none;
     }
-    .header .mobile-menu-container {
+    .Header .Header-mobileMenuContainer {
         display: flex;
     }
-    .header .mobile-nav {
-        display: flex; 
+    .Header .Header-mobileNav {
+        display: flex;
         flex-direction: column;
-        align-items: center; 
-        width: 100%; 
-        position: absolute; 
-        top: 100%; 
-        left: 0; 
-        background-color: var(--main-color); 
-        padding: 1rem 0; 
-        gap: 0.5rem; 
-        border-bottom: 1px solid var(--dark-bg); 
-        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--main-color);
+        padding: 1rem 0;
+        gap: 0.5rem;
+        border-bottom: 1px solid var(--dark-bg);
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         z-index: 100;
     }
 }
@@ -43,32 +43,32 @@
 /* === TABLETS (768px - 1023px) === */
 /* ===================================================================== */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .products-grid, .gallery-grid, .price-grid {
+    .Products-grid, .ClothingGallery-grid, .MuralsGallery-grid, .PriceCards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .shopping-cart-layout, .graphic-design-layout, .about-us-content {
-       grid-template-columns: 1fr; 
+    .CartPage-layout, .Gallery-layout, .AboutUs-content {
+       grid-template-columns: 1fr;
     }
 }
 /* ===================================================================== */
 /* === LAPTOPS Y DESKTOPS (desde 1024px) === */
 /* ===================================================================== */
 @media (min-width: 1024px) {
-   .products-grid, .gallery-grid, .price-grid {
-        grid-template-columns: repeat(3, 1fr); 
+   .Products-grid, .ClothingGallery-grid, .MuralsGallery-grid, .PriceCards-grid {
+        grid-template-columns: repeat(3, 1fr);
    }
-   .about-us-content {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 3rem; 
-        align-items: center; 
+   .AboutUs-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        align-items: center;
    }
 }
 /* ===================================================================== */
 /* === DESKTOPS GRANDES (desde 1328px) === */
 /* ===================================================================== */
 @media (min-width: 1328px) {
-    .section-title {
-        font-size: 3rem; 
+    .Section-title {
+        font-size: 3rem;
     }
 }
 /* ===================================================================== */
@@ -86,41 +86,41 @@
 /* Header - Pantallas pequeñas */
 @media (max-width: 768px) {
   /* Mantiene el tamaño del icono del carrito en móvil */
-  .cart-icon {
+  .Header-cartIcon {
     height: 1.75rem;
     width: 1.75rem;
     min-height: 1.75rem;
     min-width: 1.75rem;
   }
   /* Evita que el enlace del carrito se reduzca en pantallas pequeñas */
-  .cart-link {
+  .Header-cartLink {
     flex-shrink: 0;
   }
   /* Mantiene el tamaño del icono hamburguesa en móvil */
-  .menu-icon {
+  .Header-menuIcon {
     height: 2rem;
     width: 2rem;
     min-height: 2rem;
     min-width: 2rem;
   }
   /* Evita que el botón de menú móvil se reduzca */
-  .mobile-menu-button {
+  .Header-mobileMenuButton {
     flex-shrink: 0;
   }
   /* Evita que el contenedor del menú móvil se reduzca */
-  .mobile-menu-container {
+  .Header-mobileMenuContainer {
     flex-shrink: 0;
   }
 }
 
 /* Hero - Tablets y Desktop */
 @media (min-width: 768px) {
-  .hero-logo {
+  .Hero-logo {
     width: 20rem;
     height: 20rem;
   }
   /* ContactInfo - Título más grande en tablets y desktop */
-  .contact-info-title {
+  .ContactInfo-title {
     font-size: 2.5rem;
   }
 }

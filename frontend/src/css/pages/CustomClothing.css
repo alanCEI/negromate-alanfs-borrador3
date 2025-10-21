@@ -1,78 +1,89 @@
-/* Estilos para la página de Custom Clothing (ropa personalizada) */
+/* Estilos para la página de Custom Clothing (ropa personalizada) - SUIT CSS */
 
 /* ===================================================================== */
 /* === GRID DE LA GALERÍA DE ROPA === */
 /* ===================================================================== */
-.clothing-gallery-grid {
-    display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
-    gap: 1.5rem; 
+.ClothingGallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 /* ===================================================================== */
 /* === ITEM DE LA GALERÍA === */
 /* ===================================================================== */
-.clothing-gallery-item {
-    position: relative; 
-    overflow: hidden; 
-    border-radius: 0.5rem; 
-    cursor: pointer; 
-    aspect-ratio: 4 / 5; 
+.ClothingGalleryItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  aspect-ratio: 4 / 5;
 }
 /* IMAGEN DEL ITEM */
-.clothing-gallery-item-image {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    transition: transform 0.3s ease; 
+.ClothingGalleryItem-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 /* Hover */
-.clothing-gallery-item:hover .clothing-gallery-item-image {
-    transform: scale(1.05); 
+.ClothingGalleryItem:hover .ClothingGalleryItem-image {
+  transform: scale(1.05);
 }
 /* OVERLAY DEL ITEM */
-/* Usa clases de utilidad: absolute inset-0 transition-opacity flex flex-col p-4 */
-.clothing-gallery-item-overlay {
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    opacity: 0;
-    justify-content: flex-end;
+.ClothingGalleryItem-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: flex-end;
+  transition: opacity 0.3s ease;
 }
 /* Hover */
-.clothing-gallery-item:hover .clothing-gallery-item-overlay {
-    opacity: 1;
+.ClothingGalleryItem:hover .ClothingGalleryItem-overlay {
+  opacity: 1;
 }
 /* TÍTULO DEL ITEM */
-.clothing-gallery-item-title {
-    color: white; 
-    font-size: 1.25rem; 
-    font-weight: 700; 
-    transform: translateY(1rem); 
-    transition: transform 0.3s ease; 
+.ClothingGalleryItem-title {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  transform: translateY(1rem);
+  transition: transform 0.3s ease;
 }
 /* Hover */
-.clothing-gallery-item:hover .clothing-gallery-item-title {
-    transform: translateY(0); 
+.ClothingGalleryItem:hover .ClothingGalleryItem-title {
+  transform: translateY(0);
 }
 /* === DESCRIPCIÓN DEL ITEM === */
-.clothing-gallery-item-desc {
-    color: white; 
-    opacity: 0; 
-    transition: opacity 0.3s ease 0.1s; 
+.ClothingGalleryItem-description {
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.1s;
 }
 /* Hover */
-.clothing-gallery-item:hover .clothing-gallery-item-desc {
-    opacity: 1; 
+.ClothingGalleryItem:hover .ClothingGalleryItem-description {
+  opacity: 1;
 }
 /* ===================================================================== */
 /* === MODAL DE IMAGEN === */
 /* ===================================================================== */
-/* Usa clases de utilidad: fixed inset-0 z-100 flex items-center justify-center p-4 */
-.modal-overlay {
-    background-color: rgba(0,0,0,0.8);
+.Modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(0,0,0,0.8);
 }
 /* IMAGEN DEL MODAL */
-.modal-image {
-    max-width: 90%; 
-    max-height: 90%; 
-    object-fit: contain; 
-    border-radius: 0.5rem; 
+.Modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 0.5rem;
 }

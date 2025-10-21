@@ -1,27 +1,27 @@
-/* Estilos para contenedores de formularios */
+/* Estilos para contenedores de formularios - SUIT CSS */
 
 /* ===================================================================== */
 /* === CONTENEDOR DEL FORMULARIO === */
 /* ===================================================================== */
 /* Usa clases de utilidad: w-full max-w-md bg-dark p-8 rounded-lg shadow-lg border-accent text-sub transition-colors */
-.form-container {
+.FormContainer {
   transition: border-color 0.3s;
 }
 /* ===================================================================== */
 /* === TÍTULO DEL FORMULARIO === */
 /* ===================================================================== */
-.form-container h2 {
-  font-size: 1.875rem; 
-  font-weight: 700; 
-  text-align: center; 
-  margin-bottom: 1.5rem; 
-  color: var(--sub-color); 
+.FormContainer h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--sub-color);
 }
 /* ===================================================================== */
 /* === FORMULARIO === */
 /* ===================================================================== */
-.form {
-  display: flex; 
-  flex-direction: column; 
-  gap: 1.5rem; 
+.Form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }

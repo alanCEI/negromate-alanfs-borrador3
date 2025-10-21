@@ -39,12 +39,12 @@ const Register = () => {
   };
 
   return (
-    <div className="form-container w-full max-w-md bg-dark p-8 rounded-lg shadow-lg border-accent text-sub">
+    <div className="FormContainer w-full max-w-md bg-dark p-8 rounded-lg shadow-lg border-accent text-sub">
       <h2 className="text-3xl font-bold text-center mb-6 text-sub">Crear Cuenta</h2>
       {/* Mensaje de error si existe */}
-      {error && <p className="error-message">{error}</p>}
+      {error && <p className="ErrorMessage">{error}</p>}
       {/* Formulario */}
-      <form onSubmit={handleSubmit} className="form flex flex-col gap-6">
+      <form onSubmit={handleSubmit} className="Form flex flex-col gap-6">
         {/* Campo de nombre de usuario */}
         <div className="form-group">
           <label htmlFor="register-username">Nombre de Usuario</label>

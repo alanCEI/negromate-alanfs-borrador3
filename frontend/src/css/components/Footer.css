@@ -1,70 +1,70 @@
-/* Estilos para el componente Footer */
+/* Estilos para el componente Footer - SUIT CSS */
 
 /* ===================================================================== */
 /* === CONTENEDOR PRINCIPAL DEL FOOTER === */
 /* ===================================================================== */
-.footer {
-  background-color: var(--dark-bg); 
-  color: var(--sub-color); 
-  padding: 1.5rem 0; 
-  margin-top: auto; 
+.Footer {
+  background-color: var(--dark-bg);
+  color: var(--sub-color);
+  padding: 1.5rem 0;
+  margin-top: auto;
 }
 /* ===================================================================== */
 /* === LÍNEA DIVISORIA DEL FOOTER === */
 /* ===================================================================== */
-.footer-divider {
-  border-color: var(--contrast-color); 
-  margin-bottom: 1.5rem; 
+.Footer-divider {
+  border-color: var(--contrast-color);
+  margin-bottom: 1.5rem;
 }
 /* ===================================================================== */
 /* === CONTENIDO DEL FOOTER === */
 /* ===================================================================== */
-.footer-content {
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  flex-wrap: wrap; 
-  gap: 1rem; 
+.Footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 /* ===================================================================== */
 /* === TEXTO DE COPYRIGHT === */
 /* ===================================================================== */
-.footer-copy {
-  font-size: 0.875rem; 
-  text-align: center; 
+.Footer-copy {
+  font-size: 0.875rem;
+  text-align: center;
 }
 /* ===================================================================== */
 /* === ENLACES DEL FOOTER === */
 /* ===================================================================== */
-.footer-links {
-  display: flex; 
-  align-items: center; 
-  gap: 1rem; 
-  flex-wrap: wrap; 
-  justify-content: center; 
+.Footer-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 /* Estilos para los enlaces dentro del footer */
-.footer-links a {
-  transition: color 0.2s; 
+.Footer-links a {
+  transition: color 0.2s;
 }
 /* Estado hover de los enlaces del footer */
-.footer-links a:hover {
-  color: var(--contrast-color); 
+.Footer-links a:hover {
+  color: var(--contrast-color);
 }
 /* ===================================================================== */
 /* === BOTÓN DE CAMBIO DE TEMA === */
 /* ===================================================================== */
-.theme-toggle-button {
-  border: 1px solid var(--contrast-color); 
-  color: #B91C1C; 
-  border-radius: 0.5rem; 
-  padding: 0.5rem 1rem; 
-  font-size: 0.875rem; 
-  font-family: 'Spartan', sans-serif; 
-  transition: background-color 0.2s, color 0.2s; 
+.Footer-themeToggleButton {
+  border: 1px solid var(--contrast-color);
+  color: #B91C1C;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-family: 'Spartan', sans-serif;
+  transition: background-color 0.2s, color 0.2s;
 }
 /* Estado hover del botón de cambio de tema */
-.theme-toggle-button:hover {
-  background-color: var(--main-color); 
-  color: var(--contrast-color); 
+.Footer-themeToggleButton:hover {
+  background-color: var(--main-color);
+  color: var(--contrast-color);
 }

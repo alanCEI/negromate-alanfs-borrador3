@@ -28,29 +28,29 @@ const productCategories = [
  */
 const Products = () => {
   return (
-    <section className="section products-section">
+    <section className="section Products">
       <div className="container">
         {/* Título */}
-        <h2 className="section-title">Nuestros Servicios</h2>
+        <h2 className="Section-title">Nuestros Servicios</h2>
         {/* Grid de tarjetas */}
-        <div className="products-grid">
+        <div className="Products-grid">
           {/* Generamos las tarjetas dinámicamente */}
           {productCategories.map((category) => (
             // Link que envuelve cada tarjeta
             <Link
               to={category.path}
               key={category.title}
-              className="category-card"
+              className="CategoryCard"
             >
               {/* Fondo de la categoría */}
               <img
                 src={category.image}
                 alt={category.title}
-                className="category-card-image"
+                className="CategoryCard-image"
               />
               {/* Overlay con el título del servicio */}
-              <div className="category-card-overlay absolute inset-0 flex items-center justify-center">
-                <h3 className="category-card-title">{category.title}</h3>
+              <div className="CategoryCard-overlay absolute inset-0 flex items-center justify-center">
+                <h3 className="CategoryCard-title">{category.title}</h3>
               </div>
             </Link>
           ))}

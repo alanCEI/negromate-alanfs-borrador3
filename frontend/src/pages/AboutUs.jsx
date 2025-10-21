@@ -41,32 +41,32 @@ const AboutUs = () => {
   }, []);
 
   // Mostrar mensaje de carga mientras se obtienen los datos
-  if (loading) return <div className="loading-message">Cargando...</div>;
+  if (loading) return <div className="LoadingMessage">Cargando...</div>;
   // Mostrar mensaje de error si la petición falla
-  if (error) return <div className="error-message">{error}</div>;
+  if (error) return <div className="ErrorMessage">{error}</div>;
   // Mostrar mensaje si no hay contenido disponible
   if (!content)
-    return <div className="loading-message">No hay contenido disponible.</div>;
+    return <div className="LoadingMessage">No hay contenido disponible.</div>;
 
   return (
     <section className="section">
       <div className="container">
         {/* Título obtenido desde la API */}
-        <h1 className="section-title">{content.title}</h1>
+        <h1 className="Section-title">{content.title}</h1>
         {/* Párrafo principal */}
         <p
-          className="about-us-main-paragraph text-center max-w-4xl leading-relaxed bg-sub p-8 rounded-lg shadow-lg"
+          className="AboutUs-mainParagraph text-center max-w-4xl leading-relaxed bg-sub p-8 rounded-lg shadow-lg"
           dangerouslySetInnerHTML={{ __html: content.mainParagraph }}
         ></p>
-        <div className="about-us-content">
+        <div className="AboutUs-content">
           {/* Imagen de los artistas y enlaces a Instagram */}
-          <figure className="artist-figure">
+          <figure className="Artist-figure">
             <img
               src={content.artists.imageUrl}
               alt={content.artists.title}
-              className="artist-image"
+              className="Artist-image"
             />
-            <figcaption className="artist-figcaption">
+            <figcaption className="Artist-figcaption">
               {/* Enlaces a perfiles de Instagram */}
               <a
                 href={content.artists.instagram.adriana}
@@ -85,8 +85,8 @@ const AboutUs = () => {
             </figcaption>
           </figure>
           {/* Información sobre los artistas */}
-          <div className="artist-info bg-dark p-8 rounded-lg flex flex-col gap-6">
-            <h2 className="artist-info-title">{content.artists.title}</h2>
+          <div className="Artist-info bg-dark p-8 rounded-lg flex flex-col gap-6">
+            <h2 className="Artist-infoTitle">{content.artists.title}</h2>
             {content.artists.paragraphs.map((p, index) => (
               <p key={index} dangerouslySetInnerHTML={{ __html: p }}></p>
             ))}

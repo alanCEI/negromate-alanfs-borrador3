@@ -1,134 +1,142 @@
-/* Estilos para la página de Graphic Design (diseño gráfico) */
+/* Estilos para la página de Graphic Design (diseño gráfico) - SUIT CSS */
 
 /* ===================================================================== */
 /* === LAYOUT DE LA GALERÍA === */
 /* ===================================================================== */
-.gallery-layout {
-  display: grid; 
-  grid-template-columns: 1fr; 
-  gap: 2rem; 
+.Gallery-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 /* ===================================================================== */
 /* === SIDEBAR DE LA GALERÍA === */
 /* ===================================================================== */
-.gallery-sidebar {
-  display: flex; 
-  flex-direction: column; 
-  gap: 1rem; 
+.Gallery-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 /* ITEM DE LA GALERÍA (SIDEBAR) */
-.gallery-item {
-  cursor: pointer; 
-  padding: 1rem; 
-  border-radius: 0.5rem; 
-  transition: all 0.2s ease-in-out; 
-  background-color: var(--dark-bg); 
+.GalleryItem {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--dark-bg);
 }
 /* Hover */
-.gallery-item:hover {
-  background-color: #4a4a4a; 
+.GalleryItem:hover {
+  background-color: #4a4a4a;
 }
 /* Estado seleccionado del item */
-.gallery-item.selected {
-  background-color: var(--contrast-color); 
-  color: var(--main-color); 
-  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+.GalleryItem.is-selected {
+  background-color: var(--contrast-color);
+  color: var(--main-color);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
 }
 /* Nombre de la marca/proyecto en el item */
-.gallery-item-brand {
-  font-weight: 700; 
-  font-size: 1.125rem; 
+.GalleryItem-brand {
+  font-weight: 700;
+  font-size: 1.125rem;
 }
 /* ===================================================================== */
 /* === ÁREA PRINCIPAL DE LA GALERÍA === */
 /* ===================================================================== */
-.gallery-main {
-  position: sticky; 
-  top: 6rem; 
-  background-color: var(--dark-bg); 
-  padding: 1.5rem; 
-  border-radius: 0.5rem; 
+.Gallery-main {
+  position: sticky;
+  top: 6rem;
+  background-color: var(--dark-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
 }
 /* IMAGEN PRINCIPAL */
-.gallery-main-image {
-  width: 100%; 
-  height: auto; 
-  object-fit: cover; 
-  border-radius: 0.5rem; 
-  margin-bottom: 1rem; 
+.Gallery-mainImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
 }
 /* NOMBRE DE LA MARCA PRINCIPAL */
-.gallery-main-brand {
-  font-size: 1.5rem; 
-  font-weight: 700; 
-  color: var(--contrast-color); 
-  margin-bottom: 0.5rem; 
+.Gallery-mainBrand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--contrast-color);
+  margin-bottom: 0.5rem;
 }
 /* ===================================================================== */
 /* === SECCIÓN DE TARJETAS DE PRECIOS === */
 /* ===================================================================== */
-.price-card-section {
-  background-color: var(--dark-bg); 
+.PriceCardSection {
+  background-color: var(--dark-bg);
 }
 /* GRID DE TARJETAS DE PRECIOS */
-.price-cards-grid {
-  display: grid; 
-  grid-template-columns: 1fr; 
-  gap: 2rem; 
-  max-width: 72rem; 
-  margin: 0 auto; 
+.PriceCards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
 }
 /* ===================================================================== */
 /* === TARJETA DE PRECIO === */
 /* ===================================================================== */
-/* Usa clases de utilidad: bg-main p-8 rounded-lg shadow-lg flex flex-col border-accent */
+.PriceCard {
+  background-color: var(--main-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--contrast-color);
+}
 /* NOMBRE DEL PAQUETE */
-.price-card-name {
-  font-size: 1.5rem; 
-  font-weight: 700; 
+.PriceCard-name {
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--contrast-color);
-  margin-bottom: 1rem; 
-  text-align: center; 
+  margin-bottom: 1rem;
+  text-align: center;
 }
 /* DESCRIPCIÓN DEL PAQUETE */
-.price-card-description {
+.PriceCard-description {
   text-align: center;
-  margin-bottom: 1.5rem; 
-  color: var(--sub-contrast); 
+  margin-bottom: 1.5rem;
+  color: var(--sub-contrast);
 }
 /* PRECIO */
-.price-card-price {
-  font-size: 3rem; 
-  font-weight: 700; 
-  text-align: center; 
+.PriceCard-price {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
   margin-bottom: 1.5rem;
-  color: var(--contrast-color); 
+  color: var(--contrast-color);
 }
 /* LISTA DE DETALLES */
-.price-card-details {
-  list-style: none; 
-  margin-bottom: 2rem; 
-  flex-grow: 1; 
-  display: flex; 
-  flex-direction: column; 
-  gap: 0.75rem; 
+.PriceCard-details {
+  list-style: none;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 /* Cada item de la lista de detalles */
-.price-card-details li {
-  display: flex; 
+.PriceCard-details li {
+  display: flex;
   align-items: flex-start;
 }
 /* Icono check (SVG) */
-.price-card-details svg {
-  width: 1.25rem; 
-  height: 1.25rem; 
-  color: var(--contrast-color); 
-  margin-right: 0.5rem; 
-  flex-shrink: 0; 
-  margin-top: 0.25rem; 
+.PriceCard-details svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--contrast-color);
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
 }
 /* BOTÓN DE ACCIÓN */
-.price-card .button {
-  margin-top: auto; 
+.PriceCard .button {
+  margin-top: auto;
   width: 100%;
 }

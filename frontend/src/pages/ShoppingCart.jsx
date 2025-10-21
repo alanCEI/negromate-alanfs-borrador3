@@ -55,8 +55,8 @@ const ShoppingCart = () => {
   // Mensaje de éxito si la orden fue procesada
   if (status.success) {
     return (
-      <div className="contact-success-message">
-        <div className="contact-success-box">
+      <div className="ContactPage-successMessage">
+        <div className="ContactPage-successBox">
           <h1 className="text-3xl font-bold text-contrast-color mb-4">
             ¡Orden Realizada con Éxito!
           </h1>
@@ -74,12 +74,12 @@ const ShoppingCart = () => {
   }
 
   return (
-    <section className="section cart-page">
+    <section className="section CartPage">
       <div className="container">
-        <h1 className="section-title">Carrito de Compras</h1>
+        <h1 className="Section-title">Carrito de Compras</h1>
         {/* Mensaje si el carrito está vacío */}
         {cartItems.length === 0 ? (
-          <div className="cart-empty">
+          <div className="CartPage-empty">
             <p>Tu carrito está vacío.</p>
             <Link to="/" className="button">
               Explorar productos
@@ -87,26 +87,26 @@ const ShoppingCart = () => {
           </div>
         ) : (
           // Lista de items y resumen
-          <div className="cart-layout">
+          <div className="CartPage-layout">
             {/* Contenedor de items del carrito */}
-            <div className="cart-items-container">
+            <div className="CartPage-itemsContainer">
               {/* Mapeo de cada producto en el carrito */}
               {cartItems.map((item) => (
-                <div key={item._id} className="cart-item">
+                <div key={item._id} className="CartItem">
                   {/* Información del producto */}
-                  <div className="cart-item-info">
+                  <div className="CartItem-info">
                     <img
                       src={item.imageUrl}
                       alt={item.name}
-                      className="cart-item-image"
+                      className="CartItem-image"
                     />
-                    <div className="cart-item-details">
+                    <div className="CartItem-details">
                       <h3>{item.name}</h3>
                       <p>{item.price.toFixed(2)}€</p>
                     </div>
                   </div>
                   {/* Modificar cantidad y eliminar */}
-                  <div className="cart-item-actions">
+                  <div className="CartItem-actions">
                     {/* Input numérico para cambiar la cantidad */}
                     <input
                       type="number"
@@ -114,13 +114,13 @@ const ShoppingCart = () => {
                       onChange={(e) =>
                         updateQuantity(item._id, parseInt(e.target.value))
                       }
-                      className="cart-item-quantity"
+                      className="CartItem-quantity"
                       min="1"
                     />
                     {/* Botón para eliminar el producto del carrito de compras */}
                     <button
                       onClick={() => removeFromCart(item._id)}
-                      className="cart-item-remove"
+                      className="CartItem-removeButton"
                     >
                       {/* Icono de papelera */}
                       <svg
@@ -142,15 +142,15 @@ const ShoppingCart = () => {
               ))}
             </div>
             {/* Panel lateral con resumen de la orden */}
-            <div className="cart-summary">
+            <div className="CartPage-summary">
               <h2>Resumen de la Orden</h2>
               {/* Fila de subtotal */}
-              <div className="cart-summary-row">
+              <div className="CartPage-summaryRow">
                 <span>Subtotal</span>
                 <span>{cartTotal.toFixed(2)}€</span>
               </div>
               {/* Fila de total */}
-              <div className="cart-summary-total">
+              <div className="CartPage-summaryTotal">
                 <span>Total</span>
                 <span>{cartTotal.toFixed(2)}€</span>
               </div>
@@ -165,7 +165,7 @@ const ShoppingCart = () => {
               {/* Mensaje de error si la petición falla */}
               {status.error && (
                 <p
-                  className="error-message"
+                  className="ErrorMessage"
                   style={{ textAlign: "center", marginTop: "1rem" }}
                 >
                   {status.error}

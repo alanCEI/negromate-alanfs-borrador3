@@ -1,54 +1,58 @@
-/* Estilos para el componente Products */
+/* Estilos para el componente Products - SUIT CSS */
 
 /* ===================================================================== */
 /* === SECCIÓN DE PRODUCTOS === */
 /* ===================================================================== */
-.products-section {
-  background-color: var(--dark-bg); 
-  color: var(--sub-color); 
+.Products {
+  background-color: var(--dark-bg);
+  color: var(--sub-color);
 }
 /* ===================================================================== */
 /* === GRID DE PRODUCTOS === */
 /* ===================================================================== */
-.products-grid {
-  display: grid; 
-  grid-template-columns: 1fr; 
-  gap: 2rem; 
+.Products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 /* ===================================================================== */
 /* === TARJETA DE CATEGORÍA === */
 /* ===================================================================== */
-.category-card {
-  display: block; 
-  position: relative; 
-  overflow: hidden; 
-  border-radius: 0.5rem; 
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
-  aspect-ratio: 1 / 1; 
+.CategoryCard {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  aspect-ratio: 1 / 1;
 }
 /* IMAGEN DE LA TARJETA */
-.category-card-image {
-  width: 100%; 
-  height: 100%; 
-  object-fit: cover; 
-  transition: transform 0.5s ease; 
+.CategoryCard-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 /* Hover */
-.category-card:hover .category-card-image {
-  transform: scale(1.1); 
+.CategoryCard:hover .CategoryCard-image {
+  transform: scale(1.1);
 }
 /* OVERLAY DE LA TARJETA */
-/* Usa clases de utilidad: absolute inset-0 flex items-center justify-center */
-.category-card-overlay {
+.CategoryCard-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
   transition: background-color 0.3s ease;
 }
 /* Hover */
-.category-card:hover .category-card-overlay {
-  background-color: rgba(0, 0, 0, 0.7); 
+.CategoryCard:hover .CategoryCard-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 /* TÍTULO DE LA TARJETA */
-.category-card-title {
+.CategoryCard-title {
   font-size: 1.875rem;
   font-weight: 700;
   color: white;
@@ -56,6 +60,6 @@
   transition: transform 0.3s ease;
 }
 /* Hover */
-.category-card:hover .category-card-title {
-  transform: scale(1.05); 
+.CategoryCard:hover .CategoryCard-title {
+  transform: scale(1.05);
 }

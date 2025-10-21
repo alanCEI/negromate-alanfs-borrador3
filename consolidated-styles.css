@@ -1,0 +1,1602 @@
+/* ====================================================================== */
+/* ===                 CONSOLIDATED STYLES                           === */
+/* ===        Consolidación de todos los estilos CSS del proyecto   === */
+/* ====================================================================== */
+
+/* ====================================================================== */
+/* === 1. RESET CSS (reset.css)                                      === */
+/* ====================================================================== */
+
+/* Reset CSS */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* HTML */
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+/* Body */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+ul, ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+/* ====================================================================== */
+/* === 2. ESTILOS GLOBALES (index.css)                               === */
+/* ====================================================================== */
+
+/* ESTILOS GLOBALES */
+
+/* TEMA CLARO */
+body.light-theme {
+  --main-color: #FFFFFF;
+  --dark-bg: #F0F0F0;
+  --sub-color: #1A1B1F;
+  --contrast-color: #0021D7;
+  --sub-contrast: #001cbe;
+  --border-color: #D1D5DB;
+  --error-bg: #FEE2E2;
+  --error-text: #B91C1C;
+}
+/* TEMA OSCURO */
+body.dark-theme {
+  --main-color: #1A1B1F;
+  --dark-bg: #111215;
+  --sub-color: #E3E3E3;
+  --contrast-color: #DFFF00;
+  --sub-contrast: #C8E600;
+  --border-color: #4B5563;
+  --error-bg: #3b2424;
+  --error-text: #fca5a5;
+}
+/* BODY */
+body {
+  font-family: 'Spartan', sans-serif;
+  background-color: var(--main-color);
+  color: var(--sub-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+/* CONTENEDOR PRINCIPAL */
+.container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+/* SECCIÓN */
+.section {
+  padding: 4rem 0;
+}
+/* TÍTULO DE SECCIÓN */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--contrast-color);
+}
+/* MENSAJES DE CARGA Y ERROR */
+.loading-message,
+.error-message {
+  text-align: center;
+  padding: 5rem 1rem;
+  font-size: 1.25rem;
+}
+/* Estilos específicos para mensajes de error */
+.error-message {
+  color: var(--error-text);
+  background-color: var(--error-bg);
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+/* BOTÓN */
+.button {
+  display: inline-block;
+  background-color: var(--contrast-color);
+  color: var(--main-color);
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+}
+/* Hover */
+.button:hover {
+  background-color: var(--sub-contrast);
+  transform: scale(1.05);
+}
+/* Estado deshabilitado del botón */
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* GRUPO DE FORMULARIO */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+/* Labels dentro de grupos de formulario */
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+/* INPUT DE FORMULARIO */
+.form-input {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  background-color: var(--dark-bg);
+  color: var(--sub-color);
+}
+/* Focus del input */
+.form-input:focus {
+  outline: 2px solid var(--contrast-color);
+  border-color: transparent;
+}
+/* ESTILOS DE TEXTO */
+strong, b { font-weight: 700; }
+u { text-decoration: underline; }
+
+/* ===================================================================== */
+/* === CLASES DE UTILIDAD (Reducción de duplicación) === */
+/* ===================================================================== */
+
+/* Tipografía común */
+.font-bold { font-weight: 700; }
+.text-sm { font-size: 0.875rem; }
+.text-base { font-size: 1rem; }
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-2xl { font-size: 1.5rem; }
+.text-3xl { font-size: 1.875rem; }
+.text-4xl { font-size: 2.5rem; }
+.text-center { text-align: center; }
+
+/* Espaciado común */
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+.gap-4 { gap: 1rem; }
+.gap-6 { gap: 1.5rem; }
+
+/* Bordes y sombras comunes */
+.rounded { border-radius: 0.25rem; }
+.rounded-md { border-radius: 0.375rem; }
+.rounded-lg { border-radius: 0.5rem; }
+.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
+.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); }
+.border-accent { border: 2px solid var(--contrast-color); }
+
+/* Fondos comunes */
+.bg-dark { background-color: var(--dark-bg); }
+.bg-main { background-color: var(--main-color); }
+
+/* Display común */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.grid { display: grid; }
+
+/* Transiciones comunes */
+.transition { transition: all 0.2s ease-in-out; }
+.transition-colors { transition: background-color 0.2s, color 0.2s; }
+.transition-transform { transition: transform 0.3s ease; }
+.transition-opacity { transition: opacity 0.3s ease; }
+
+/* Inputs comunes - clase específica para reducir complejidad de selectores */
+.form-input-focus:focus {
+  outline: none;
+  border-color: var(--sub-contrast);
+  box-shadow: 0 0 0 2px var(--sub-contrast);
+}
+
+/* Anchos máximos comunes */
+.max-w-md { max-width: 28rem; }
+.max-w-2xl { max-width: 42rem; }
+.max-w-4xl { max-width: 64rem; }
+.max-w-5xl { max-width: 72rem; }
+.w-full { width: 100%; }
+
+/* Posicionamiento */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+.inset-0 { inset: 0; }
+
+/* Colores de texto y fondo específicos */
+.text-sub { color: var(--sub-color); }
+.text-contrast { color: var(--contrast-color); }
+.bg-sub { background-color: var(--sub-color); }
+
+/* Overflow */
+.overflow-hidden { overflow: hidden; }
+
+/* Z-index */
+.z-10 { z-index: 10; }
+.z-50 { z-index: 50; }
+.z-100 { z-index: 100; }
+
+/* Altura */
+.h-full { height: 100%; }
+.min-h-screen { min-height: 100vh; }
+
+/* Flex y Grid específicos */
+.flex-wrap { flex-wrap: wrap; }
+.flex-shrink-0 { flex-shrink: 0; }
+.flex-grow { flex-grow: 1; }
+.align-start { align-items: flex-start; }
+.self-start { align-self: flex-start; }
+
+/* Line-height */
+.leading-relaxed { line-height: 1.75; }
+
+/* ====================================================================== */
+/* === 3. APP CSS (App.css)                                          === */
+/* ====================================================================== */
+
+/* CONTENEDOR PRINCIPAL DE LA APLICACIÓN */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* CONTENIDO PRINCIPAL */
+.main-content {
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* ====================================================================== */
+/* === 4. MEDIA QUERIES (queries.css)                                === */
+/* ====================================================================== */
+
+/* Media Queries */
+
+/* ===================================================================== */
+/* === MÓVILES (320px - 480px) === */
+/* ===================================================================== */
+@media (min-width: 320px) and (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .footer-content, .about-us-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+}
+/* ===================================================================== */
+/* === MENÚ MÓVIL (hasta 960px) === */
+/* ===================================================================== */
+@media (max-width: 960px) {
+    .header .desktop-nav {
+        display: none;
+    }
+    .header .mobile-menu-container {
+        display: flex;
+    }
+    .header .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--main-color);
+        padding: 1rem 0;
+        gap: 0.5rem;
+        border-bottom: 1px solid var(--dark-bg);
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+}
+/* ===================================================================== */
+/* === TABLETS (768px - 1023px) === */
+/* ===================================================================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .products-grid, .gallery-grid, .price-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .shopping-cart-layout, .graphic-design-layout, .about-us-content {
+       grid-template-columns: 1fr;
+    }
+}
+/* ===================================================================== */
+/* === LAPTOPS Y DESKTOPS (desde 1024px) === */
+/* ===================================================================== */
+@media (min-width: 1024px) {
+   .products-grid, .gallery-grid, .price-grid {
+        grid-template-columns: repeat(3, 1fr);
+   }
+   .about-us-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        align-items: center;
+   }
+}
+/* ===================================================================== */
+/* === DESKTOPS GRANDES (desde 1328px) === */
+/* ===================================================================== */
+@media (min-width: 1328px) {
+    .section-title {
+        font-size: 3rem;
+    }
+}
+/* ===================================================================== */
+/* === PANTALLAS EXTRA GRANDES (desde 2560px) === */
+/* ===================================================================== */
+@media (min-width: 2560px) {
+    .container {
+        max-width: 1800px;
+    }
+}
+/* ===================================================================== */
+/* === MEDIA QUERIES DE COMPONENTES === */
+/* ===================================================================== */
+
+/* Header - Pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Mantiene el tamaño del icono del carrito en móvil */
+  .cart-icon {
+    height: 1.75rem;
+    width: 1.75rem;
+    min-height: 1.75rem;
+    min-width: 1.75rem;
+  }
+  /* Evita que el enlace del carrito se reduzca en pantallas pequeñas */
+  .cart-link {
+    flex-shrink: 0;
+  }
+  /* Mantiene el tamaño del icono hamburguesa en móvil */
+  .menu-icon {
+    height: 2rem;
+    width: 2rem;
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+  /* Evita que el botón de menú móvil se reduzca */
+  .mobile-menu-button {
+    flex-shrink: 0;
+  }
+  /* Evita que el contenedor del menú móvil se reduzca */
+  .mobile-menu-container {
+    flex-shrink: 0;
+  }
+}
+
+/* Hero - Tablets y Desktop */
+@media (min-width: 768px) {
+  .hero-logo {
+    width: 20rem;
+    height: 20rem;
+  }
+  /* ContactInfo - Título más grande en tablets y desktop */
+  .contact-info-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* ====================================================================== */
+/* === 5. COMPONENTS                                                 === */
+/* ====================================================================== */
+
+/* ===================================================================== */
+/* === 5.1 HEADER (components/Header.css)                            === */
+/* ===================================================================== */
+
+/* Estilos para el componente Header */
+
+/* ===================================================================== */
+/* === CONTENEDOR PRINCIPAL DEL HEADER === */
+/* ===================================================================== */
+.header {
+  background-color: var(--main-color);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--dark-bg);
+}
+/* Contenido del header */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+/* ===================================================================== */
+/* === LOGO DEL HEADER === */
+/* ===================================================================== */
+.header-logo img {
+  height: 2rem;
+  width: auto;
+  transition: transform 0.2s ease-in-out;
+}
+/* Hover */
+.header-logo:hover img {
+  transform: scale(1.05);
+}
+/* ===================================================================== */
+/* === NAVEGACIÓN DESKTOP === */
+/* ===================================================================== */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* Estilos para los enlaces de navegación */
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: color 0.2s, background-color 0.2s;
+  color: var(--sub-color);
+  font-weight: 700;
+}
+/* Estado hover de los enlaces */
+.nav-link:hover {
+  background-color: var(--dark-bg);
+  color: var(--contrast-color);
+}
+/* Estado activo de los enlaces */
+.nav-link.active {
+  background-color: var(--dark-bg);
+  color: var(--contrast-color);
+}
+/* ===================================================================== */
+/* === BOTÓN DE CERRAR SESIÓN === */
+/* ===================================================================== */
+.logout-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--sub-color);
+  font-weight: 700;
+  transition: background-color 0.2s, color 0.2s;
+}
+/* Hover */
+.logout-button:hover {
+  background-color: #ef4444;
+  color: white;
+}
+/* ===================================================================== */
+/* === ICONO DEL CARRITO === */
+/* ===================================================================== */
+.cart-link {
+  position: relative;
+  padding: 0.5rem;
+  border-radius: 9999px;
+  color: var(--sub-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+/* Hover */
+.cart-link:hover {
+  background-color: var(--dark-bg);
+}
+/* Icono SVG del carrito */
+.cart-icon {
+  height: 1.75rem;
+  width: 1.75rem;
+  min-height: 1.75rem;
+  min-width: 1.75rem;
+  flex-shrink: 0;
+}
+/* Contador de productos en el carrito de compras*/
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+  line-height: 1;
+  color: #fee2e2;
+  background-color: #dc2626;
+  border-radius: 9999px;
+}
+/* ===================================================================== */
+/* === MENÚ MÓVIL === */
+/* ===================================================================== */
+.mobile-menu-container {
+  display: none;
+  align-items: center;
+}
+/* Botón hamburguesa */
+.mobile-menu-button {
+  color: var(--sub-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+}
+/* Hover */
+.mobile-menu-button:hover {
+  background-color: var(--dark-bg);
+}
+/* Icono hamburguesa (SVG) */
+.menu-icon {
+  height: 2rem;
+  width: 2rem;
+  min-height: 2rem;
+  min-width: 2rem;
+  flex-shrink: 0;
+}
+/* Contador de productos en el carrito (móvil) */
+.cart-count-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1rem;
+  height: 1rem;
+  font-size: 0.75rem;
+  color: white;
+  background-color: #ef4444;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================================================================== */
+/* === 5.2 FOOTER (components/Footer.css)                            === */
+/* ===================================================================== */
+
+/* Estilos para el componente Footer */
+
+/* ===================================================================== */
+/* === CONTENEDOR PRINCIPAL DEL FOOTER === */
+/* ===================================================================== */
+.footer {
+  background-color: var(--dark-bg);
+  color: var(--sub-color);
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+/* ===================================================================== */
+/* === LÍNEA DIVISORIA DEL FOOTER === */
+/* ===================================================================== */
+.footer-divider {
+  border-color: var(--contrast-color);
+  margin-bottom: 1.5rem;
+}
+/* ===================================================================== */
+/* === CONTENIDO DEL FOOTER === */
+/* ===================================================================== */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+/* ===================================================================== */
+/* === TEXTO DE COPYRIGHT === */
+/* ===================================================================== */
+.footer-copy {
+  font-size: 0.875rem;
+  text-align: center;
+}
+/* ===================================================================== */
+/* === ENLACES DEL FOOTER === */
+/* ===================================================================== */
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* Estilos para los enlaces dentro del footer */
+.footer-links a {
+  transition: color 0.2s;
+}
+/* Estado hover de los enlaces del footer */
+.footer-links a:hover {
+  color: var(--contrast-color);
+}
+/* ===================================================================== */
+/* === BOTÓN DE CAMBIO DE TEMA === */
+/* ===================================================================== */
+.theme-toggle-button {
+  border: 1px solid var(--contrast-color);
+  color: #B91C1C;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-family: 'Spartan', sans-serif;
+  transition: background-color 0.2s, color 0.2s;
+}
+/* Estado hover del botón de cambio de tema */
+.theme-toggle-button:hover {
+  background-color: var(--main-color);
+  color: var(--contrast-color);
+}
+
+/* ===================================================================== */
+/* === 5.3 HERO (components/Hero.css)                                === */
+/* ===================================================================== */
+
+/* Estilos para el componente Hero */
+
+/* ===================================================================== */
+/* === SECCIÓN HERO === */
+/* ===================================================================== */
+/* Usa clases de utilidad: relative w-full overflow-hidden flex items-center justify-center */
+.hero-section {
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+/* ===================================================================== */
+/* === OVERLAY OSCURO === */
+/* ===================================================================== */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+/* ===================================================================== */
+/* === CONTENEDOR DEL LOGO === */
+/* ===================================================================== */
+.hero-logo-container {
+  z-index: 10;
+  transition: all 0.5s ease-in-out;
+}
+/* Estado "scrolled" */
+.hero-logo-container.scrolled {
+  transform: scale(1.25);
+  opacity: 0;
+}
+/* ===================================================================== */
+/* === LOGO DEL HERO === */
+/* ===================================================================== */
+.hero-logo {
+  width: 16rem;
+  height: 16rem;
+  object-fit: contain;
+  border: 4px solid #DFFF00;
+  border-radius: 9999px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================================================== */
+/* === 5.4 PRODUCTS (components/Products.css)                        === */
+/* ===================================================================== */
+
+/* Estilos para el componente Products */
+
+/* ===================================================================== */
+/* === SECCIÓN DE PRODUCTOS === */
+/* ===================================================================== */
+.products-section {
+  background-color: var(--dark-bg);
+  color: var(--sub-color);
+}
+/* ===================================================================== */
+/* === GRID DE PRODUCTOS === */
+/* ===================================================================== */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+/* ===================================================================== */
+/* === TARJETA DE CATEGORÍA === */
+/* ===================================================================== */
+.category-card {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  aspect-ratio: 1 / 1;
+}
+/* IMAGEN DE LA TARJETA */
+.category-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+/* Hover */
+.category-card:hover .category-card-image {
+  transform: scale(1.1);
+}
+/* OVERLAY DE LA TARJETA */
+/* Usa clases de utilidad: absolute inset-0 flex items-center justify-center */
+.category-card-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease;
+}
+/* Hover */
+.category-card:hover .category-card-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+/* TÍTULO DE LA TARJETA */
+.category-card-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+/* Hover */
+.category-card:hover .category-card-title {
+  transform: scale(1.05);
+}
+
+/* ===================================================================== */
+/* === 5.5 CONTACT INFO (components/ContactInfo.css)                 === */
+/* ===================================================================== */
+
+/* Estilos para el componente ContactInfo */
+
+/* ===================================================================== */
+/* === SECCIÓN DE INFORMACIÓN DE CONTACTO === */
+/* ===================================================================== */
+.contact-info-section {
+  text-align: center;
+}
+/* ===================================================================== */
+/* === TÍTULO DE CONTACTO === */
+/* ===================================================================== */
+.contact-info-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+/* ===================================================================== */
+/* === TEXTO DE CONTACTO === */
+/* ===================================================================== */
+.contact-info-text {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===================================================================== */
+/* === 5.6 FORM (components/Form.css)                                === */
+/* ===================================================================== */
+
+/* Estilos para contenedores de formularios */
+
+/* ===================================================================== */
+/* === CONTENEDOR DEL FORMULARIO === */
+/* ===================================================================== */
+/* Usa clases de utilidad: w-full max-w-md bg-dark p-8 rounded-lg shadow-lg border-accent text-sub transition-colors */
+.form-container {
+  transition: border-color 0.3s;
+}
+/* ===================================================================== */
+/* === TÍTULO DEL FORMULARIO === */
+/* ===================================================================== */
+.form-container h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--sub-color);
+}
+/* ===================================================================== */
+/* === FORMULARIO === */
+/* ===================================================================== */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ===================================================================== */
+/* === 5.7 LOGIN (components/Login.css)                              === */
+/* ===================================================================== */
+
+/* Estilos para el componente de Login */
+
+/* ===================================================================== */
+/* === CONTENEDOR DEL FORMULARIO DE LOGIN === */
+/* ===================================================================== */
+/* Usa clases de utilidad: w-full max-w-md bg-dark p-8 rounded-lg shadow-lg border-accent text-sub */
+/* ===================================================================== */
+/* === TÍTULO DEL FORMULARIO === */
+/* ===================================================================== */
+.login-form-container h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--sub-color);
+}
+/* ===================================================================== */
+/* === FORMULARIO DE LOGIN === */
+/* ===================================================================== */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+/* Estilos alternativos */
+/*
+.login-form .form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--dark-bg);
+  margin-bottom: 0.25rem;
+}
+*/
+/* ===================================================================== */
+/* === INPUTS DEL FORMULARIO === */
+/* ===================================================================== */
+.login-form-input {
+  margin-top: 0.25rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
+  color: var(--dark-bg);
+}
+/* Estado focus de los inputs - Usa clase de utilidad */
+.login-form-input:focus {
+  outline: none;
+  border-color: var(--sub-contrast);
+  box-shadow: 0 0 0 2px var(--sub-contrast);
+}
+
+/* ===================================================================== */
+/* === 5.8 REGISTER (components/Register.css)                        === */
+/* ===================================================================== */
+
+/* Estilos para el componente de Register */
+
+/* ===================================================================== */
+/* === CONTENEDOR DEL FORMULARIO DE REGISTRO === */
+/* ===================================================================== */
+/* Usa clases de utilidad: w-full max-w-md bg-dark p-8 rounded-lg shadow-lg border-accent text-sub */
+/* ===================================================================== */
+/* === TÍTULO DEL FORMULARIO === */
+/* ===================================================================== */
+.register-form-container h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--sub-color);
+}
+/* ===================================================================== */
+/* === FORMULARIO DE REGISTRO === */
+/* ===================================================================== */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ====================================================================== */
+/* === 6. PAGES                                                      === */
+/* ====================================================================== */
+
+/* ===================================================================== */
+/* === 6.1 PROFILE (pages/Profile.css)                               === */
+/* ===================================================================== */
+
+/* Profile (perfil de usuario) */
+
+/* ===================================================================== */
+/* === PÁGINA DE PERFIL === */
+/* ===================================================================== */
+.profile-page {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ===================================================================== */
+/* === CONTENEDOR DEL PERFIL === */
+/* ===================================================================== */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+/* ===================================================================== */
+/* === BOTONES DE ALTERNANCIA (LOGIN/REGISTER) === */
+/* ===================================================================== */
+.profile-toggle-buttons {
+  width: 100%;
+  max-width: 28rem;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid var(--contrast-color);
+  margin-bottom: 2rem;
+}
+/* === BOTÓN DE ALTERNANCIA === */
+.toggle-button {
+  flex: 1;
+  padding: 0.75rem 0;
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  color: var(--sub-color);
+}
+/* Hover */
+.toggle-button:hover {
+  background-color: var(--dark-bg); /* Fondo alternativo al pasar el mouse */
+}
+/* Estado activo del botón */
+.toggle-button.active {
+  background-color: var(--contrast-color); /* Fondo con color de acento */
+  color: var(--main-color); /* Color de texto invertido para contraste */
+}
+
+/* ===================================================================== */
+/* === 6.2 ABOUT US (pages/AboutUs.css)                              === */
+/* ===================================================================== */
+
+/* About Us (Sobre Nosotros) */
+
+/* ===================================================================== */
+/* === PÁRRAFO PRINCIPAL DE ABOUT US === */
+/* ===================================================================== */
+/* Usa clases de utilidad: text-center max-w-4xl leading-relaxed bg-sub p-8 rounded-lg shadow-lg */
+.about-us-main-paragraph {
+  margin: 0 auto 4rem auto;
+  color: var(--main-color);
+  border: 4px solid var(--contrast-color);
+}
+/* ===================================================================== */
+/* === CONTENIDO DE ABOUT US === */
+/* ===================================================================== */
+.about-us-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+/* ===================================================================== */
+/* === FIGURA DEL ARTISTA === */
+/* ===================================================================== */
+.artist-figure {
+  max-width: 28rem;
+  margin: 0 auto;
+}
+/* IMAGEN DEL ARTISTA */
+.artist-image {
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2);
+  width: 100%;
+  border: 4px solid var(--contrast-color);
+}
+/* CAPTION */
+.artist-figcaption {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+  color: var(--sub-color);
+}
+/* Hover de los enlaces en el caption */
+.artist-figcaption a:hover {
+  color: var(--contrast-color);
+}
+/* ===================================================================== */
+/* === INFORMACIÓN DEL ARTISTA === */
+/* ===================================================================== */
+/* Usa clases de utilidad: bg-dark p-8 rounded-lg flex flex-col gap-6 */
+/* TÍTULO DE LA INFORMACIÓN */
+.artist-info-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--contrast-color);
+}
+/* PÁRRAFOS DE INFORMACIÓN */
+.artist-info p {
+  line-height: 1.75;
+}
+
+/* ===================================================================== */
+/* === 6.3 CONTACT (pages/Contact.css)                               === */
+/* ===================================================================== */
+
+/* Estilos para la página de Contact */
+
+/* ===================================================================== */
+/* === PÁGINA DE CONTACTO === */
+/* ===================================================================== */
+.contact-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+}
+/* ===================================================================== */
+/* === CONTENEDOR DEL CONTACTO === */
+/* ===================================================================== */
+.contact-container {
+  max-width: 42rem; /* Ancho máximo de 672px */
+}
+/* ===================================================================== */
+/* === ENCABEZADO DEL CONTACTO === */
+/* ===================================================================== */
+.contact-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+/* Título principal (h1) */
+.contact-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--contrast-color);
+}
+/* Párrafo descriptivo */
+.contact-header p {
+  font-size: 1.125rem;
+}
+/* ===================================================================== */
+/* === FORMULARIO DE CONTACTO === */
+/* ===================================================================== */
+/* Usa clases de utilidad: bg-sub p-8 rounded-lg shadow-lg border-accent flex flex-col gap-6 */
+.contact-form {
+  color: var(--dark-bg);
+}
+/* ETIQUETAS DEL FORMULARIO */
+.contact-form .form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+/* INPUTS Y TEXTAREAS */
+.contact-form-input {
+  margin-top: 0.25rem;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  background-color: white;
+  border: 1px solid #D1D5DB;
+  border-radius: 0.375rem;
+  color: var(--sub-color);
+}
+/* Estado focus de inputs y textareas - Usa clase de utilidad */
+.contact-form-input:focus {
+  outline: none;
+  border-color: var(--sub-contrast);
+  box-shadow: 0 0 0 2px var(--sub-contrast);
+}
+/* FIELDSET Y LEGEND */
+.contact-form .fieldset legend {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+/* GRUPO DE RADIO BUTTONS */
+.contact-form .radio-group {
+  display: flex;
+  gap: 1rem;
+}
+/* ETIQUETAS DE RADIO */
+.contact-form .radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+/* ===================================================================== */
+/* === MENSAJE DE ÉXITO === */
+/* ===================================================================== */
+.contact-success-message {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Caja del mensaje de éxito */
+.contact-success-box {
+  background-color: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+/* Título del mensaje de éxito */
+.contact-success-box h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--contrast-color);
+  margin-bottom: 1rem;
+}
+
+/* ===================================================================== */
+/* === 6.4 GRAPHIC DESIGN (pages/GraphicDesign.css)                  === */
+/* ===================================================================== */
+
+/* Estilos para la página de Graphic Design (diseño gráfico) */
+
+/* ===================================================================== */
+/* === LAYOUT DE LA GALERÍA === */
+/* ===================================================================== */
+.gallery-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+/* ===================================================================== */
+/* === SIDEBAR DE LA GALERÍA === */
+/* ===================================================================== */
+.gallery-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* ITEM DE LA GALERÍA (SIDEBAR) */
+.gallery-item {
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--dark-bg);
+}
+/* Hover */
+.gallery-item:hover {
+  background-color: #4a4a4a;
+}
+/* Estado seleccionado del item */
+.gallery-item.selected {
+  background-color: var(--contrast-color);
+  color: var(--main-color);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+/* Nombre de la marca/proyecto en el item */
+.gallery-item-brand {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+/* ===================================================================== */
+/* === ÁREA PRINCIPAL DE LA GALERÍA === */
+/* ===================================================================== */
+.gallery-main {
+  position: sticky;
+  top: 6rem;
+  background-color: var(--dark-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+/* IMAGEN PRINCIPAL */
+.gallery-main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+/* NOMBRE DE LA MARCA PRINCIPAL */
+.gallery-main-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--contrast-color);
+  margin-bottom: 0.5rem;
+}
+/* ===================================================================== */
+/* === SECCIÓN DE TARJETAS DE PRECIOS === */
+/* ===================================================================== */
+.price-card-section {
+  background-color: var(--dark-bg);
+}
+/* GRID DE TARJETAS DE PRECIOS */
+.price-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+/* ===================================================================== */
+/* === TARJETA DE PRECIO === */
+/* ===================================================================== */
+/* Usa clases de utilidad: bg-main p-8 rounded-lg shadow-lg flex flex-col border-accent */
+/* NOMBRE DEL PAQUETE */
+.price-card-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--contrast-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+/* DESCRIPCIÓN DEL PAQUETE */
+.price-card-description {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--sub-contrast);
+}
+/* PRECIO */
+.price-card-price {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--contrast-color);
+}
+/* LISTA DE DETALLES */
+.price-card-details {
+  list-style: none;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+/* Cada item de la lista de detalles */
+.price-card-details li {
+  display: flex;
+  align-items: flex-start;
+}
+/* Icono check (SVG) */
+.price-card-details svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--contrast-color);
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+/* BOTÓN DE ACCIÓN */
+.price-card .button {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* ===================================================================== */
+/* === 6.5 CUSTOM CLOTHING (pages/CustomClothing.css)                === */
+/* ===================================================================== */
+
+/* Estilos para la página de Custom Clothing (ropa personalizada) */
+
+/* ===================================================================== */
+/* === GRID DE LA GALERÍA DE ROPA === */
+/* ===================================================================== */
+.clothing-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+/* ===================================================================== */
+/* === ITEM DE LA GALERÍA === */
+/* ===================================================================== */
+.clothing-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    aspect-ratio: 4 / 5;
+}
+/* IMAGEN DEL ITEM */
+.clothing-gallery-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+/* Hover */
+.clothing-gallery-item:hover .clothing-gallery-item-image {
+    transform: scale(1.05);
+}
+/* OVERLAY DEL ITEM */
+/* Usa clases de utilidad: absolute inset-0 transition-opacity flex flex-col p-4 */
+.clothing-gallery-item-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    opacity: 0;
+    justify-content: flex-end;
+}
+/* Hover */
+.clothing-gallery-item:hover .clothing-gallery-item-overlay {
+    opacity: 1;
+}
+/* TÍTULO DEL ITEM */
+.clothing-gallery-item-title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    transform: translateY(1rem);
+    transition: transform 0.3s ease;
+}
+/* Hover */
+.clothing-gallery-item:hover .clothing-gallery-item-title {
+    transform: translateY(0);
+}
+/* === DESCRIPCIÓN DEL ITEM === */
+.clothing-gallery-item-desc {
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.1s;
+}
+/* Hover */
+.clothing-gallery-item:hover .clothing-gallery-item-desc {
+    opacity: 1;
+}
+/* ===================================================================== */
+/* === MODAL DE IMAGEN === */
+/* ===================================================================== */
+/* Usa clases de utilidad: fixed inset-0 z-100 flex items-center justify-center p-4 */
+.modal-overlay {
+    background-color: rgba(0,0,0,0.8);
+}
+/* IMAGEN DEL MODAL */
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+/* ===================================================================== */
+/* === 6.6 MURALS (pages/Murals.css)                                 === */
+/* ===================================================================== */
+
+/* Murals (murales) */
+
+/* ===================================================================== */
+/* === GRID DE LA GALERÍA DE MURALES === */
+/* ===================================================================== */
+.murals-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+/* ===================================================================== */
+/* === ITEM DE LA GALERÍA === */
+/* ===================================================================== */
+.murals-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    aspect-ratio: 16 / 9;
+}
+/* IMAGEN DEL ITEM */
+.murals-gallery-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+/* Hover */
+.murals-gallery-item:hover .murals-gallery-item-image {
+    transform: scale(1.05);
+}
+/* OVERLAY DEL ITEM */
+.murals-gallery-item-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0);
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+/* Hover */
+.murals-gallery-item:hover .murals-gallery-item-overlay {
+    background-color: rgba(0,0,0,0.6);
+}
+/* TÍTULO DEL ITEM */
+.murals-gallery-item-title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+/* Hover */
+.murals-gallery-item:hover .murals-gallery-item-title {
+    opacity: 1; /* Completamente visible */
+}
+
+/* ===================================================================== */
+/* === 6.7 SHOPPING CART (pages/ShoppingCart.css)                    === */
+/* ===================================================================== */
+
+/* Estilos para la página de Shopping Cart (carrito de compras) */
+
+/* ===================================================================== */
+/* === PÁGINA DEL CARRITO === */
+/* ===================================================================== */
+.cart-page {
+  min-height: calc(100vh - 200px); /* Altura mínima (100vh menos header/footer aprox.) */
+}
+/* ===================================================================== */
+/* === CARRITO VACÍO === */
+/* ===================================================================== */
+.cart-empty {
+  text-align: center;
+  padding: 2.5rem 0;
+  background-color: var(--dark-bg);
+  border-radius: 0.5rem;
+}
+/* Párrafo del mensaje de carrito vacío */
+.cart-empty p {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+/* ===================================================================== */
+/* === LAYOUT DEL CARRITO === */
+/* ===================================================================== */
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+/* ===================================================================== */
+/* === CONTENEDOR DE ITEMS === */
+/* ===================================================================== */
+.cart-items-container {
+  background-color: var(--dark-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* ===================================================================== */
+/* === ITEM DEL CARRITO === */
+/* ===================================================================== */
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid #4a4a4a;
+  padding-bottom: 1rem;
+}
+/* Último item sin borde inferior */
+.cart-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+/* INFORMACIÓN DEL ITEM */
+.cart-item-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+/* Imagen del producto */
+.cart-item-image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 0.25rem;
+}
+/* Título del producto */
+.cart-item-details h3 {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+/* Información adicional del producto */
+.cart-item-details p {
+  font-size: 0.875rem;
+  color: #9CA3AF;
+}
+/* ACCIONES DEL ITEM */
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+/* Input de cantidad */
+.cart-item-quantity {
+  width: 4rem;
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+}
+/* BOTÓN DE ELIMINAR */
+.cart-item-remove button {
+  color: #EF4444;
+}
+/* Hover */
+.cart-item-remove button:hover {
+  color: #F87171;
+}
+/* Icono del botón de eliminar */
+.cart-item-remove svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+/* ===================================================================== */
+/* === RESUMEN DEL CARRITO === */
+/* ===================================================================== */
+.cart-summary {
+  background-color: var(--dark-bg);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  align-self: flex-start;
+  position: sticky;
+  top: 6rem;
+}
+/* Título del resumen */
+.cart-summary h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #4a4a4a;
+  padding-bottom: 1rem;
+}
+/* FILA DEL RESUMEN */
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+/* TOTAL DEL RESUMEN */
+.cart-summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-top: 1px solid #4a4a4a;
+  padding-top: 1rem;
+}
+/* BOTÓN DE CHECKOUT */
+.cart-summary .button {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+/* ====================================================================== */
+/* ===                   FIN DE CONSOLIDATED STYLES                  === */
+/* ====================================================================== */

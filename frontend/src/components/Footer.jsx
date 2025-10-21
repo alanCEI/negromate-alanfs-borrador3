@@ -11,18 +11,18 @@ const Footer = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <footer className="footer">
-      <div className="container footer-container">
-        <hr className="footer-divider" />
-        <div className="footer-content">
-          <p className="footer-copyright">
+    <footer className="Footer">
+      <div className="container">
+        <hr className="Footer-divider" />
+        <div className="Footer-content">
+          <p className="Footer-copy">
             &copy; {new Date().getFullYear()} Negromate Creatives. Todos los
             derechos reservados.
           </p>
           {/* Sección de enlaces y controles */}
-          <div className="footer-links">
+          <div className="Footer-links">
             {/* Botón para cambiar entre tema claro y oscuro */}
-            <button onClick={toggleTheme} className="theme-toggle-button">
+            <button onClick={toggleTheme} className="Footer-themeToggleButton">
               Modo {theme === "light" ? "Oscuro" : "Claro"}
             </button>
             {/* Enlaces a redes sociales */}

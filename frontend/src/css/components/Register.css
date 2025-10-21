@@ -1,4 +1,4 @@
-/* Estilos para el componente de Register */
+/* Estilos para el componente de Register - SUIT CSS */
 
 /* ===================================================================== */
 /* === CONTENEDOR DEL FORMULARIO DE REGISTRO === */
@@ -7,18 +7,18 @@
 /* ===================================================================== */
 /* === TÍTULO DEL FORMULARIO === */
 /* ===================================================================== */
-.register-form-container h2 {
-  font-size: 1.875rem; 
-  font-weight: 700; 
-  text-align: center; 
-  margin-bottom: 1.5rem; 
+.RegisterForm h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
   color: var(--sub-color);
 }
 /* ===================================================================== */
 /* === FORMULARIO DE REGISTRO === */
 /* ===================================================================== */
-.register-form {
-  display: flex; 
-  flex-direction: column; 
-  gap: 1.5rem; 
+.RegisterForm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }

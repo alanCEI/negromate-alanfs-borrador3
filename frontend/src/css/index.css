@@ -1,9 +1,9 @@
-/* ESTILOS GLOBALES */
+/* ESTILOS GLOBALES - SUIT CSS */
 
 /* TEMA CLARO */
 body.light-theme {
-  --main-color: #FFFFFF; 
-  --dark-bg: #F0F0F0; 
+  --main-color: #FFFFFF;
+  --dark-bg: #F0F0F0;
   --sub-color: #1A1B1F;
   --contrast-color: #0021D7;
   --sub-contrast: #001cbe;
@@ -41,7 +41,7 @@ body {
   padding: 4rem 0;
 }
 /* TÍTULO DE SECCIÓN */
-.section-title {
+.Section-title {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -49,14 +49,14 @@ body {
   color: var(--contrast-color);
 }
 /* MENSAJES DE CARGA Y ERROR */
-.loading-message,
-.error-message {
+.LoadingMessage,
+.ErrorMessage {
   text-align: center;
   padding: 5rem 1rem;
   font-size: 1.25rem;
 }
 /* Estilos específicos para mensajes de error */
-.error-message {
+.ErrorMessage {
   color: var(--error-text);
   background-color: var(--error-bg);
   border-radius: 0.5rem;
@@ -99,7 +99,7 @@ body {
 .form-input {
   padding: 0.75rem;
   border: 1px solid var(--border-color);
-  border-radius: 0.375rem; 
+  border-radius: 0.375rem;
   background-color: var(--dark-bg);
   color: var(--sub-color);
 }

@@ -1,4 +1,4 @@
-/* Estilos para el componente de Login */
+/* Estilos para el componente de Login - SUIT CSS */
 
 /* ===================================================================== */
 /* === CONTENEDOR DEL FORMULARIO DE LOGIN === */
@@ -7,35 +7,25 @@
 /* ===================================================================== */
 /* === TÍTULO DEL FORMULARIO === */
 /* ===================================================================== */
-.login-form-container h2 {
-  font-size: 1.875rem; 
-  font-weight: 700; 
-  text-align: center; 
-  margin-bottom: 1.5rem; 
-  color: var(--sub-color); 
+.LoginForm h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--sub-color);
 }
 /* ===================================================================== */
 /* === FORMULARIO DE LOGIN === */
 /* ===================================================================== */
-.login-form {
-  display: flex; 
-  flex-direction: column; 
-  gap: 1.5rem; 
+.LoginForm-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
-/* Estilos alternativos */
-/*
-.login-form .form-group label {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--dark-bg);
-  margin-bottom: 0.25rem;
-}
-*/
 /* ===================================================================== */
 /* === INPUTS DEL FORMULARIO === */
 /* ===================================================================== */
-.login-form-input {
+.LoginForm-input {
   margin-top: 0.25rem;
   display: block;
   width: 100%;
@@ -46,8 +36,8 @@
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
   color: var(--dark-bg);
 }
-/* Estado focus de los inputs - Usa clase de utilidad */
-.login-form-input:focus {
+/* Estado focus de los inputs */
+.LoginForm-input:focus {
   outline: none;
   border-color: var(--sub-contrast);
   box-shadow: 0 0 0 2px var(--sub-contrast);
