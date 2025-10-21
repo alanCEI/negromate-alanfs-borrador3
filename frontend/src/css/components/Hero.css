@@ -3,43 +3,43 @@
 /* ===================================================================== */
 /* === SECCIÓN HERO === */
 /* ===================================================================== */
-.hero-section {
-  position: relative; 
-  height: 100vh; 
-  width: 100%; 
-  overflow: hidden; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  background-size: cover; 
-  background-attachment: fixed; 
-  background-position: center; 
+.Hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 /* ===================================================================== */
 /* === OVERLAY OSCURO === */
 /* ===================================================================== */
-.hero-overlay {
-  position: absolute; 
-  inset: 0; 
-  background-color: black; 
-  opacity: 0.5; 
+.Hero-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.5;
 }
 /* ===================================================================== */
 /* === CONTENEDOR DEL LOGO === */
 /* ===================================================================== */
-.hero-logo-container {
-  z-index: 10; 
-  transition: all 0.5s ease-in-out; 
+.Hero-logoContainer {
+  z-index: 10;
+  transition: all 0.5s ease-in-out;
 }
 /* Estado "scrolled" */
-.hero-logo-container.scrolled {
-  transform: scale(1.25); 
-  opacity: 0; 
+.Hero-logoContainer--scrolled {
+  transform: scale(1.25);
+  opacity: 0;
 }
 /* ===================================================================== */
 /* === LOGO DEL HERO === */
 /* ===================================================================== */
-.hero-logo {
+.Hero-logo {
   width: 16rem;
   height: 16rem;
   object-fit: contain;

@@ -16,12 +16,12 @@ const PriceCard = ({ product }) => {
   const { addToCart } = useCart();
 
   return (
-    <div className="price-card">
-      <h3 className="price-card-name">{product.name}</h3>
-      <p className="price-card-description">{product.description}</p>
-      <div className="price-card-price">{product.price}€</div>
+    <div className="PriceCard">
+      <h3 className="PriceCard-name">{product.name}</h3>
+      <p className="PriceCard-description">{product.description}</p>
+      <div className="PriceCard-price">{product.price}€</div>
       {/* Lista de características en el paquete */}
-      <ul className="price-card-details">
+      <ul className="PriceCard-details">
         {product.details.map((detail, i) => (
           <li key={i}>
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,7 +37,7 @@ const PriceCard = ({ product }) => {
         ))}
       </ul>
       {/* Botón para agregar el producto al carrito de compras */}
-      <button onClick={() => addToCart(product)} className="button">
+      <button onClick={() => addToCart(product)} className="Button">
         Agregar al Carrito
       </button>
     </div>
@@ -86,32 +86,32 @@ const CustomClothing = () => {
 
   // Mensaje de carga mientras se obtienen los datos
   if (loading)
-    return <div className="loading-message">Cargando prendas...</div>;
+    return <div className="u-loadingMessage">Cargando prendas...</div>;
 
   return (
-    <div className="bg-main-color text-sub-color">
+    <>
       {/* Sección de galería*/}
-      <section className="section">
-        <div className="container">
-          <h2 className="section-title">Galería de Ropa Personalizada</h2>
+      <section className="u-section">
+        <div className="u-container">
+          <h2 className="u-sectionTitle">Galería de Ropa Personalizada</h2>
           {/* Grid de imágenes de galería */}
-          <div className="clothing-gallery-grid">
+          <div className="ClothingGallery-grid">
             {gallery.map((item) => (
               // Cada item es clickeable con la imagen ampliada
               <div
                 key={item.id}
-                className="clothing-gallery-item"
+                className="ClothingGalleryItem"
                 onClick={() => setModalImage(item.imageUrl)}
               >
                 <img
                   src={item.imageUrl}
                   alt={item.title}
-                  className="clothing-gallery-item-image"
+                  className="ClothingGalleryItem-image"
                 />
                 {/* Overlay con información que aparece con hover */}
-                <div className="clothing-gallery-item-overlay">
-                  <h3 className="clothing-gallery-item-title">{item.title}</h3>
-                  <p className="clothing-gallery-item-desc">
+                <div className="ClothingGalleryItem-overlay">
+                  <h3 className="ClothingGalleryItem-title">{item.title}</h3>
+                  <p className="ClothingGalleryItem-desc">
                     {item.description}
                   </p>
                 </div>
@@ -121,11 +121,11 @@ const CustomClothing = () => {
         </div>
       </section>
       {/* Sección de paquetes de precios */}
-      <section className="section price-card-section">
-        <div className="container">
-          <h2 className="section-title">Paquetes de Personalización</h2>
+      <section className="u-section PriceCard-section">
+        <div className="u-container">
+          <h2 className="u-sectionTitle">Paquetes de Personalización</h2>
           {/* Grid de tarjetas de productos */}
-          <div className="price-cards-grid">
+          <div className="PriceCards-grid">
             {products.map((p) => (
               <PriceCard key={p._id} product={p} />
             ))}
@@ -134,11 +134,11 @@ const CustomClothing = () => {
       </section>
       {/* Vista ampliada de la imagen */}
       {modalImage && (
-        <div className="modal-overlay" onClick={() => setModalImage(null)}>
-          <img src={modalImage} alt="Vista ampliada" className="modal-image" />
+        <div className="Modal-overlay" onClick={() => setModalImage(null)}>
+          <img src={modalImage} alt="Vista ampliada" className="Modal-image" />
         </div>
       )}
-    </div>
+    </>
   );
 };
 

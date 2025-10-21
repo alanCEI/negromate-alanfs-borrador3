@@ -30,18 +30,18 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 /* CONTENEDOR PRINCIPAL */
-.container {
+.u-container {
   width: 90%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 1rem;
 }
 /* SECCIÓN */
-.section {
+.u-section {
   padding: 4rem 0;
 }
 /* TÍTULO DE SECCIÓN */
-.section-title {
+.u-sectionTitle {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -49,21 +49,21 @@ body {
   color: var(--contrast-color);
 }
 /* MENSAJES DE CARGA Y ERROR */
-.loading-message,
-.error-message {
+.u-loadingMessage,
+.u-errorMessage {
   text-align: center;
   padding: 5rem 1rem;
   font-size: 1.25rem;
 }
 /* Estilos específicos para mensajes de error */
-.error-message {
+.u-errorMessage {
   color: var(--error-text);
   background-color: var(--error-bg);
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 /* BOTÓN */
-.button {
+.Button {
   display: inline-block;
   background-color: var(--contrast-color);
   color: var(--main-color);
@@ -76,35 +76,35 @@ body {
   border: none;
 }
 /* Hover */
-.button:hover {
+.Button:hover {
   background-color: var(--sub-contrast);
   transform: scale(1.05);
 }
 /* Estado deshabilitado del botón */
-.button:disabled {
+.Button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
 }
 /* GRUPO DE FORMULARIO */
-.form-group {
+.Form-group {
   display: flex;
   flex-direction: column;
 }
 /* Labels dentro de grupos de formulario */
-.form-group label {
+.Form-group label {
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 /* INPUT DE FORMULARIO */
-.form-input {
+.Form-input {
   padding: 0.75rem;
   border: 1px solid var(--border-color);
-  border-radius: 0.375rem; 
+  border-radius: 0.375rem;
   background-color: var(--dark-bg);
   color: var(--sub-color);
 }
 /* Focus del input */
-.form-input:focus {
+.Form-input:focus {
   outline: 2px solid var(--contrast-color);
   border-color: transparent;
 }

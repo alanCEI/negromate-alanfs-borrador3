@@ -9,17 +9,17 @@ import "@/css/components/ContactInfo.css";
 
 const ContactInfo = () => {
   return (
-    <section className="section contact-info-section">
-      <div className="container">
+    <section className="u-section ContactInfo">
+      <div className="u-container">
         {/* Título principal */}
-        <h2 className="contact-info-title">¿Tienes un proyecto en mente?</h2>
+        <h2 className="ContactInfo-title">¿Tienes un proyecto en mente?</h2>
         {/* Texto que invita al usuario a contactar */}
-        <p className="contact-info-text">
+        <p className="ContactInfo-text">
           Nos encantaría escucharlo. Ponte en contacto con nosotros y hagamos
           que tu idea cobre vida.
         </p>
         {/* Botón para la página de contacto */}
-        <Link to="/contact" className="button">
+        <Link to="/contact" className="Button">
           Hablemos
         </Link>
       </div>

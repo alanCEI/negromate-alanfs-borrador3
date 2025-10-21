@@ -39,14 +39,14 @@ const Register = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="FormContainer">
       <h2>Crear Cuenta</h2>
       {/* Mensaje de error si existe */}
-      {error && <p className="error-message">{error}</p>}
+      {error && <p className="u-errorMessage">{error}</p>}
       {/* Formulario */}
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} className="Form">
         {/* Campo de nombre de usuario */}
-        <div className="form-group">
+        <div className="Form-group">
           <label htmlFor="register-username">Nombre de Usuario</label>
           <input
             id="register-username"
@@ -54,12 +54,12 @@ const Register = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-            className="form-input"
+            className="Form-input"
             autoComplete="username"
           />
         </div>
         {/* Campo de email */}
-        <div className="form-group">
+        <div className="Form-group">
           <label htmlFor="register-email">Email</label>
           <input
             id="register-email"
@@ -67,12 +67,12 @@ const Register = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="form-input"
+            className="Form-input"
             autoComplete="email"
           />
         </div>
         {/* Campo de contraseña */}
-        <div className="form-group">
+        <div className="Form-group">
           <label htmlFor="register-password">
             Contraseña (mín. 6 caracteres)
           </label>
@@ -82,12 +82,12 @@ const Register = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="form-input"
+            className="Form-input"
             autoComplete="new-password"
           />
         </div>
         {/* Botón de envío */}
-        <button type="submit" disabled={loading} className="button">
+        <button type="submit" disabled={loading} className="Button">
           {/* Estado de carga */}
           {loading ? "Creando cuenta..." : "Registrarse"}
         </button>

@@ -4,10 +4,10 @@
 /* === MÓVILES (320px - 480px) === */
 /* ===================================================================== */
 @media (min-width: 320px) and (max-width: 480px) {
-    .section-title {
+    .u-sectionTitle {
         font-size: 2rem;
     }
-    .footer-content, .about-us-content {
+    .Footer-content, .AboutUs-content {
         flex-direction: column;
         gap: 1.5rem;
         text-align: center;
@@ -18,29 +18,29 @@
 /* ===================================================================== */
 @media (max-width: 768px) {
     /* Header: Mantiene el tamaño del icono del carrito en móvil */
-    .cart-icon {
+    .CartLink-icon {
         height: 1.75rem;
         width: 1.75rem;
         min-height: 1.75rem;
         min-width: 1.75rem;
     }
     /* Header: Evita que el enlace del carrito se reduzca en pantallas pequeñas */
-    .cart-link {
+    .CartLink {
         flex-shrink: 0;
     }
     /* Header: Mantiene el tamaño del icono hamburguesa en móvil */
-    .menu-icon {
+    .MobileMenuButton-icon {
         height: 2rem;
         width: 2rem;
         min-height: 2rem;
         min-width: 2rem;
     }
     /* Header: Evita que el botón de menú móvil se reduzca */
-    .mobile-menu-button {
+    .MobileMenuButton {
         flex-shrink: 0;
     }
     /* Header: Evita que el contenedor del menú móvil se reduzca */
-    .mobile-menu-container {
+    .Header-mobileMenuContainer {
         flex-shrink: 0;
     }
 }
@@ -48,25 +48,25 @@
 /* === MENÚ MÓVIL (hasta 960px) === */
 /* ===================================================================== */
 @media (max-width: 960px) {
-    .header .desktop-nav {
+    .Header .Header-desktopNav {
         display: none;
     }
-    .header .mobile-menu-container {
+    .Header .Header-mobileMenuContainer {
         display: flex;
     }
-    .header .mobile-nav {
-        display: flex; 
+    .Header .MobileNav {
+        display: flex;
         flex-direction: column;
-        align-items: center; 
-        width: 100%; 
-        position: absolute; 
-        top: 100%; 
-        left: 0; 
-        background-color: var(--main-color); 
-        padding: 1rem 0; 
-        gap: 0.5rem; 
-        border-bottom: 1px solid var(--dark-bg); 
-        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--main-color);
+        padding: 1rem 0;
+        gap: 0.5rem;
+        border-bottom: 1px solid var(--dark-bg);
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
         z-index: 100;
     }
 }
@@ -75,12 +75,12 @@
 /* ===================================================================== */
 @media (min-width: 768px) {
     /* Hero: Aumenta el tamaño del logo en tablets y desktop */
-    .hero-logo {
+    .Hero-logo {
         width: 20rem;
         height: 20rem;
     }
     /* ContactInfo: Aumenta el tamaño del título en tablets y desktop */
-    .contact-info-title {
+    .ContactInfo-title {
         font-size: 2.5rem;
     }
 }
@@ -88,10 +88,10 @@
 /* === TABLETS (768px - 1023px) === */
 /* ===================================================================== */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .products-grid, .gallery-grid, .price-grid {
+    .Products-grid, .Gallery-grid, .PriceList-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .shopping-cart-layout, .graphic-design-layout, .about-us-content {
+    .ShoppingCart-layout, .GraphicDesign-layout, .AboutUs-content {
        grid-template-columns: 1fr;
     }
 }
@@ -99,28 +99,28 @@
 /* === LAPTOPS Y DESKTOPS (desde 1024px) === */
 /* ===================================================================== */
 @media (min-width: 1024px) {
-   .products-grid, .gallery-grid, .price-grid {
-        grid-template-columns: repeat(3, 1fr); 
+   .Products-grid, .Gallery-grid, .PriceList-grid {
+        grid-template-columns: repeat(3, 1fr);
    }
-   .about-us-content {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 3rem; 
-        align-items: center; 
+   .AboutUs-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        align-items: center;
    }
 }
 /* ===================================================================== */
 /* === DESKTOPS GRANDES (desde 1328px) === */
 /* ===================================================================== */
 @media (min-width: 1328px) {
-    .section-title {
-        font-size: 3rem; 
+    .u-sectionTitle {
+        font-size: 3rem;
     }
 }
 /* ===================================================================== */
 /* === PANTALLAS EXTRA GRANDES (desde 2560px) === */
 /* ===================================================================== */
 @media (min-width: 2560px) {
-    .container {
+    .u-container {
         max-width: 1800px;
     }
 }

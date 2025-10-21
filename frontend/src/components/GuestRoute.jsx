@@ -11,7 +11,7 @@ const GuestRoute = () => {
   const { user, loading } = useAuth();
   // Mensaje de carga
   if (loading) {
-    return <div className="loading-message">Cargando...</div>;
+    return <div className="u-loadingMessage">Cargando...</div>;
   }
   // Si el usuario está autenticado lo redirigimos al carrito de compras, si no está autenticado (invitado)
   return user ? <Navigate to="/cart" replace /> : <Outlet />;

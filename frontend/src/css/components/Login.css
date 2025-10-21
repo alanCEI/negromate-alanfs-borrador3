@@ -3,37 +3,37 @@
 /* ===================================================================== */
 /* === CONTENEDOR DEL FORMULARIO DE LOGIN === */
 /* ===================================================================== */
-.login-form-container {
-  width: 100%; 
-  max-width: 28rem; 
-  background-color: var(--dark-bg); 
-  padding: 2rem; 
-  border-radius: 0.5rem; 
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
-  border: 2px solid var(--contrast-color); 
-  color: var(--sub-color); 
+.LoginFormContainer {
+  width: 100%;
+  max-width: 28rem;
+  background-color: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  border: 2px solid var(--contrast-color);
+  color: var(--sub-color);
 }
 /* ===================================================================== */
 /* === TÍTULO DEL FORMULARIO === */
 /* ===================================================================== */
-.login-form-container h2 {
-  font-size: 1.875rem; 
-  font-weight: 700; 
-  text-align: center; 
-  margin-bottom: 1.5rem; 
-  color: var(--sub-color); 
+.LoginFormContainer h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--sub-color);
 }
 /* ===================================================================== */
 /* === FORMULARIO DE LOGIN === */
 /* ===================================================================== */
-.login-form {
-  display: flex; 
-  flex-direction: column; 
-  gap: 1.5rem; 
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 /* Estilos alternativos */
 /*
-.login-form .form-group label {
+.LoginForm .Form-group label {
   display: block;
   font-size: 0.875rem;
   font-weight: 500;
@@ -44,7 +44,7 @@
 /* ===================================================================== */
 /* === INPUTS DEL FORMULARIO === */
 /* ===================================================================== */
-.login-form input {
+.LoginForm input {
   margin-top: 0.25rem;
   display: block;
   width: 100%;
@@ -56,7 +56,7 @@
   color: var(--dark-bg);
 }
 /* Estado focus de los inputs */
-.login-form input:focus {
+.LoginForm input:focus {
   outline: none;
   border-color: var(--sub-contrast);
   box-shadow: 0 0 0 2px var(--sub-contrast);

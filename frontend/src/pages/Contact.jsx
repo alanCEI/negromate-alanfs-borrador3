@@ -37,8 +37,8 @@ const Contact = () => {
   // Mostrar mensaje de éxito si el formulario fue enviado
   if (submitted) {
     return (
-      <div className="contact-success-message">
-        <div className="contact-success-box">
+      <div className="Contact-successMessage">
+        <div className="Contact-successBox">
           <h2>¡Gracias por tu mensaje!</h2>
           <p>Nos pondremos en contacto contigo lo antes posible.</p>
         </div>
@@ -47,17 +47,17 @@ const Contact = () => {
   }
 
   return (
-    <section className="section contact-page">
-      <div className="container contact-container">
+    <section className="u-section Contact">
+      <div className="u-container Contact-container">
         {/* Título y descripción */}
-        <div className="contact-header">
+        <div className="Contact-header">
           <h1>Contacto</h1>
           <p>¿Tienes un proyecto en mente? Ponte en contacto con nosotros.</p>
         </div>
         {/* Formulario de contacto */}
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form onSubmit={handleSubmit} className="Contact-form">
           {/* Campo nombre/empresa*/}
-          <div className="form-group">
+          <div className="Form-group">
             <label htmlFor="user">Nombre / Empresa</label>
             <input
               type="text"
@@ -69,7 +69,7 @@ const Contact = () => {
             />
           </div>
           {/* Campo email */}
-          <div className="form-group">
+          <div className="Form-group">
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -81,7 +81,7 @@ const Contact = () => {
             />
           </div>
           {/* Campo teléfono */}
-          <div className="form-group">
+          <div className="Form-group">
             <label htmlFor="tel">Teléfono (Opcional)</label>
             <input
               type="tel"
@@ -92,11 +92,11 @@ const Contact = () => {
             />
           </div>
           {/* Botones para seleccionar tipo de cliente */}
-          <fieldset className="fieldset">
+          <fieldset className="Contact-fieldset">
             <legend>Tipo de cliente</legend>
-            <div className="radio-group">
+            <div className="Contact-radioGroup">
               {/* Cliente particular por defecto */}
-              <label className="radio-label">
+              <label className="Contact-radioLabel">
                 <input
                   id="private"
                   name="type"
@@ -108,7 +108,7 @@ const Contact = () => {
                 <span>Particular</span>
               </label>
               {/* Cliente empresa */}
-              <label className="radio-label">
+              <label className="Contact-radioLabel">
                 <input
                   id="company"
                   name="type"
@@ -122,7 +122,7 @@ const Contact = () => {
             </div>
           </fieldset>
           {/* Campo de texto para comentarios */}
-          <div className="form-group">
+          <div className="Form-group">
             <label htmlFor="info">Comentarios</label>
             <textarea
               id="info"
@@ -134,7 +134,7 @@ const Contact = () => {
             ></textarea>
           </div>
           {/* Botón de envío */}
-          <button type="submit" disabled={loading} className="button">
+          <button type="submit" disabled={loading} className="Button">
             {loading ? "Enviando..." : "Enviar"}
           </button>
         </form>

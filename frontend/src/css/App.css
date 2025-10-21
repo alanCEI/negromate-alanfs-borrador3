@@ -1,11 +1,11 @@
 /* CONTENEDOR PRINCIPAL DE LA APLICACIÓN */
-.app-container {
+.App-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 /* CONTENIDO PRINCIPAL */
-.main-content {
+.App-mainContent {
   flex-grow: 1;
   width: 100%;
 }

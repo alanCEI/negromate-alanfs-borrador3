@@ -35,14 +35,14 @@ const Login = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="FormContainer">
       <h2>Iniciar Sesión</h2>
       {/* Mensaje de error si existe */}
-      {error && <p className="error-message">{error}</p>}
+      {error && <p className="u-errorMessage">{error}</p>}
       {/* Formulario */}
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} className="Form">
         {/* Campo de email */}
-        <div className="form-group">
+        <div className="Form-group">
           <label htmlFor="login-email">Email</label>
           <input
             id="login-email"
@@ -50,12 +50,12 @@ const Login = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="form-input"
+            className="Form-input"
             autoComplete="email"
           />
         </div>
         {/* Campo de contraseña */}
-        <div className="form-group">
+        <div className="Form-group">
           <label htmlFor="login-password">Contraseña</label>
           <input
             id="login-password"
@@ -63,12 +63,12 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required // Validación HTML5 - campo obligatorio
-            className="form-input"
+            className="Form-input"
             autoComplete="current-password" // Sugiere contraseñas guardadas
           />
         </div>
         {/* Botón de envío */}
-        <button type="submit" disabled={loading} className="button">
+        <button type="submit" disabled={loading} className="Button">
           {/* Estado de carga */}
           {loading ? "Entrando..." : "Entrar"}
         </button>

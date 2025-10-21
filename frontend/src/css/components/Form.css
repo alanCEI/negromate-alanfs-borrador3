@@ -3,32 +3,32 @@
 /* ===================================================================== */
 /* === CONTENEDOR DEL FORMULARIO === */
 /* ===================================================================== */
-.form-container {
-  width: 100%; 
-  max-width: 28rem; 
-  background-color: var(--dark-bg); 
-  padding: 2rem; 
-  border-radius: 0.5rem; 
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); 
-  border: 2px solid var(--contrast-color); 
-  color: var(--sub-color); 
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
+.FormContainer {
+  width: 100%;
+  max-width: 28rem;
+  background-color: var(--dark-bg);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--contrast-color);
+  color: var(--sub-color);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 /* ===================================================================== */
 /* === TÍTULO DEL FORMULARIO === */
 /* ===================================================================== */
-.form-container h2 {
-  font-size: 1.875rem; 
-  font-weight: 700; 
-  text-align: center; 
-  margin-bottom: 1.5rem; 
-  color: var(--sub-color); 
+.FormContainer h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--sub-color);
 }
 /* ===================================================================== */
 /* === FORMULARIO === */
 /* ===================================================================== */
-.form {
-  display: flex; 
-  flex-direction: column; 
-  gap: 1.5rem; 
+.Form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }

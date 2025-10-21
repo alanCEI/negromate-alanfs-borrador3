@@ -3,21 +3,21 @@
 /* ===================================================================== */
 /* === SECCIÓN DE INFORMACIÓN DE CONTACTO === */
 /* ===================================================================== */
-.contact-info-section {
+.ContactInfo {
   text-align: center;
 }
 /* ===================================================================== */
 /* === TÍTULO DE CONTACTO === */
 /* ===================================================================== */
-.contact-info-title {
-  font-size: 2.25rem; 
-  font-weight: 700; 
-  margin-bottom: 1rem; 
+.ContactInfo-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 /* ===================================================================== */
 /* === TEXTO DE CONTACTO === */
 /* ===================================================================== */
-.contact-info-text {
+.ContactInfo-text {
   font-size: 1.25rem;
   margin-bottom: 2rem;
   max-width: 42rem;
