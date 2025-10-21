@@ -19,6 +19,12 @@
 
 /* Reset CSS */
 
+@negromate-alanfs-borrador3
+
+# Hay que arreglar el tamaño de las tarjetas de precio de cada servicio: diseño grafico, ropa personalizada y murales.
+
+# Se reflejan en vertical y deben reflejarse los 3 paquetes de precio una al lado de otra de forma horizontal, modifca el codigo CSS necesario para corregirlo.
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
