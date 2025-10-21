@@ -1,7 +1,5 @@
 /* ESTILOS GLOBALES */
 
-/* Importa la fuente Spartan de Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
 /* TEMA CLARO */
 body.light-theme {
   --main-color: #FFFFFF; 
