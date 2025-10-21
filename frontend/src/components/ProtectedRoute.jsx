@@ -11,7 +11,7 @@ const ProtectedRoute = () => {
   const { user, loading } = useAuth();
   // Mensaje de carga
   if (loading) {
-    return <div className="loading-message">Cargando...</div>;
+    return <div className="LoadingMessage">Cargando...</div>;
   }
   // Si hay un usuario autenticado renderiza Outlet, si no hay usuario redirige a la página de login
   return user ? <Outlet /> : <Navigate to="/profile" replace />;

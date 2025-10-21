@@ -42,7 +42,7 @@ const Login = () => {
       {/* Formulario */}
       <form onSubmit={handleSubmit} className="Form flex flex-col gap-6">
         {/* Campo de email */}
-        <div className="form-group">
+        <div className="FormGroup">
           <label htmlFor="login-email">Email</label>
           <input
             id="login-email"
@@ -50,12 +50,12 @@ const Login = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="form-input"
+            className="FormInput"
             autoComplete="email"
           />
         </div>
         {/* Campo de contraseña */}
-        <div className="form-group">
+        <div className="FormGroup">
           <label htmlFor="login-password">Contraseña</label>
           <input
             id="login-password"
@@ -63,7 +63,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required // Validación HTML5 - campo obligatorio
-            className="form-input"
+            className="FormInput"
             autoComplete="current-password" // Sugiere contraseñas guardadas
           />
         </div>

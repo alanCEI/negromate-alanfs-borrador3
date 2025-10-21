@@ -46,7 +46,7 @@ const Register = () => {
       {/* Formulario */}
       <form onSubmit={handleSubmit} className="Form flex flex-col gap-6">
         {/* Campo de nombre de usuario */}
-        <div className="form-group">
+        <div className="FormGroup">
           <label htmlFor="register-username">Nombre de Usuario</label>
           <input
             id="register-username"
@@ -54,12 +54,12 @@ const Register = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-            className="form-input"
+            className="FormInput"
             autoComplete="username"
           />
         </div>
         {/* Campo de email */}
-        <div className="form-group">
+        <div className="FormGroup">
           <label htmlFor="register-email">Email</label>
           <input
             id="register-email"
@@ -67,12 +67,12 @@ const Register = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="form-input"
+            className="FormInput"
             autoComplete="email"
           />
         </div>
         {/* Campo de contraseña */}
-        <div className="form-group">
+        <div className="FormGroup">
           <label htmlFor="register-password">
             Contraseña (mín. 6 caracteres)
           </label>
@@ -82,7 +82,7 @@ const Register = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="form-input"
+            className="FormInput"
             autoComplete="new-password"
           />
         </div>

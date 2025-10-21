@@ -39,13 +39,6 @@
 .ContactForm {
   color: var(--dark-bg);
 }
-/* ETIQUETAS DEL FORMULARIO */
-.ContactForm .form-group label {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-}
 /* INPUTS Y TEXTAREAS */
 .ContactForm-input {
   margin-top: 0.25rem;
@@ -64,18 +57,18 @@
   box-shadow: 0 0 0 2px var(--sub-contrast);
 }
 /* FIELDSET Y LEGEND */
-.ContactForm .fieldset legend {
+.ContactForm-fieldset legend {
   font-size: 0.875rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 /* GRUPO DE RADIO BUTTONS */
-.ContactForm .radio-group {
+.ContactForm-radioGroup {
   display: flex;
   gap: 1rem;
 }
 /* ETIQUETAS DE RADIO */
-.ContactForm .radio-label {
+.ContactForm-radioLabel {
   display: flex;
   align-items: center;
   gap: 0.5rem;

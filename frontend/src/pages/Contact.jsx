@@ -57,7 +57,7 @@ const Contact = () => {
         {/* Formulario de contacto */}
         <form onSubmit={handleSubmit} className="ContactForm bg-sub p-8 rounded-lg shadow-lg border-accent flex flex-col gap-6">
           {/* Campo nombre/empresa*/}
-          <div className="form-group">
+          <div className="FormGroup">
             <label htmlFor="user">Nombre / Empresa</label>
             <input
               type="text"
@@ -70,7 +70,7 @@ const Contact = () => {
             />
           </div>
           {/* Campo email */}
-          <div className="form-group">
+          <div className="FormGroup">
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -83,7 +83,7 @@ const Contact = () => {
             />
           </div>
           {/* Campo teléfono */}
-          <div className="form-group">
+          <div className="FormGroup">
             <label htmlFor="tel">Teléfono (Opcional)</label>
             <input
               type="tel"
@@ -95,11 +95,11 @@ const Contact = () => {
             />
           </div>
           {/* Botones para seleccionar tipo de cliente */}
-          <fieldset className="fieldset">
+          <fieldset className="ContactForm-fieldset">
             <legend>Tipo de cliente</legend>
-            <div className="radio-group">
+            <div className="ContactForm-radioGroup">
               {/* Cliente particular por defecto */}
-              <label className="radio-label">
+              <label className="ContactForm-radioLabel">
                 <input
                   id="private"
                   name="type"
@@ -111,7 +111,7 @@ const Contact = () => {
                 <span>Particular</span>
               </label>
               {/* Cliente empresa */}
-              <label className="radio-label">
+              <label className="ContactForm-radioLabel">
                 <input
                   id="company"
                   name="type"
@@ -125,7 +125,7 @@ const Contact = () => {
             </div>
           </fieldset>
           {/* Campo de texto para comentarios */}
-          <div className="form-group">
+          <div className="FormGroup">
             <label htmlFor="info">Comentarios</label>
             <textarea
               id="info"
