@@ -80,7 +80,7 @@ const ShoppingCart = () => {
         {/* Mensaje si el carrito está vacío */}
         {cartItems.length === 0 ? (
           <div className="CartPage-empty">
-            <p>Tu carrito está vacío.</p>
+            <p className="text-xl mb-4">Tu carrito está vacío.</p>
             <Link to="/" className="button">
               Explorar productos
             </Link>
@@ -89,7 +89,7 @@ const ShoppingCart = () => {
           // Lista de items y resumen
           <div className="CartPage-layout">
             {/* Contenedor de items del carrito */}
-            <div className="CartPage-itemsContainer">
+            <div className="bg-dark p-6 rounded-lg flex flex-col gap-4 CartPage-itemsContainer">
               {/* Mapeo de cada producto en el carrito */}
               {cartItems.map((item) => (
                 <div key={item._id} className="CartItem">
@@ -101,8 +101,8 @@ const ShoppingCart = () => {
                       className="CartItem-image"
                     />
                     <div className="CartItem-details">
-                      <h3>{item.name}</h3>
-                      <p>{item.price.toFixed(2)}€</p>
+                      <h3 className="font-bold text-lg">{item.name}</h3>
+                      <p className="text-sm">{item.price.toFixed(2)}€</p>
                     </div>
                   </div>
                   {/* Modificar cantidad y eliminar */}
@@ -142,15 +142,15 @@ const ShoppingCart = () => {
               ))}
             </div>
             {/* Panel lateral con resumen de la orden */}
-            <div className="CartPage-summary">
-              <h2>Resumen de la Orden</h2>
+            <div className="bg-dark p-6 rounded-lg sticky CartPage-summary">
+              <h2 className="text-2xl font-bold mb-6 pb-4 CartPage-summary-title">Resumen de la Orden</h2>
               {/* Fila de subtotal */}
               <div className="CartPage-summaryRow">
                 <span>Subtotal</span>
                 <span>{cartTotal.toFixed(2)}€</span>
               </div>
               {/* Fila de total */}
-              <div className="CartPage-summaryTotal">
+              <div className="flex justify-between font-bold text-xl pt-4 CartPage-summaryTotal">
                 <span>Total</span>
                 <span>{cartTotal.toFixed(2)}€</span>
               </div>

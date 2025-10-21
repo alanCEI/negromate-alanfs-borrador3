@@ -29,16 +29,10 @@
   border-bottom: 2px solid var(--contrast-color);
   margin-bottom: 2rem;
 }
-/* === BOTÓN DE ALTERNANCIA === */
+/* === BOTÓN DE ALTERNANCIA - Usa clases de utilidad: flex-1 py-3 text-lg font-bold transition text-sub */
 .ToggleButton {
-  flex: 1;
-  padding: 0.75rem 0;
-  font-size: 1.125rem;
-  font-weight: 700;
-  transition: all 0.2s ease-in-out;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  color: var(--sub-color);
 }
 /* Hover */
 .ToggleButton:hover {

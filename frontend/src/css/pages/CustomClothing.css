@@ -45,11 +45,9 @@
 .ClothingGalleryItem:hover .ClothingGalleryItem-overlay {
   opacity: 1;
 }
-/* TÍTULO DEL ITEM */
+/* TÍTULO DEL ITEM - Usa clases de utilidad: text-xl font-bold transition-transform */
 .ClothingGalleryItem-title {
   color: white;
-  font-size: 1.25rem;
-  font-weight: 700;
   transform: translateY(1rem);
   transition: transform 0.3s ease;
 }

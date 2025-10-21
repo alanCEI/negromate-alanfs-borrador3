@@ -21,14 +21,14 @@ const Profile = () => {
             {/* Botón para mostrar Login cuando showLogin es true */}
             <button
               onClick={() => setShowLogin(true)}
-              className={`ToggleButton ${showLogin ? "is-active" : ""}`}
+              className={`ToggleButton flex-1 py-3 text-lg font-bold transition text-sub ${showLogin ? "is-active" : ""}`}
             >
               Iniciar Sesión
             </button>
             {/* Botón para mostrar Register cuando showLogin es false */}
             <button
               onClick={() => setShowLogin(false)}
-              className={`ToggleButton ${!showLogin ? "is-active" : ""}`}
+              className={`ToggleButton flex-1 py-3 text-lg font-bold transition text-sub ${!showLogin ? "is-active" : ""}`}
             >
               Registrarse
             </button>

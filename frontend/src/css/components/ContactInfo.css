@@ -9,18 +9,8 @@
 /* ===================================================================== */
 /* === TÍTULO DE CONTACTO === */
 /* ===================================================================== */
-.ContactInfo-title {
-  font-size: 2.25rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
+/* Usa clases de utilidad: text-4xl font-bold mb-4 */
 /* ===================================================================== */
 /* === TEXTO DE CONTACTO === */
 /* ===================================================================== */
-.ContactInfo-text {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  max-width: 42rem;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* Usa clases de utilidad: text-xl mb-8 max-w-2xl mx-auto */

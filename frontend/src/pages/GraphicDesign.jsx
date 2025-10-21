@@ -19,9 +19,9 @@ const PriceCard = ({ product }) => {
 
   return (
     <div className="PriceCard bg-main p-8 rounded-lg shadow-lg flex flex-col border-accent">
-      <h3 className="PriceCard-name">{product.name}</h3>
-      <p className="PriceCard-description">{product.description}</p>
-      <div className="PriceCard-price">{product.price}€</div>
+      <h3 className="text-2xl font-bold text-contrast mb-4 text-center">{product.name}</h3>
+      <p className="text-center mb-6 PriceCard-description">{product.description}</p>
+      <div className="text-6xl font-bold text-center mb-6 text-contrast">{product.price}€</div>
       {/* Lista de características en el paquete */}
       <ul className="PriceCard-details">
         {product.details.map((detail, i) => (
@@ -55,9 +55,9 @@ const PriceCard = ({ product }) => {
 const GalleryItem = ({ item, onSelect, isSelected }) => (
   <div
     onClick={onSelect}
-    className={`GalleryItem ${isSelected ? "is-selected" : ""}`}
+    className={`GalleryItem cursor-pointer p-4 rounded-lg transition bg-dark ${isSelected ? "is-selected" : ""}`}
   >
-    <h4 className="GalleryItem-brand">{item.brand}</h4>
+    <h4 className="font-bold text-lg">{item.brand}</h4>
   </div>
 );
 
@@ -130,13 +130,13 @@ const GraphicDesign = () => {
             {/* Vista del item seleccionado */}
             <div className="md-col-span-2">
               {selectedItem && (
-                <div className="Gallery-main">
+                <div className="Gallery-main sticky bg-dark p-6 rounded-lg">
                   <img
                     src={selectedItem.imageUrl}
                     alt={selectedItem.brand}
-                    className="Gallery-mainImage"
+                    className="w-full rounded-lg mb-4"
                   />
-                  <h3 className="Gallery-mainBrand">{selectedItem.brand}</h3>
+                  <h3 className="text-2xl font-bold text-contrast mb-2">{selectedItem.brand}</h3>
                   <p>{selectedItem.description}</p>
                 </div>
               )}

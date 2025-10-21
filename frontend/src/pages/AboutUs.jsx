@@ -55,7 +55,7 @@ const AboutUs = () => {
         <h1 className="Section-title">{content.title}</h1>
         {/* Párrafo principal */}
         <p
-          className="AboutUs-mainParagraph text-center max-w-4xl leading-relaxed bg-sub p-8 rounded-lg shadow-lg"
+          className="AboutUs-mainParagraph mx-auto mb-16 text-center max-w-4xl leading-relaxed p-8 rounded-lg shadow-lg"
           dangerouslySetInnerHTML={{ __html: content.mainParagraph }}
         ></p>
         <div className="AboutUs-content">
@@ -86,9 +86,9 @@ const AboutUs = () => {
           </figure>
           {/* Información sobre los artistas */}
           <div className="Artist-info bg-dark p-8 rounded-lg flex flex-col gap-6">
-            <h2 className="Artist-infoTitle">{content.artists.title}</h2>
+            <h2 className="text-3xl font-bold text-center text-contrast">{content.artists.title}</h2>
             {content.artists.paragraphs.map((p, index) => (
-              <p key={index} dangerouslySetInnerHTML={{ __html: p }}></p>
+              <p key={index} className="leading-relaxed" dangerouslySetInnerHTML={{ __html: p }}></p>
             ))}
           </div>
         </div>

@@ -11,13 +11,7 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid var(--dark-bg);
 }
-/* Contenido del header */
-.Header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
+/* Contenido del header - Usa clases de utilidad: flex justify-between items-center p-4 */
 /* ===================================================================== */
 /* === LOGO DEL HEADER === */
 /* ===================================================================== */
@@ -38,13 +32,10 @@
   align-items: center;
   gap: 1rem;
 }
-/* Estilos para los enlaces de navegación */
+/* Estilos para los enlaces de navegación - Usa clases de utilidad: py-2 px-4 rounded-lg transition-colors text-sub font-bold */
 .NavLink {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
   transition: color 0.2s, background-color 0.2s;
   color: var(--sub-color);
-  font-weight: 700;
 }
 /* Estado hover de los enlaces */
 .NavLink:hover {
@@ -59,11 +50,8 @@
 /* ===================================================================== */
 /* === BOTÓN DE CERRAR SESIÓN === */
 /* ===================================================================== */
+/* Usa clases de utilidad: py-2 px-4 rounded-lg text-sub font-bold transition-colors */
 .Header-logoutButton {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  color: var(--sub-color);
-  font-weight: 700;
   transition: background-color 0.2s, color 0.2s;
 }
 /* Hover */
@@ -119,16 +107,7 @@
   display: none;
   align-items: center;
 }
-/* Botón hamburguesa */
-.Header-mobileMenuButton {
-  color: var(--sub-color);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  flex-shrink: 0;
-}
+/* Botón hamburguesa - Usa clases de utilidad: text-sub inline-flex items-center justify-center p-2 rounded-lg flex-shrink-0 */
 /* Hover */
 .Header-mobileMenuButton:hover {
   background-color: var(--dark-bg);
@@ -156,12 +135,7 @@
   align-items: center;
   justify-content: center;
 }
-/* Navegación móvil desplegable */
+/* Navegación móvil desplegable - Usa clases de utilidad: flex flex-col gap-2 p-4 bg-main */
 .Header-mobileNav {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem;
-  background-color: var(--main-color);
   border-top: 1px solid var(--dark-bg);
 }

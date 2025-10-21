@@ -12,9 +12,9 @@ const ContactInfo = () => {
     <section className="section ContactInfo">
       <div className="container">
         {/* Título principal */}
-        <h2 className="ContactInfo-title">¿Tienes un proyecto en mente?</h2>
+        <h2 className="text-4xl font-bold mb-4">¿Tienes un proyecto en mente?</h2>
         {/* Texto que invita al usuario a contactar */}
-        <p className="ContactInfo-text">
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
           Nos encantaría escucharlo. Ponte en contacto con nosotros y hagamos
           que tu idea cobre vida.
         </p>

@@ -37,9 +37,9 @@ const Contact = () => {
   // Mostrar mensaje de éxito si el formulario fue enviado
   if (submitted) {
     return (
-      <div className="ContactPage-successMessage">
-        <div className="ContactPage-successBox">
-          <h2>¡Gracias por tu mensaje!</h2>
+      <div className="flex items-center justify-center text-center ContactPage-successMessage">
+        <div className="bg-dark p-8 rounded-lg shadow ContactPage-successBox">
+          <h2 className="text-3xl font-bold text-contrast mb-4">¡Gracias por tu mensaje!</h2>
           <p>Nos pondremos en contacto contigo lo antes posible.</p>
         </div>
       </div>
@@ -51,8 +51,8 @@ const Contact = () => {
       <div className="container ContactPage-container">
         {/* Título y descripción */}
         <div className="ContactPage-header">
-          <h1>Contacto</h1>
-          <p>¿Tienes un proyecto en mente? Ponte en contacto con nosotros.</p>
+          <h1 className="text-5xl font-bold mb-2 text-contrast">Contacto</h1>
+          <p className="text-lg">¿Tienes un proyecto en mente? Ponte en contacto con nosotros.</p>
         </div>
         {/* Formulario de contacto */}
         <form onSubmit={handleSubmit} className="ContactForm bg-sub p-8 rounded-lg shadow-lg border-accent flex flex-col gap-6">
@@ -96,7 +96,7 @@ const Contact = () => {
           </div>
           {/* Botones para seleccionar tipo de cliente */}
           <fieldset className="ContactForm-fieldset">
-            <legend>Tipo de cliente</legend>
+            <legend className="text-sm font-medium mb-2">Tipo de cliente</legend>
             <div className="ContactForm-radioGroup">
               {/* Cliente particular por defecto */}
               <label className="ContactForm-radioLabel">

@@ -16,12 +16,8 @@
   flex-direction: column;
   gap: 1rem;
 }
-/* ITEM DE LA GALERÍA (SIDEBAR) */
+/* ITEM DE LA GALERÍA (SIDEBAR) - Usa clases de utilidad: cursor-pointer p-4 rounded-lg transition bg-dark */
 .GalleryItem {
-  cursor: pointer;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  transition: all 0.2s ease-in-out;
   background-color: var(--dark-bg);
 }
 /* Hover */
@@ -34,36 +30,17 @@
   color: var(--main-color);
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
 }
-/* Nombre de la marca/proyecto en el item */
-.GalleryItem-brand {
-  font-weight: 700;
-  font-size: 1.125rem;
-}
+/* Nombre de la marca/proyecto en el item - Usa clases de utilidad: font-bold text-lg */
 /* ===================================================================== */
 /* === ÁREA PRINCIPAL DE LA GALERÍA === */
 /* ===================================================================== */
+/* Usa clases de utilidad: sticky bg-dark p-6 rounded-lg */
 .Gallery-main {
-  position: sticky;
   top: 6rem;
   background-color: var(--dark-bg);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
 }
-/* IMAGEN PRINCIPAL */
-.Gallery-mainImage {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-}
-/* NOMBRE DE LA MARCA PRINCIPAL */
-.Gallery-mainBrand {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--contrast-color);
-  margin-bottom: 0.5rem;
-}
+/* IMAGEN PRINCIPAL - Usa clases de utilidad: w-full rounded-lg mb-4 */
+/* NOMBRE DE LA MARCA PRINCIPAL - Usa clases de utilidad: text-2xl font-bold text-contrast mb-2 */
 /* ===================================================================== */
 /* === SECCIÓN DE TARJETAS DE PRECIOS === */
 /* ===================================================================== */
@@ -81,37 +58,16 @@
 /* ===================================================================== */
 /* === TARJETA DE PRECIO === */
 /* ===================================================================== */
+/* Usa clases de utilidad: bg-main p-8 rounded-lg shadow-lg flex flex-col border-contrast */
 .PriceCard {
   background-color: var(--main-color);
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  border: 2px solid var(--contrast-color);
 }
-/* NOMBRE DEL PAQUETE */
-.PriceCard-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--contrast-color);
-  margin-bottom: 1rem;
-  text-align: center;
-}
-/* DESCRIPCIÓN DEL PAQUETE */
+/* NOMBRE DEL PAQUETE - Usa clases de utilidad: text-2xl font-bold text-contrast mb-4 text-center */
+/* DESCRIPCIÓN DEL PAQUETE - Usa clases de utilidad: text-center mb-6 */
 .PriceCard-description {
-  text-align: center;
-  margin-bottom: 1.5rem;
   color: var(--sub-contrast);
 }
-/* PRECIO */
-.PriceCard-price {
-  font-size: 3rem;
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: var(--contrast-color);
-}
+/* PRECIO - Usa clases de utilidad: text-6xl font-bold text-center mb-6 text-contrast */
 /* LISTA DE DETALLES */
 .PriceCard-details {
   list-style: none;

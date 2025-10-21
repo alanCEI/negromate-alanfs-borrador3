@@ -15,11 +15,7 @@
   background-color: var(--dark-bg);
   border-radius: 0.5rem;
 }
-/* Párrafo del mensaje de carrito vacío */
-.CartPage-empty p {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-}
+/* Párrafo del mensaje de carrito vacío - Usa clases de utilidad: text-xl mb-4 */
 /* ===================================================================== */
 /* === LAYOUT DEL CARRITO === */
 /* ===================================================================== */
@@ -31,13 +27,9 @@
 /* ===================================================================== */
 /* === CONTENEDOR DE ITEMS === */
 /* ===================================================================== */
+/* Usa clases de utilidad: bg-dark p-6 rounded-lg flex flex-col gap-4 */
 .CartPage-itemsContainer {
   background-color: var(--dark-bg);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 /* ===================================================================== */
 /* === ITEM DEL CARRITO === */
@@ -69,14 +61,9 @@
   object-fit: cover;
   border-radius: 0.25rem;
 }
-/* Detalles del item */
-.CartItem-details h3 {
-  font-weight: 700;
-  font-size: 1.125rem;
-}
-/* Información adicional del producto */
+/* Detalles del item - Usa clases de utilidad: font-bold text-lg */
+/* Información adicional del producto - Usa clases de utilidad: text-sm */
 .CartItem-details p {
-  font-size: 0.875rem;
   color: #9CA3AF;
 }
 /* ACCIONES DEL ITEM */
@@ -110,21 +97,15 @@
 /* ===================================================================== */
 /* === RESUMEN DEL CARRITO === */
 /* ===================================================================== */
+/* Usa clases de utilidad: bg-dark p-6 rounded-lg sticky */
 .CartPage-summary {
   background-color: var(--dark-bg);
-  padding: 1.5rem;
-  border-radius: 0.5rem;
   align-self: flex-start;
-  position: sticky;
   top: 6rem;
 }
-/* Título del resumen */
+/* Título del resumen - Usa clases de utilidad: text-2xl font-bold mb-6 pb-4 */
 .CartPage-summary h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
   border-bottom: 1px solid #4a4a4a;
-  padding-bottom: 1rem;
 }
 /* FILA DEL RESUMEN */
 .CartPage-summaryRow {
@@ -132,14 +113,9 @@
   justify-content: space-between;
   margin-bottom: 1rem;
 }
-/* TOTAL DEL RESUMEN */
+/* TOTAL DEL RESUMEN - Usa clases de utilidad: flex justify-between font-bold text-xl pt-4 */
 .CartPage-summaryTotal {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 700;
-  font-size: 1.25rem;
   border-top: 1px solid #4a4a4a;
-  padding-top: 1rem;
 }
 /* BOTÓN DE CHECKOUT */
 .CartPage-summary .button {

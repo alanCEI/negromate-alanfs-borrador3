@@ -16,10 +16,10 @@ const PriceCard = ({ product }) => {
   const { addToCart } = useCart();
 
   return (
-    <div className="PriceCard">
-      <h3 className="PriceCard-name">{product.name}</h3>
-      <p className="PriceCard-description">{product.description}</p>
-      <div className="PriceCard-price">{product.price}€</div>
+    <div className="PriceCard bg-main p-8 rounded-lg shadow-lg flex flex-col border-accent">
+      <h3 className="text-2xl font-bold text-contrast mb-4 text-center">{product.name}</h3>
+      <p className="text-center mb-6 PriceCard-description">{product.description}</p>
+      <div className="text-6xl font-bold text-center mb-6 text-contrast">{product.price}€</div>
       {/* Lista de características en el paquete */}
       <ul className="PriceCard-details">
         {product.details.map((detail, i) => (
@@ -110,7 +110,7 @@ const CustomClothing = () => {
                 />
                 {/* Overlay con información que aparece con hover */}
                 <div className="ClothingGalleryItem-overlay absolute inset-0 transition-opacity flex flex-col p-4">
-                  <h3 className="ClothingGalleryItem-title">{item.title}</h3>
+                  <h3 className="ClothingGalleryItem-title text-xl font-bold transition-transform">{item.title}</h3>
                   <p className="ClothingGalleryItem-description">
                     {item.description}
                   </p>

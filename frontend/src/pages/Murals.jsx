@@ -19,10 +19,10 @@ const PriceCard = ({ product }) => {
   const { addToCart } = useCart();
 
   return (
-    <div className="PriceCard">
-      <h3 className="PriceCard-name">{product.name}</h3>
-      <p className="PriceCard-description">{product.description}</p>
-      <div className="PriceCard-price">{product.price}€</div>
+    <div className="PriceCard bg-main p-8 rounded-lg shadow-lg flex flex-col border-accent">
+      <h3 className="text-2xl font-bold text-contrast mb-4 text-center">{product.name}</h3>
+      <p className="text-center mb-6 PriceCard-description">{product.description}</p>
+      <div className="text-6xl font-bold text-center mb-6 text-contrast">{product.price}€</div>
       {/* Lista de características en el paquete */}
       <ul className="PriceCard-details">
         {product.details.map((detail, i) => (
@@ -113,7 +113,7 @@ const Murals = () => {
                 />
                 {/* Overlay con título que aparece con hover */}
                 <div className="MuralsGalleryItem-overlay">
-                  <h3 className="MuralsGalleryItem-title">{item.title}</h3>
+                  <h3 className="MuralsGalleryItem-title text-xl font-bold text-center transition-opacity">{item.title}</h3>
                 </div>
               </div>
             ))}
@@ -134,7 +134,7 @@ const Murals = () => {
       </section>
       {/* Vista ampliada de la imagen */}
       {modalImage && (
-        <div className="Modal-overlay" onClick={() => setModalImage(null)}>
+        <div className="Modal-overlay fixed inset-0 z-100 flex items-center justify-center p-4" onClick={() => setModalImage(null)}>
           <img src={modalImage} alt="Vista ampliada" className="Modal-image" />
         </div>
       )}

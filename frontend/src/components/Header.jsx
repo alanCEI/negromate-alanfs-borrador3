@@ -15,7 +15,7 @@ const Header = () => {
   const { user, logout } = useAuth();
   const { cartCount } = useCart();
   // CSS del NavLink si está activo o no
-  const navLinkClass = ({ isActive }) => `NavLink ${isActive ? "is-active" : ""}`;
+  const navLinkClass = ({ isActive }) => `NavLink py-2 px-4 rounded-lg transition-colors text-sub font-bold ${isActive ? "is-active" : ""}`;
   // Cierra el menú cuando se hace clic
   const handleMenuClick = () => setIsMenuOpen(false);
   // Cierre de sesión del usuario
@@ -39,7 +39,7 @@ const Header = () => {
       </NavLink>
       {/* Si esta está autenticado, muestra botón de cerrar sesión, si no muestra perfil/login */}
       {user ? (
-        <button onClick={handleLogoutClick} className="Header-logoutButton">
+        <button onClick={handleLogoutClick} className="Header-logoutButton py-2 px-4 rounded-lg text-sub font-bold transition-colors">
           Cerrar Sesión
         </button>
       ) : (
@@ -56,7 +56,7 @@ const Header = () => {
 
   return (
     <header className="Header">
-      <div className="container Header-content">
+      <div className="container flex justify-between items-center p-4">
         {/* Logo que redirige al inicio */}
         <Link
           to="/"
@@ -119,7 +119,7 @@ const Header = () => {
           {/* Botón hamburguesa menu */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="Header-mobileMenuButton"
+            className="text-sub inline-flex items-center justify-center p-2 rounded-lg flex-shrink-0 Header-mobileMenuButton"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ const Header = () => {
       </div>
       {/* Menú desplegable */}
       {isMenuOpen && (
-        <nav className="Header-mobileNav">
+        <nav className="flex flex-col gap-2 p-4 bg-main Header-mobileNav">
           <NavLinks />
         </nav>
       )}

@@ -51,12 +51,9 @@
 .CategoryCard:hover .CategoryCard-overlay {
   background-color: rgba(0, 0, 0, 0.7);
 }
-/* TÍTULO DE LA TARJETA */
+/* TÍTULO DE LA TARJETA - Usa clases de utilidad: text-3xl font-bold text-center transition-transform */
 .CategoryCard-title {
-  font-size: 1.875rem;
-  font-weight: 700;
   color: white;
-  text-align: center;
   transition: transform 0.3s ease;
 }
 /* Hover */

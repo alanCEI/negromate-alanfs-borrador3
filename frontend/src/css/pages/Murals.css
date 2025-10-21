@@ -44,12 +44,9 @@
 .MuralsGalleryItem:hover .MuralsGalleryItem-overlay {
   background-color: rgba(0,0,0,0.6);
 }
-/* TÍTULO DEL ITEM */
+/* TÍTULO DEL ITEM - Usa clases de utilidad: text-xl font-bold text-center transition-opacity */
 .MuralsGalleryItem-title {
   color: white;
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-align: center;
   opacity: 0;
   transition: opacity 0.3s ease;
 }

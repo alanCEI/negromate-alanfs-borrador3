@@ -29,17 +29,17 @@ const Hero = () => {
 
   return (
     <section
-      className="Hero"
+      className="Hero h-screen relative w-full overflow-hidden flex items-center justify-center"
       style={{ backgroundImage: `url(/images/bghero-clear.webp)` }}
     >
       {/* Overlay oscuro semitransparente */}
-      <div className="Hero-overlay"></div>
+      <div className="Hero-overlay absolute inset-0 opacity-50"></div>
       {/* Contenedor del logo del hero */}
-      <div className={`Hero-logoContainer ${scrolled ? "is-scrolled" : ""}`}>
+      <div className={`Hero-logoContainer z-10 ${scrolled ? "is-scrolled" : ""}`}>
         <img
           src="/images/logoclear.webp"
           alt="Negromate Creatives Logo"
-          className="Hero-logo"
+          className="Hero-logo w-64 h-64 object-contain rounded-full shadow-2xl"
         />
       </div>
     </section>

@@ -50,7 +50,7 @@ const Products = () => {
               />
               {/* Overlay con el título del servicio */}
               <div className="CategoryCard-overlay absolute inset-0 flex items-center justify-center">
-                <h3 className="CategoryCard-title">{category.title}</h3>
+                <h3 className="CategoryCard-title text-3xl font-bold text-center transition-transform">{category.title}</h3>
               </div>
             </Link>
           ))}

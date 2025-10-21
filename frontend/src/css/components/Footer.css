@@ -3,10 +3,9 @@
 /* ===================================================================== */
 /* === CONTENEDOR PRINCIPAL DEL FOOTER === */
 /* ===================================================================== */
+/* Usa clases de utilidad: bg-dark text-sub py-6 mt-auto */
 .Footer {
   background-color: var(--dark-bg);
-  color: var(--sub-color);
-  padding: 1.5rem 0;
   margin-top: auto;
 }
 /* ===================================================================== */
@@ -29,10 +28,7 @@
 /* ===================================================================== */
 /* === TEXTO DE COPYRIGHT === */
 /* ===================================================================== */
-.Footer-copy {
-  font-size: 0.875rem;
-  text-align: center;
-}
+/* Usa clases de utilidad: text-sm text-center */
 /* ===================================================================== */
 /* === ENLACES DEL FOOTER === */
 /* ===================================================================== */
@@ -54,14 +50,11 @@
 /* ===================================================================== */
 /* === BOTÓN DE CAMBIO DE TEMA === */
 /* ===================================================================== */
+/* Usa clases de utilidad: rounded-lg py-2 px-4 text-sm transition-colors */
 .Footer-themeToggleButton {
   border: 1px solid var(--contrast-color);
   color: #B91C1C;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
   font-family: 'Spartan', sans-serif;
-  transition: background-color 0.2s, color 0.2s;
 }
 /* Estado hover del botón de cambio de tema */
 .Footer-themeToggleButton:hover {
