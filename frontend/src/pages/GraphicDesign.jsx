@@ -18,7 +18,7 @@ const PriceCard = ({ product }) => {
   const { addToCart } = useCart();
 
   return (
-    <div className="price-card">
+    <div className="price-card bg-main p-8 rounded-lg shadow-lg flex flex-col border-accent">
       <h3 className="price-card-name">{product.name}</h3>
       <p className="price-card-description">{product.description}</p>
       <div className="price-card-price">{product.price}€</div>

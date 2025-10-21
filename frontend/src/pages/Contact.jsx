@@ -55,7 +55,7 @@ const Contact = () => {
           <p>¿Tienes un proyecto en mente? Ponte en contacto con nosotros.</p>
         </div>
         {/* Formulario de contacto */}
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form onSubmit={handleSubmit} className="contact-form bg-sub p-8 rounded-lg shadow-lg border-accent flex flex-col gap-6">
           {/* Campo nombre/empresa*/}
           <div className="form-group">
             <label htmlFor="user">Nombre / Empresa</label>

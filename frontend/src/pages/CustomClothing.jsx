@@ -109,7 +109,7 @@ const CustomClothing = () => {
                   className="clothing-gallery-item-image"
                 />
                 {/* Overlay con información que aparece con hover */}
-                <div className="clothing-gallery-item-overlay">
+                <div className="clothing-gallery-item-overlay absolute inset-0 transition-opacity flex flex-col p-4">
                   <h3 className="clothing-gallery-item-title">{item.title}</h3>
                   <p className="clothing-gallery-item-desc">
                     {item.description}
@@ -134,7 +134,7 @@ const CustomClothing = () => {
       </section>
       {/* Vista ampliada de la imagen */}
       {modalImage && (
-        <div className="modal-overlay" onClick={() => setModalImage(null)}>
+        <div className="modal-overlay fixed inset-0 z-100 flex items-center justify-center p-4" onClick={() => setModalImage(null)}>
           <img src={modalImage} alt="Vista ampliada" className="modal-image" />
         </div>
       )}

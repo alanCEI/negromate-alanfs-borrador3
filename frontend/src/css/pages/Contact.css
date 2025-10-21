@@ -36,16 +36,9 @@
 /* ===================================================================== */
 /* === FORMULARIO DE CONTACTO === */
 /* ===================================================================== */
+/* Usa clases de utilidad: bg-sub p-8 rounded-lg shadow-lg border-accent flex flex-col gap-6 */
 .contact-form {
-  background-color: var(--sub-color); 
-  color: var(--dark-bg); 
-  padding: 2rem; 
-  border-radius: 0.5rem; 
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); 
-  border: 2px solid var(--contrast-color); 
-  display: flex; 
-  flex-direction: column; 
-  gap: 1.5rem; 
+  color: var(--dark-bg);
 }
 /* ETIQUETAS DEL FORMULARIO */
 .contact-form .form-group label {

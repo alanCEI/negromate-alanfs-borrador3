@@ -160,6 +160,8 @@ u { text-decoration: underline; }
 /* Transiciones comunes */
 .transition { transition: all 0.2s ease-in-out; }
 .transition-colors { transition: background-color 0.2s, color 0.2s; }
+.transition-transform { transition: transform 0.3s ease; }
+.transition-opacity { transition: opacity 0.3s ease; }
 
 /* Inputs comunes - clase específica para reducir complejidad de selectores */
 .form-input-focus:focus {
@@ -167,3 +169,44 @@ u { text-decoration: underline; }
   border-color: var(--sub-contrast);
   box-shadow: 0 0 0 2px var(--sub-contrast);
 }
+
+/* Anchos máximos comunes */
+.max-w-md { max-width: 28rem; }
+.max-w-2xl { max-width: 42rem; }
+.max-w-4xl { max-width: 64rem; }
+.max-w-5xl { max-width: 72rem; }
+.w-full { width: 100%; }
+
+/* Posicionamiento */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed { position: fixed; }
+.sticky { position: sticky; }
+.inset-0 { inset: 0; }
+
+/* Colores de texto y fondo específicos */
+.text-sub { color: var(--sub-color); }
+.text-contrast { color: var(--contrast-color); }
+.bg-sub { background-color: var(--sub-color); }
+
+/* Overflow */
+.overflow-hidden { overflow: hidden; }
+
+/* Z-index */
+.z-10 { z-index: 10; }
+.z-50 { z-index: 50; }
+.z-100 { z-index: 100; }
+
+/* Altura */
+.h-full { height: 100%; }
+.min-h-screen { min-height: 100vh; }
+
+/* Flex y Grid específicos */
+.flex-wrap { flex-wrap: wrap; }
+.flex-shrink-0 { flex-shrink: 0; }
+.flex-grow { flex-grow: 1; }
+.align-start { align-items: flex-start; }
+.self-start { align-self: flex-start; }
+
+/* Line-height */
+.leading-relaxed { line-height: 1.75; }

@@ -38,14 +38,10 @@
   transform: scale(1.1); 
 }
 /* OVERLAY DE LA TARJETA */
+/* Usa clases de utilidad: absolute inset-0 flex items-center justify-center */
 .category-card-overlay {
-  position: absolute;
-  inset: 0; 
-  background-color: rgba(0, 0, 0, 0.6); 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  transition: background-color 0.3s ease; 
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.3s ease;
 }
 /* Hover */
 .category-card:hover .category-card-overlay {

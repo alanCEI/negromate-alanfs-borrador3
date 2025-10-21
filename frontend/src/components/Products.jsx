@@ -49,7 +49,7 @@ const Products = () => {
                 className="category-card-image"
               />
               {/* Overlay con el título del servicio */}
-              <div className="category-card-overlay">
+              <div className="category-card-overlay absolute inset-0 flex items-center justify-center">
                 <h3 className="category-card-title">{category.title}</h3>
               </div>
             </Link>

@@ -30,16 +30,11 @@
     transform: scale(1.05); 
 }
 /* OVERLAY DEL ITEM */
+/* Usa clases de utilidad: absolute inset-0 transition-opacity flex flex-col p-4 */
 .clothing-gallery-item-overlay {
-    position: absolute; 
-    inset: 0; 
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); 
-    opacity: 0; 
-    transition: opacity 0.3s ease; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: flex-end; 
-    padding: 1rem; 
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    opacity: 0;
+    justify-content: flex-end;
 }
 /* Hover */
 .clothing-gallery-item:hover .clothing-gallery-item-overlay {
@@ -70,15 +65,9 @@
 /* ===================================================================== */
 /* === MODAL DE IMAGEN === */
 /* ===================================================================== */
+/* Usa clases de utilidad: fixed inset-0 z-100 flex items-center justify-center p-4 */
 .modal-overlay {
-    position: fixed; 
-    inset: 0; 
-    background-color: rgba(0,0,0,0.8); 
-    z-index: 100; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    padding: 1rem; 
+    background-color: rgba(0,0,0,0.8);
 }
 /* IMAGEN DEL MODAL */
 .modal-image {

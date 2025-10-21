@@ -3,17 +3,11 @@
 /* ===================================================================== */
 /* === PÁRRAFO PRINCIPAL DE ABOUT US === */
 /* ===================================================================== */
+/* Usa clases de utilidad: text-center max-w-4xl leading-relaxed bg-sub p-8 rounded-lg shadow-lg */
 .about-us-main-paragraph {
-  text-align: center; 
-  max-width: 64rem; 
-  margin: 0 auto 4rem auto; 
-  line-height: 1.75; 
-  background-color: var(--sub-color); 
-  color: var(--main-color); 
-  padding: 2rem; 
-  border-radius: 0.5rem; 
-  border: 4px solid var(--contrast-color); 
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2); 
+  margin: 0 auto 4rem auto;
+  color: var(--main-color);
+  border: 4px solid var(--contrast-color);
 }
 /* ===================================================================== */
 /* === CONTENIDO DE ABOUT US === */
@@ -54,14 +48,7 @@
 /* ===================================================================== */
 /* === INFORMACIÓN DEL ARTISTA === */
 /* ===================================================================== */
-.artist-info {
-  background-color: var(--dark-bg); 
-  padding: 2rem; 
-  border-radius: 0.5rem; 
-  display: flex; 
-  flex-direction: column; 
-  gap: 1.5rem; 
-}
+/* Usa clases de utilidad: bg-dark p-8 rounded-lg flex flex-col gap-6 */
 /* TÍTULO DE LA INFORMACIÓN */
 .artist-info-title {
   font-size: 1.875rem; 
