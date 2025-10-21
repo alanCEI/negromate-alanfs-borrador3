@@ -3,24 +3,32 @@
 /* ===================================================================== */
 /* === SECCIÓN HERO === */
 /* ===================================================================== */
-/* Usa clases de utilidad: h-screen relative w-full overflow-hidden flex items-center justify-center */
 .Hero {
+  height: 100vh;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* ===================================================================== */
 /* === OVERLAY OSCURO === */
 /* ===================================================================== */
-/* Usa clases de utilidad: absolute inset-0 opacity-50 */
 .Hero-overlay {
+  position: absolute;
+  inset: 0;
   background-color: black;
+  opacity: 0.5;
 }
 /* ===================================================================== */
 /* === CONTENEDOR DEL LOGO === */
 /* ===================================================================== */
-/* Usa clases de utilidad: z-10 */
 .Hero-logoContainer {
+  z-index: 10;
   transition: all 0.5s ease-in-out;
 }
 /* Estado "scrolled" */
@@ -31,7 +39,11 @@
 /* ===================================================================== */
 /* === LOGO DEL HERO === */
 /* ===================================================================== */
-/* Usa clases de utilidad: w-64 h-64 object-contain rounded-full shadow-2xl */
 .Hero-logo {
+  width: 16rem;
+  height: 16rem;
+  object-fit: contain;
   border: 4px solid #DFFF00;
+  border-radius: 9999px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
