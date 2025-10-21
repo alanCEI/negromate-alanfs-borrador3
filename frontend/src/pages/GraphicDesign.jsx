@@ -18,12 +18,12 @@ const PriceCard = ({ product }) => {
   const { addToCart } = useCart();
 
   return (
-    <div className="PriceCard bg-main p-8 rounded-lg shadow-lg flex flex-col border-accent">
-      <h3 className="text-2xl font-bold text-contrast mb-4 text-center">{product.name}</h3>
-      <p className="text-center mb-6 PriceCard-description">{product.description}</p>
-      <div className="text-6xl font-bold text-center mb-6 text-contrast">{product.price}€</div>
+    <div className="price-card">
+      <h3 className="price-card-name">{product.name}</h3>
+      <p className="price-card-description">{product.description}</p>
+      <div className="price-card-price">{product.price}€</div>
       {/* Lista de características en el paquete */}
-      <ul className="PriceCard-details">
+      <ul className="price-card-details">
         {product.details.map((detail, i) => (
           <li key={i}>
             {/* Icono de check */}
@@ -55,9 +55,9 @@ const PriceCard = ({ product }) => {
 const GalleryItem = ({ item, onSelect, isSelected }) => (
   <div
     onClick={onSelect}
-    className={`GalleryItem cursor-pointer p-4 rounded-lg transition bg-dark ${isSelected ? "is-selected" : ""}`}
+    className={`gallery-item ${isSelected ? "selected" : ""}`}
   >
-    <h4 className="font-bold text-lg">{item.brand}</h4>
+    <h4 className="gallery-item-brand">{item.brand}</h4>
   </div>
 );
 
@@ -107,17 +107,17 @@ const GraphicDesign = () => {
 
   // Mensaje de carga mientras se obtienen los datos
   if (loading)
-    return <div className="LoadingMessage">Cargando diseños...</div>;
+    return <div className="loading-message">Cargando diseños...</div>;
 
   return (
     <div className="bg-main-color text-sub-color">
       {/* Sección de galería */}
       <section className="section">
         <div className="container">
-          <h2 className="Section-title">Galería de Diseño Gráfico</h2>
-          <div className="Gallery-layout">
+          <h2 className="section-title">Galería de Diseño Gráfico</h2>
+          <div className="gallery-layout">
             {/* Lista de items de galería */}
-            <div className="Gallery-sidebar">
+            <div className="gallery-sidebar">
               {gallery.map((item) => (
                 <GalleryItem
                   key={item.id}
@@ -130,13 +130,13 @@ const GraphicDesign = () => {
             {/* Vista del item seleccionado */}
             <div className="md-col-span-2">
               {selectedItem && (
-                <div className="Gallery-main sticky bg-dark p-6 rounded-lg">
+                <div className="gallery-main">
                   <img
                     src={selectedItem.imageUrl}
                     alt={selectedItem.brand}
-                    className="w-full rounded-lg mb-4"
+                    className="gallery-main-image"
                   />
-                  <h3 className="text-2xl font-bold text-contrast mb-2">{selectedItem.brand}</h3>
+                  <h3 className="gallery-main-brand">{selectedItem.brand}</h3>
                   <p>{selectedItem.description}</p>
                 </div>
               )}
@@ -145,11 +145,11 @@ const GraphicDesign = () => {
         </div>
       </section>
       {/* Sección de paquetes de precios */}
-      <section className="section PriceCardSection">
+      <section className="section price-card-section">
         <div className="container">
-          <h2 className="Section-title">Paquetes de Precios</h2>
+          <h2 className="section-title">Paquetes de Precios</h2>
           {/* Grid de tarjetas de productos */}
-          <div className="PriceCards-grid">
+          <div className="price-cards-grid">
             {products.map((p) => (
               <PriceCard key={p._id} product={p} />
             ))}

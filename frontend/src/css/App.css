@@ -1,11 +1,11 @@
-/* CONTENEDOR PRINCIPAL DE LA APLICACIÓN - SUIT CSS */
-.App-container {
+/* CONTENEDOR PRINCIPAL DE LA APLICACIÓN */
+.app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 /* CONTENIDO PRINCIPAL */
-.App-mainContent {
+.main-content {
   flex-grow: 1;
   width: 100%;
 }

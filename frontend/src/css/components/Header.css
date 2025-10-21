@@ -1,141 +1,189 @@
-/* Estilos para el componente Header - SUIT CSS */
+/* Estilos para el componente Header */
 
 /* ===================================================================== */
 /* === CONTENEDOR PRINCIPAL DEL HEADER === */
 /* ===================================================================== */
-.Header {
-  background-color: var(--main-color);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid var(--dark-bg);
+.header {
+  background-color: var(--main-color); 
+  position: sticky; 
+  top: 0; 
+  z-index: 50; 
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); 
+  border-bottom: 1px solid var(--dark-bg); 
 }
-/* Contenido del header - Usa clases de utilidad: flex justify-between items-center p-4 */
+/* Contenido del header */
+.header-content {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem; 
+}
 /* ===================================================================== */
 /* === LOGO DEL HEADER === */
 /* ===================================================================== */
-.Header-logo img {
-  height: 2rem;
-  width: auto;
+.header-logo img {
+  height: 2rem; 
+  width: auto; 
   transition: transform 0.2s ease-in-out;
 }
 /* Hover */
-.Header-logo:hover img {
-  transform: scale(1.05);
+.header-logo:hover img {
+  transform: scale(1.05); 
 }
 /* ===================================================================== */
 /* === NAVEGACIÓN DESKTOP === */
 /* ===================================================================== */
-.Header-desktopNav {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.desktop-nav {
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; 
 }
-/* Estilos para los enlaces de navegación - Usa clases de utilidad: py-2 px-4 rounded-lg transition-colors text-sub font-bold */
-.NavLink {
-  transition: color 0.2s, background-color 0.2s;
-  color: var(--sub-color);
+/* Estilos para los enlaces de navegación */
+.nav-link {
+  padding: 0.5rem 1rem; 
+  border-radius: 0.5rem; 
+  transition: color 0.2s, background-color 0.2s; 
+  color: var(--sub-color); 
+  font-weight: 700; 
 }
 /* Estado hover de los enlaces */
-.NavLink:hover {
-  background-color: var(--dark-bg);
-  color: var(--contrast-color);
+.nav-link:hover {
+  background-color: var(--dark-bg); 
+  color: var(--contrast-color); 
 }
 /* Estado activo de los enlaces */
-.NavLink.is-active {
-  background-color: var(--dark-bg);
+.nav-link.active {
+  background-color: var(--dark-bg); 
   color: var(--contrast-color);
 }
 /* ===================================================================== */
 /* === BOTÓN DE CERRAR SESIÓN === */
 /* ===================================================================== */
-/* Usa clases de utilidad: py-2 px-4 rounded-lg text-sub font-bold transition-colors */
-.Header-logoutButton {
-  transition: background-color 0.2s, color 0.2s;
+.logout-button {
+  padding: 0.5rem 1rem; 
+  border-radius: 0.5rem; 
+  color: var(--sub-color); 
+  font-weight: 700; 
+  transition: background-color 0.2s, color 0.2s; 
 }
 /* Hover */
-.Header-logoutButton:hover {
-  background-color: #ef4444;
-  color: white;
+.logout-button:hover {
+  background-color: #ef4444; 
+  color: white; 
 }
 /* ===================================================================== */
 /* === ICONO DEL CARRITO === */
 /* ===================================================================== */
-.Header-cartLink {
-  position: relative;
-  padding: 0.5rem;
-  border-radius: 9999px;
-  color: var(--sub-color);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.cart-link {
+  position: relative; 
+  padding: 0.5rem; 
+  border-radius: 9999px; 
+  color: var(--sub-color); 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-shrink: 0; 
 }
 /* Hover */
-.Header-cartLink:hover {
-  background-color: var(--dark-bg);
+.cart-link:hover {
+  background-color: var(--dark-bg); 
 }
 /* Icono SVG del carrito */
-.Header-cartIcon {
-  height: 1.75rem;
-  width: 1.75rem;
-  min-height: 1.75rem;
-  min-width: 1.75rem;
-  flex-shrink: 0;
+.cart-icon {
+  height: 1.75rem; 
+  width: 1.75rem; 
+  min-height: 1.75rem; 
+  min-width: 1.75rem; 
+  flex-shrink: 0; 
 }
 /* Contador de productos en el carrito de compras*/
-.Header-cartCount {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0.5rem;
-  font-size: 0.75rem;
-  font-weight: bold;
-  line-height: 1;
-  color: #fee2e2;
-  background-color: #dc2626;
-  border-radius: 9999px;
+.cart-count {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 0 0.5rem; 
+  font-size: 0.75rem; 
+  font-weight: bold; 
+  line-height: 1; 
+  color: #fee2e2; 
+  background-color: #dc2626; 
+  border-radius: 9999px; 
 }
 /* ===================================================================== */
 /* === MENÚ MÓVIL === */
 /* ===================================================================== */
-.Header-mobileMenuContainer {
+.mobile-menu-container {
   display: none;
-  align-items: center;
+  align-items: center; 
 }
-/* Botón hamburguesa - Usa clases de utilidad: text-sub inline-flex items-center justify-center p-2 rounded-lg flex-shrink-0 */
+/* Botón hamburguesa */
+.mobile-menu-button {
+  color: var(--sub-color); 
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 0.5rem; 
+  border-radius: 0.5rem; 
+  flex-shrink: 0; 
+}
 /* Hover */
-.Header-mobileMenuButton:hover {
-  background-color: var(--dark-bg);
+.mobile-menu-button:hover {
+  background-color: var(--dark-bg); 
 }
 /* Icono hamburguesa (SVG) */
-.Header-menuIcon {
-  height: 2rem;
-  width: 2rem;
-  min-height: 2rem;
-  min-width: 2rem;
-  flex-shrink: 0;
+.menu-icon {
+  height: 2rem; 
+  width: 2rem; 
+  min-height: 2rem; 
+  min-width: 2rem; 
+  flex-shrink: 0; 
 }
 /* Contador de productos en el carrito (móvil) */
-.Header-cartCountMobile {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1rem;
-  height: 1rem;
-  font-size: 0.75rem;
-  color: white;
-  background-color: #ef4444;
+.cart-count-mobile {
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  width: 1rem; 
+  height: 1rem; 
+  font-size: 0.75rem; 
+  color: white; 
+  background-color: #ef4444; 
   border-radius: 9999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
 }
-/* Navegación móvil desplegable - Usa clases de utilidad: flex flex-col gap-2 p-4 bg-main */
-.Header-mobileNav {
-  border-top: 1px solid var(--dark-bg);
+/* ===================================================================== */
+/* === MEDIA QUERY PARA PANTALLAS PEQUEÑAS === */
+/* ===================================================================== */
+@media (max-width: 768px) {
+  /* Mantiene el tamaño del icono del carrito en móvil */
+  .cart-icon {
+    height: 1.75rem; 
+    width: 1.75rem; 
+    min-height: 1.75rem; 
+    min-width: 1.75rem; 
+  }
+  /* Evita que el enlace del carrito se reduzca en pantallas pequeñas */
+  .cart-link {
+    flex-shrink: 0;
+  }
+  /* Mantiene el tamaño del icono hamburguesa en móvil */
+  .menu-icon {
+    height: 2rem; 
+    width: 2rem; 
+    min-height: 2rem; 
+    min-width: 2rem; 
+  }
+  /* Evita que el botón de menú móvil se reduzca */
+  .mobile-menu-button {
+    flex-shrink: 0;
+  }
+  /* Evita que el contenedor del menú móvil se reduzca */
+  .mobile-menu-container {
+    flex-shrink: 0;
+  }
 }

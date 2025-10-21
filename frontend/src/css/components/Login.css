@@ -1,34 +1,63 @@
-/* Estilos para el componente de Login - SUIT CSS */
+/* Estilos para el componente de Login */
 
 /* ===================================================================== */
 /* === CONTENEDOR DEL FORMULARIO DE LOGIN === */
 /* ===================================================================== */
-/* Usa clases de utilidad: w-full max-w-md bg-dark p-8 rounded-lg shadow-lg border-accent text-sub */
+.login-form-container {
+  width: 100%; 
+  max-width: 28rem; 
+  background-color: var(--dark-bg); 
+  padding: 2rem; 
+  border-radius: 0.5rem; 
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+  border: 2px solid var(--contrast-color); 
+  color: var(--sub-color); 
+}
 /* ===================================================================== */
 /* === TÍTULO DEL FORMULARIO === */
 /* ===================================================================== */
-/* Usa clases de utilidad: text-3xl font-bold text-center mb-6 text-sub */
+.login-form-container h2 {
+  font-size: 1.875rem; 
+  font-weight: 700; 
+  text-align: center; 
+  margin-bottom: 1.5rem; 
+  color: var(--sub-color); 
+}
 /* ===================================================================== */
 /* === FORMULARIO DE LOGIN === */
 /* ===================================================================== */
-/* Usa clases de utilidad: flex flex-col gap-6 */
+.login-form {
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.5rem; 
+}
+/* Estilos alternativos */
+/*
+.login-form .form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--dark-bg);
+  margin-bottom: 0.25rem;
+}
+*/
 /* ===================================================================== */
 /* === INPUTS DEL FORMULARIO === */
 /* ===================================================================== */
-.LoginForm-input {
-  margin-top: 0.25rem;
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0.75rem;
-  background-color: white;
-  border: 1px solid var(--border-color);
-  border-radius: 0.375rem;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
-  color: var(--dark-bg);
+.login-form .form-group input {
+  margin-top: 0.25rem; 
+  display: block; 
+  width: 100%; 
+  padding: 0.5rem 0.75rem; 
+  background-color: white; 
+  border: 1px solid var(--border-color); 
+  border-radius: 0.375rem; 
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05); 
+  color: var(--dark-bg); 
 }
 /* Estado focus de los inputs */
-.LoginForm-input:focus {
-  outline: none;
-  border-color: var(--sub-contrast);
-  box-shadow: 0 0 0 2px var(--sub-contrast);
+.login-form .form-group input:focus {
+  outline: none; 
+  border-color: var(--sub-contrast); 
+  box-shadow: 0 0 0 2px var(--sub-contrast); 
 }

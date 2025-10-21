@@ -22,11 +22,11 @@ import "./css/App.css";
 // Componente principal
 function App() {
   return (
-    <div className="App-container">
+    <div className="app-container">
       {/* Header */}
       <Header />
       {/* Main */}
-      <main className="App-mainContent">
+      <main className="main-content">
         {/* Rutas */}
         <Routes>
           <Route path="/" element={<LandingPage />} />

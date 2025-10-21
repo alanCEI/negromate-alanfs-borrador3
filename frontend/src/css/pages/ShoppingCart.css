@@ -1,124 +1,148 @@
-/* Estilos para la página de Shopping Cart (carrito de compras) - SUIT CSS */
+/* Estilos para la página de Shopping Cart (carrito de compras) */
 
 /* ===================================================================== */
 /* === PÁGINA DEL CARRITO === */
 /* ===================================================================== */
-.CartPage {
-  min-height: calc(100vh - 200px);
+.cart-page {
+  min-height: calc(100vh - 200px); /* Altura mínima (100vh menos header/footer aprox.) */
 }
 /* ===================================================================== */
 /* === CARRITO VACÍO === */
 /* ===================================================================== */
-.CartPage-empty {
-  text-align: center;
-  padding: 2.5rem 0;
-  background-color: var(--dark-bg);
-  border-radius: 0.5rem;
+.cart-empty {
+  text-align: center; 
+  padding: 2.5rem 0; 
+  background-color: var(--dark-bg); 
+  border-radius: 0.5rem; 
 }
-/* Párrafo del mensaje de carrito vacío - Usa clases de utilidad: text-xl mb-4 */
+/* Párrafo del mensaje de carrito vacío */
+.cart-empty p {
+  font-size: 1.25rem; 
+  margin-bottom: 1rem; 
+}
 /* ===================================================================== */
 /* === LAYOUT DEL CARRITO === */
 /* ===================================================================== */
-.CartPage-layout {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+.cart-layout {
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 2rem; 
 }
 /* ===================================================================== */
 /* === CONTENEDOR DE ITEMS === */
 /* ===================================================================== */
-/* Usa clases de utilidad: bg-dark p-6 rounded-lg flex flex-col gap-4 */
-.CartPage-itemsContainer {
-  background-color: var(--dark-bg);
+.cart-items-container {
+  background-color: var(--dark-bg); 
+  padding: 1.5rem; 
+  border-radius: 0.5rem;
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
 }
 /* ===================================================================== */
 /* === ITEM DEL CARRITO === */
 /* ===================================================================== */
-.CartItem {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: space-between;
-  border-bottom: 1px solid #4a4a4a;
-  padding-bottom: 1rem;
+.cart-item {
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+  justify-content: space-between; 
+  border-bottom: 1px solid #4a4a4a; 
+  padding-bottom: 1rem; 
 }
 /* Último item sin borde inferior */
-.CartItem:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
+.cart-item:last-child {
+  border-bottom: none; 
+  padding-bottom: 0; /
 }
 /* INFORMACIÓN DEL ITEM */
-.CartItem-info {
+.cart-item-info {
   display: flex;
   align-items: center;
   gap: 1rem;
-  width: 100%;
+  width: 100%; 
 }
 /* Imagen del producto */
-.CartItem-image {
-  width: 5rem;
-  height: 5rem;
-  object-fit: cover;
-  border-radius: 0.25rem;
+.cart-item-image {
+  width: 5rem; 
+  height: 5rem; 
+  object-fit: cover; 
+  border-radius: 0.25rem; 
 }
-/* Detalles del item - Usa clases de utilidad: font-bold text-lg */
-/* Información adicional del producto - Usa clases de utilidad: text-sm */
-.CartItem-details p {
-  color: #9CA3AF;
+/* Título del producto */
+.cart-item-details h3 {
+  font-weight: 700; 
+  font-size: 1.125rem; 
+}
+/* Información adicional del producto */
+.cart-item-details p {
+  font-size: 0.875rem; 
+  color: #9CA3AF; /
 }
 /* ACCIONES DEL ITEM */
-.CartItem-actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.cart-item-actions {
+  display: flex; 
+  align-items: center; 
+  gap: 1rem; 
 }
 /* Input de cantidad */
-.CartItem-quantity {
-  width: 4rem;
-  text-align: center;
-  background-color: #FFFFFF;
-  border: 1px solid var(--border-color);
-  border-radius: 0.25rem;
-  padding: 0.25rem;
+.cart-item-quantity {
+  width: 4rem; 
+  text-align: center; 
+  background-color: #FFFFFF; 
+  border: 1px solid var(--border-color); 
+  border-radius: 0.25rem; 
+  padding: 0.25rem; 
 }
 /* BOTÓN DE ELIMINAR */
-.CartItem-removeButton {
+.cart-item-remove button {
   color: #EF4444;
 }
 /* Hover */
-.CartItem-removeButton:hover {
+.cart-item-remove button:hover {
   color: #F87171;
 }
 /* Icono del botón de eliminar */
-.CartItem-removeButton svg {
-  width: 1.5rem;
-  height: 1.5rem;
+.cart-item-remove svg {
+  width: 1.5rem; 
+  height: 1.5rem; 
 }
 /* ===================================================================== */
 /* === RESUMEN DEL CARRITO === */
 /* ===================================================================== */
-/* Usa clases de utilidad: bg-dark p-6 rounded-lg sticky */
-.CartPage-summary {
-  background-color: var(--dark-bg);
-  align-self: flex-start;
-  top: 6rem;
+.cart-summary {
+  background-color: var(--dark-bg); 
+  padding: 1.5rem; 
+  border-radius: 0.5rem; 
+  align-self: flex-start; 
+  position: sticky; 
+  top: 6rem; 
 }
-/* Título del resumen - Usa clases de utilidad: text-2xl font-bold mb-6 pb-4 */
-.CartPage-summary h2 {
-  border-bottom: 1px solid #4a4a4a;
+/* Título del resumen */
+.cart-summary h2 {
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  margin-bottom: 1.5rem; 
+  border-bottom: 1px solid #4a4a4a; 
+  padding-bottom: 1rem; 
 }
 /* FILA DEL RESUMEN */
-.CartPage-summaryRow {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+.cart-summary-row {
+  display: flex; 
+  justify-content: space-between; 
+  margin-bottom: 1rem; 
 }
-/* TOTAL DEL RESUMEN - Usa clases de utilidad: flex justify-between font-bold text-xl pt-4 */
-.CartPage-summaryTotal {
-  border-top: 1px solid #4a4a4a;
+/* TOTAL DEL RESUMEN */
+.cart-summary-total {
+  display: flex; 
+  justify-content: space-between; 
+  font-weight: 700; 
+  font-size: 1.25rem; 
+  border-top: 1px solid #4a4a4a; 
+  padding-top: 1rem; 
 }
 /* BOTÓN DE CHECKOUT */
-.CartPage-summary .button {
-  width: 100%;
-  margin-top: 1.5rem;
+.cart-summary .button {
+  width: 100%; 
+  margin-top: 1.5rem; 
 }

@@ -15,7 +15,7 @@ const Header = () => {
   const { user, logout } = useAuth();
   const { cartCount } = useCart();
   // CSS del NavLink si está activo o no
-  const navLinkClass = ({ isActive }) => `NavLink py-2 px-4 rounded-lg transition-colors text-sub font-bold ${isActive ? "is-active" : ""}`;
+  const navLinkClass = ({ isActive }) => `nav-link ${isActive ? "active" : ""}`;
   // Cierra el menú cuando se hace clic
   const handleMenuClick = () => setIsMenuOpen(false);
   // Cierre de sesión del usuario
@@ -39,7 +39,7 @@ const Header = () => {
       </NavLink>
       {/* Si esta está autenticado, muestra botón de cerrar sesión, si no muestra perfil/login */}
       {user ? (
-        <button onClick={handleLogoutClick} className="Header-logoutButton py-2 px-4 rounded-lg text-sub font-bold transition-colors">
+        <button onClick={handleLogoutClick} className="logout-button">
           Cerrar Sesión
         </button>
       ) : (
@@ -55,12 +55,12 @@ const Header = () => {
   );
 
   return (
-    <header className="Header">
-      <div className="container flex justify-between items-center p-4">
+    <header className="header">
+      <div className="container header-content">
         {/* Logo que redirige al inicio */}
         <Link
           to="/"
-          className="Header-logo"
+          className="header-logo"
           onClick={() => setIsMenuOpen(false)}
         >
           <img
@@ -69,12 +69,12 @@ const Header = () => {
           />
         </Link>
         {/* Nav desktop */}
-        <nav className="Header-desktopNav">
+        <nav className="desktop-nav">
           <NavLinks />
-          <NavLink to="/cart" className="Header-cartLink">
+          <NavLink to="/cart" className="cart-link">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="Header-cartIcon"
+              className="cart-icon"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -87,20 +87,20 @@ const Header = () => {
               />
             </svg>
             {/* Contador solo si hay items en el carrito de compras */}
-            {cartCount > 0 && <span className="Header-cartCount">{cartCount}</span>}
+            {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
           </NavLink>
         </nav>
         {/* Nav móvil */}
-        <div className="Header-mobileMenuContainer">
+        <div className="mobile-menu-container">
           {/* Icono de carrito de compras*/}
           <NavLink
             to="/cart"
-            className="Header-cartLink"
+            className="cart-link"
             style={{ marginRight: "0.5rem" }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="Header-cartIcon"
+              className="cart-icon"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -113,17 +113,17 @@ const Header = () => {
               />
             </svg>
             {cartCount > 0 && (
-              <span className="Header-cartCountMobile">{cartCount}</span>
+              <span className="cart-count-mobile">{cartCount}</span>
             )}
           </NavLink>
           {/* Botón hamburguesa menu */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-sub inline-flex items-center justify-center p-2 rounded-lg flex-shrink-0 Header-mobileMenuButton"
+            className="mobile-menu-button"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="Header-menuIcon"
+              className="menu-icon"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -140,7 +140,7 @@ const Header = () => {
       </div>
       {/* Menú desplegable */}
       {isMenuOpen && (
-        <nav className="flex flex-col gap-2 p-4 bg-main Header-mobileNav">
+        <nav className="mobile-nav">
           <NavLinks />
         </nav>
       )}

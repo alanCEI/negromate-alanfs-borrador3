@@ -1,49 +1,58 @@
-/* Estilos para el componente Hero - SUIT CSS */
+/* Estilos para el componente Hero */
 
 /* ===================================================================== */
 /* === SECCIÓN HERO === */
 /* ===================================================================== */
-.Hero {
-  height: 100vh;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero-section {
+  position: relative; 
+  height: 100vh; 
+  width: 100%; 
+  overflow: hidden; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  background-size: cover; 
+  background-attachment: fixed; 
+  background-position: center; 
 }
 /* ===================================================================== */
 /* === OVERLAY OSCURO === */
 /* ===================================================================== */
-.Hero-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: black;
-  opacity: 0.5;
+.hero-overlay {
+  position: absolute; 
+  inset: 0; 
+  background-color: black; 
+  opacity: 0.5; 
 }
 /* ===================================================================== */
 /* === CONTENEDOR DEL LOGO === */
 /* ===================================================================== */
-.Hero-logoContainer {
-  z-index: 10;
-  transition: all 0.5s ease-in-out;
+.hero-logo-container {
+  z-index: 10; 
+  transition: all 0.5s ease-in-out; 
 }
 /* Estado "scrolled" */
-.Hero-logoContainer.is-scrolled {
-  transform: scale(1.25);
-  opacity: 0;
+.hero-logo-container.scrolled {
+  transform: scale(1.25); 
+  opacity: 0; 
 }
 /* ===================================================================== */
 /* === LOGO DEL HERO === */
 /* ===================================================================== */
-.Hero-logo {
-  width: 16rem;
-  height: 16rem;
-  object-fit: contain;
-  border: 4px solid #DFFF00;
-  border-radius: 9999px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+.hero-logo {
+  width: 16rem; 
+  height: 16rem; 
+  object-fit: contain; 
+  border: 4px solid #DFFF00; 
+  border-radius: 9999px; 
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
+}
+/* ===================================================================== */
+/* === MEDIA QUERY PARA TABLETS Y DESKTOP === */
+/* ===================================================================== */
+@media (min-width: 768px) {
+  .hero-logo {
+    width: 20rem; 
+    height: 20rem; 
+  }
 }

@@ -55,8 +55,8 @@ const ShoppingCart = () => {
   // Mensaje de éxito si la orden fue procesada
   if (status.success) {
     return (
-      <div className="ContactPage-successMessage">
-        <div className="ContactPage-successBox">
+      <div className="contact-success-message">
+        <div className="contact-success-box">
           <h1 className="text-3xl font-bold text-contrast-color mb-4">
             ¡Orden Realizada con Éxito!
           </h1>
@@ -74,39 +74,39 @@ const ShoppingCart = () => {
   }
 
   return (
-    <section className="section CartPage">
+    <section className="section cart-page">
       <div className="container">
-        <h1 className="Section-title">Carrito de Compras</h1>
+        <h1 className="section-title">Carrito de Compras</h1>
         {/* Mensaje si el carrito está vacío */}
         {cartItems.length === 0 ? (
-          <div className="CartPage-empty">
-            <p className="text-xl mb-4">Tu carrito está vacío.</p>
+          <div className="cart-empty">
+            <p>Tu carrito está vacío.</p>
             <Link to="/" className="button">
               Explorar productos
             </Link>
           </div>
         ) : (
           // Lista de items y resumen
-          <div className="CartPage-layout">
+          <div className="cart-layout">
             {/* Contenedor de items del carrito */}
-            <div className="bg-dark p-6 rounded-lg flex flex-col gap-4 CartPage-itemsContainer">
+            <div className="cart-items-container">
               {/* Mapeo de cada producto en el carrito */}
               {cartItems.map((item) => (
-                <div key={item._id} className="CartItem">
+                <div key={item._id} className="cart-item">
                   {/* Información del producto */}
-                  <div className="CartItem-info">
+                  <div className="cart-item-info">
                     <img
                       src={item.imageUrl}
                       alt={item.name}
-                      className="CartItem-image"
+                      className="cart-item-image"
                     />
-                    <div className="CartItem-details">
-                      <h3 className="font-bold text-lg">{item.name}</h3>
-                      <p className="text-sm">{item.price.toFixed(2)}€</p>
+                    <div className="cart-item-details">
+                      <h3>{item.name}</h3>
+                      <p>{item.price.toFixed(2)}€</p>
                     </div>
                   </div>
                   {/* Modificar cantidad y eliminar */}
-                  <div className="CartItem-actions">
+                  <div className="cart-item-actions">
                     {/* Input numérico para cambiar la cantidad */}
                     <input
                       type="number"
@@ -114,13 +114,13 @@ const ShoppingCart = () => {
                       onChange={(e) =>
                         updateQuantity(item._id, parseInt(e.target.value))
                       }
-                      className="CartItem-quantity"
+                      className="cart-item-quantity"
                       min="1"
                     />
                     {/* Botón para eliminar el producto del carrito de compras */}
                     <button
                       onClick={() => removeFromCart(item._id)}
-                      className="CartItem-removeButton"
+                      className="cart-item-remove"
                     >
                       {/* Icono de papelera */}
                       <svg
@@ -142,15 +142,15 @@ const ShoppingCart = () => {
               ))}
             </div>
             {/* Panel lateral con resumen de la orden */}
-            <div className="bg-dark p-6 rounded-lg sticky CartPage-summary">
-              <h2 className="text-2xl font-bold mb-6 pb-4 CartPage-summary-title">Resumen de la Orden</h2>
+            <div className="cart-summary">
+              <h2>Resumen de la Orden</h2>
               {/* Fila de subtotal */}
-              <div className="CartPage-summaryRow">
+              <div className="cart-summary-row">
                 <span>Subtotal</span>
                 <span>{cartTotal.toFixed(2)}€</span>
               </div>
               {/* Fila de total */}
-              <div className="flex justify-between font-bold text-xl pt-4 CartPage-summaryTotal">
+              <div className="cart-summary-total">
                 <span>Total</span>
                 <span>{cartTotal.toFixed(2)}€</span>
               </div>
@@ -165,7 +165,7 @@ const ShoppingCart = () => {
               {/* Mensaje de error si la petición falla */}
               {status.error && (
                 <p
-                  className="ErrorMessage"
+                  className="error-message"
                   style={{ textAlign: "center", marginTop: "1rem" }}
                 >
                   {status.error}

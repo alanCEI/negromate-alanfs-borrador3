@@ -1,9 +1,11 @@
-/* ESTILOS GLOBALES - SUIT CSS */
+/* ESTILOS GLOBALES */
 
+/* Importa la fuente Spartan de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
 /* TEMA CLARO */
 body.light-theme {
-  --main-color: #FFFFFF;
-  --dark-bg: #F0F0F0;
+  --main-color: #FFFFFF; 
+  --dark-bg: #F0F0F0; 
   --sub-color: #1A1B1F;
   --contrast-color: #0021D7;
   --sub-contrast: #001cbe;
@@ -41,7 +43,7 @@ body {
   padding: 4rem 0;
 }
 /* TÍTULO DE SECCIÓN */
-.Section-title {
+.section-title {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
@@ -49,14 +51,14 @@ body {
   color: var(--contrast-color);
 }
 /* MENSAJES DE CARGA Y ERROR */
-.LoadingMessage,
-.ErrorMessage {
+.loading-message,
+.error-message {
   text-align: center;
   padding: 5rem 1rem;
   font-size: 1.25rem;
 }
 /* Estilos específicos para mensajes de error */
-.ErrorMessage {
+.error-message {
   color: var(--error-text);
   background-color: var(--error-bg);
   border-radius: 0.5rem;
@@ -86,176 +88,28 @@ body {
   cursor: not-allowed;
 }
 /* GRUPO DE FORMULARIO */
-.FormGroup {
+.form-group {
   display: flex;
   flex-direction: column;
 }
 /* Labels dentro de grupos de formulario */
-.FormGroup label {
+.form-group label {
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
 /* INPUT DE FORMULARIO */
-.FormInput {
+.form-input {
   padding: 0.75rem;
   border: 1px solid var(--border-color);
-  border-radius: 0.375rem;
+  border-radius: 0.375rem; 
   background-color: var(--dark-bg);
   color: var(--sub-color);
 }
 /* Focus del input */
-.FormInput:focus {
+.form-input:focus {
   outline: 2px solid var(--contrast-color);
   border-color: transparent;
 }
 /* ESTILOS DE TEXTO */
 strong, b { font-weight: 700; }
 u { text-decoration: underline; }
-
-/* ===================================================================== */
-/* === CLASES DE UTILIDAD (Reducción de duplicación) === */
-/* ===================================================================== */
-
-/* Font-size */
-.text-xs { font-size: 0.75rem; }
-.text-sm { font-size: 0.875rem; }
-.text-base { font-size: 1rem; }
-.text-lg { font-size: 1.125rem; }
-.text-xl { font-size: 1.25rem; }
-.text-2xl { font-size: 1.5rem; }
-.text-3xl { font-size: 1.875rem; }
-.text-4xl { font-size: 2.25rem; }
-.text-5xl { font-size: 2.5rem; }
-.text-6xl { font-size: 3rem; }
-
-/* Font-weight */
-.font-normal { font-weight: 400; }
-.font-medium { font-weight: 500; }
-.font-semibold { font-weight: 600; }
-.font-bold { font-weight: 700; }
-
-/* Text-align */
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-
-/* Padding (todos los lados) */
-.p-0 { padding: 0; }
-.p-1 { padding: 0.25rem; }
-.p-2 { padding: 0.5rem; }
-.p-3 { padding: 0.75rem; }
-.p-4 { padding: 1rem; }
-.p-6 { padding: 1.5rem; }
-.p-8 { padding: 2rem; }
-.p-10 { padding: 2.5rem; }
-
-/* Padding X (izquierda y derecha) */
-.px-2 { padding-left: 0.5rem; padding-right: 0.5rem; }
-.px-3 { padding-left: 0.75rem; padding-right: 0.75rem; }
-.px-4 { padding-left: 1rem; padding-right: 1rem; }
-.px-8 { padding-left: 2rem; padding-right: 2rem; }
-
-/* Padding Y (arriba y abajo) */
-.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
-.py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
-.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
-
-/* Padding específicos */
-.pb-0 { padding-bottom: 0; }
-.pb-4 { padding-bottom: 1rem; }
-
-/* Margin-bottom */
-.mb-0 { margin-bottom: 0; }
-.mb-1 { margin-bottom: 0.25rem; }
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-4 { margin-bottom: 1rem; }
-.mb-6 { margin-bottom: 1.5rem; }
-.mb-8 { margin-bottom: 2rem; }
-.mb-12 { margin-bottom: 3rem; }
-.mb-16 { margin-bottom: 4rem; }
-
-/* Margin-top */
-.mt-1 { margin-top: 0.25rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-4 { margin-top: 1rem; }
-.mt-6 { margin-top: 1.5rem; }
-.mt-8 { margin-top: 2rem; }
-.mt-auto { margin-top: auto; }
-
-/* Margin X (izquierda y derecha) */
-.mx-auto { margin-left: auto; margin-right: auto; }
-.mr-2 { margin-right: 0.5rem; }
-
-/* Gap */
-.gap-2 { gap: 0.5rem; }
-.gap-3 { gap: 0.75rem; }
-.gap-4 { gap: 1rem; }
-.gap-6 { gap: 1.5rem; }
-.gap-8 { gap: 2rem; }
-
-/* Bordes y sombras comunes */
-.rounded { border-radius: 0.25rem; }
-.rounded-md { border-radius: 0.375rem; }
-.rounded-lg { border-radius: 0.5rem; }
-.shadow-lg { box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); }
-.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.2); }
-.border-accent { border: 2px solid var(--contrast-color); }
-
-/* Fondos comunes */
-.bg-dark { background-color: var(--dark-bg); }
-.bg-main { background-color: var(--main-color); }
-
-/* Display común */
-.flex { display: flex; }
-.flex-col { flex-direction: column; }
-.items-center { align-items: center; }
-.justify-center { justify-content: center; }
-.justify-between { justify-content: space-between; }
-.grid { display: grid; }
-
-/* Transiciones comunes */
-.transition { transition: all 0.2s ease-in-out; }
-.transition-colors { transition: background-color 0.2s, color 0.2s; }
-.transition-transform { transition: transform 0.3s ease; }
-.transition-opacity { transition: opacity 0.3s ease; }
-
-/* Anchos máximos comunes */
-.max-w-md { max-width: 28rem; }
-.max-w-2xl { max-width: 42rem; }
-.max-w-4xl { max-width: 64rem; }
-.max-w-5xl { max-width: 72rem; }
-.w-full { width: 100%; }
-
-/* Posicionamiento */
-.relative { position: relative; }
-.absolute { position: absolute; }
-.fixed { position: fixed; }
-.sticky { position: sticky; }
-.inset-0 { inset: 0; }
-
-/* Colores de texto y fondo específicos */
-.text-sub { color: var(--sub-color); }
-.text-contrast { color: var(--contrast-color); }
-.bg-sub { background-color: var(--sub-color); }
-
-/* Overflow */
-.overflow-hidden { overflow: hidden; }
-
-/* Z-index */
-.z-10 { z-index: 10; }
-.z-50 { z-index: 50; }
-.z-100 { z-index: 100; }
-
-/* Altura */
-.h-full { height: 100%; }
-.min-h-screen { min-height: 100vh; }
-
-/* Flex y Grid específicos */
-.flex-wrap { flex-wrap: wrap; }
-.flex-shrink-0 { flex-shrink: 0; }
-.flex-grow { flex-grow: 1; }
-.align-start { align-items: flex-start; }
-.self-start { align-self: flex-start; }
-
-/* Line-height */
-.leading-relaxed { line-height: 1.75; }

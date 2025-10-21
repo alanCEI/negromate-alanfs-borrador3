@@ -39,14 +39,14 @@ const Register = () => {
   };
 
   return (
-    <div className="FormContainer w-full max-w-md bg-dark p-8 rounded-lg shadow-lg border-accent text-sub">
-      <h2 className="text-3xl font-bold text-center mb-6 text-sub">Crear Cuenta</h2>
+    <div className="form-container">
+      <h2>Crear Cuenta</h2>
       {/* Mensaje de error si existe */}
-      {error && <p className="ErrorMessage">{error}</p>}
+      {error && <p className="error-message">{error}</p>}
       {/* Formulario */}
-      <form onSubmit={handleSubmit} className="Form flex flex-col gap-6">
+      <form onSubmit={handleSubmit} className="form">
         {/* Campo de nombre de usuario */}
-        <div className="FormGroup">
+        <div className="form-group">
           <label htmlFor="register-username">Nombre de Usuario</label>
           <input
             id="register-username"
@@ -54,12 +54,12 @@ const Register = () => {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
-            className="FormInput"
+            className="form-input"
             autoComplete="username"
           />
         </div>
         {/* Campo de email */}
-        <div className="FormGroup">
+        <div className="form-group">
           <label htmlFor="register-email">Email</label>
           <input
             id="register-email"
@@ -67,12 +67,12 @@ const Register = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="FormInput"
+            className="form-input"
             autoComplete="email"
           />
         </div>
         {/* Campo de contraseña */}
-        <div className="FormGroup">
+        <div className="form-group">
           <label htmlFor="register-password">
             Contraseña (mín. 6 caracteres)
           </label>
@@ -82,7 +82,7 @@ const Register = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            className="FormInput"
+            className="form-input"
             autoComplete="new-password"
           />
         </div>

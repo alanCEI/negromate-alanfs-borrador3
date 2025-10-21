@@ -1,87 +1,89 @@
-/* Estilos para la página de Custom Clothing (ropa personalizada) - SUIT CSS */
+/* Estilos para la página de Custom Clothing (ropa personalizada) */
 
 /* ===================================================================== */
 /* === GRID DE LA GALERÍA DE ROPA === */
 /* ===================================================================== */
-.ClothingGallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+.clothing-gallery-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 1.5rem; 
 }
 /* ===================================================================== */
 /* === ITEM DE LA GALERÍA === */
 /* ===================================================================== */
-.ClothingGalleryItem {
-  position: relative;
-  overflow: hidden;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  aspect-ratio: 4 / 5;
+.clothing-gallery-item {
+    position: relative; 
+    overflow: hidden; 
+    border-radius: 0.5rem; 
+    cursor: pointer; 
+    aspect-ratio: 4 / 5; 
 }
 /* IMAGEN DEL ITEM */
-.ClothingGalleryItem-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
+.clothing-gallery-item-image {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.3s ease; 
 }
 /* Hover */
-.ClothingGalleryItem:hover .ClothingGalleryItem-image {
-  transform: scale(1.05);
+.clothing-gallery-item:hover .clothing-gallery-item-image {
+    transform: scale(1.05); 
 }
 /* OVERLAY DEL ITEM */
-.ClothingGalleryItem-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  justify-content: flex-end;
-  transition: opacity 0.3s ease;
+.clothing-gallery-item-overlay {
+    position: absolute; 
+    inset: 0; 
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-end; 
+    padding: 1rem; 
 }
 /* Hover */
-.ClothingGalleryItem:hover .ClothingGalleryItem-overlay {
-  opacity: 1;
+.clothing-gallery-item:hover .clothing-gallery-item-overlay {
+    opacity: 1;
 }
-/* TÍTULO DEL ITEM - Usa clases de utilidad: text-xl font-bold transition-transform */
-.ClothingGalleryItem-title {
-  color: white;
-  transform: translateY(1rem);
-  transition: transform 0.3s ease;
+/* TÍTULO DEL ITEM */
+.clothing-gallery-item-title {
+    color: white; 
+    font-size: 1.25rem; 
+    font-weight: 700; 
+    transform: translateY(1rem); 
+    transition: transform 0.3s ease; 
 }
 /* Hover */
-.ClothingGalleryItem:hover .ClothingGalleryItem-title {
-  transform: translateY(0);
+.clothing-gallery-item:hover .clothing-gallery-item-title {
+    transform: translateY(0); 
 }
 /* === DESCRIPCIÓN DEL ITEM === */
-.ClothingGalleryItem-description {
-  color: white;
-  opacity: 0;
-  transition: opacity 0.3s ease 0.1s;
+.clothing-gallery-item-desc {
+    color: white; 
+    opacity: 0; 
+    transition: opacity 0.3s ease 0.1s; 
 }
 /* Hover */
-.ClothingGalleryItem:hover .ClothingGalleryItem-description {
-  opacity: 1;
+.clothing-gallery-item:hover .clothing-gallery-item-desc {
+    opacity: 1; 
 }
 /* ===================================================================== */
 /* === MODAL DE IMAGEN === */
 /* ===================================================================== */
-.Modal-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-  background-color: rgba(0,0,0,0.8);
+.modal-overlay {
+    position: fixed; 
+    inset: 0; 
+    background-color: rgba(0,0,0,0.8); 
+    z-index: 100; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 1rem; 
 }
 /* IMAGEN DEL MODAL */
-.Modal-image {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-  border-radius: 0.5rem;
+.modal-image {
+    max-width: 90%; 
+    max-height: 90%; 
+    object-fit: contain; 
+    border-radius: 0.5rem; 
 }

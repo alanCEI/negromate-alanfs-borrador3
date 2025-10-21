@@ -37,9 +37,9 @@ const Contact = () => {
   // Mostrar mensaje de éxito si el formulario fue enviado
   if (submitted) {
     return (
-      <div className="flex items-center justify-center text-center ContactPage-successMessage">
-        <div className="bg-dark p-8 rounded-lg shadow ContactPage-successBox">
-          <h2 className="text-3xl font-bold text-contrast mb-4">¡Gracias por tu mensaje!</h2>
+      <div className="contact-success-message">
+        <div className="contact-success-box">
+          <h2>¡Gracias por tu mensaje!</h2>
           <p>Nos pondremos en contacto contigo lo antes posible.</p>
         </div>
       </div>
@@ -47,17 +47,17 @@ const Contact = () => {
   }
 
   return (
-    <section className="section ContactPage">
-      <div className="container ContactPage-container">
+    <section className="section contact-page">
+      <div className="container contact-container">
         {/* Título y descripción */}
-        <div className="ContactPage-header">
-          <h1 className="text-5xl font-bold mb-2 text-contrast">Contacto</h1>
-          <p className="text-lg">¿Tienes un proyecto en mente? Ponte en contacto con nosotros.</p>
+        <div className="contact-header">
+          <h1>Contacto</h1>
+          <p>¿Tienes un proyecto en mente? Ponte en contacto con nosotros.</p>
         </div>
         {/* Formulario de contacto */}
-        <form onSubmit={handleSubmit} className="ContactForm bg-sub p-8 rounded-lg shadow-lg border-accent flex flex-col gap-6">
+        <form onSubmit={handleSubmit} className="contact-form">
           {/* Campo nombre/empresa*/}
-          <div className="FormGroup">
+          <div className="form-group">
             <label htmlFor="user">Nombre / Empresa</label>
             <input
               type="text"
@@ -66,11 +66,10 @@ const Contact = () => {
               value={formData.user}
               onChange={handleChange}
               required
-              className="ContactForm-input"
             />
           </div>
           {/* Campo email */}
-          <div className="FormGroup">
+          <div className="form-group">
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -79,11 +78,10 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="ContactForm-input"
             />
           </div>
           {/* Campo teléfono */}
-          <div className="FormGroup">
+          <div className="form-group">
             <label htmlFor="tel">Teléfono (Opcional)</label>
             <input
               type="tel"
@@ -91,15 +89,14 @@ const Contact = () => {
               name="tel"
               value={formData.tel}
               onChange={handleChange}
-              className="ContactForm-input"
             />
           </div>
           {/* Botones para seleccionar tipo de cliente */}
-          <fieldset className="ContactForm-fieldset">
-            <legend className="text-sm font-medium mb-2">Tipo de cliente</legend>
-            <div className="ContactForm-radioGroup">
+          <fieldset className="fieldset">
+            <legend>Tipo de cliente</legend>
+            <div className="radio-group">
               {/* Cliente particular por defecto */}
-              <label className="ContactForm-radioLabel">
+              <label className="radio-label">
                 <input
                   id="private"
                   name="type"
@@ -111,7 +108,7 @@ const Contact = () => {
                 <span>Particular</span>
               </label>
               {/* Cliente empresa */}
-              <label className="ContactForm-radioLabel">
+              <label className="radio-label">
                 <input
                   id="company"
                   name="type"
@@ -125,7 +122,7 @@ const Contact = () => {
             </div>
           </fieldset>
           {/* Campo de texto para comentarios */}
-          <div className="FormGroup">
+          <div className="form-group">
             <label htmlFor="info">Comentarios</label>
             <textarea
               id="info"
@@ -134,7 +131,6 @@ const Contact = () => {
               value={formData.info}
               onChange={handleChange}
               placeholder="Coméntanos brevemente sobre tu proyecto..."
-              className="ContactForm-input"
             ></textarea>
           </div>
           {/* Botón de envío */}
