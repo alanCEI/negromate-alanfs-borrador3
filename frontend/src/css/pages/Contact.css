@@ -13,7 +13,7 @@
 /* === CONTENEDOR DEL CONTACTO === */
 /* ===================================================================== */
 .Contact-container {
-  max-width: 42rem; /* Ancho máximo de 672px en tablet/móvil */
+  max-width: 28rem; /* Ancho máximo de 672px en tablet/móvil */
 }
 /* ===================================================================== */
 /* === ENCABEZADO DEL CONTACTO === */
