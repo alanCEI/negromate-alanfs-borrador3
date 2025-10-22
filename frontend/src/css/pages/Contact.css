@@ -15,13 +15,6 @@
 .Contact-container {
   max-width: 42rem; /* Ancho máximo de 672px en tablet/móvil */
 }
-
-/* En pantallas grandes, reducir el ancho para coincidir con formularios de Login/Register */
-@media (min-width: 1024px) {
-  .Contact-container {
-    max-width: 28rem; /* Mismo ancho que FormContainer (448px) */
-  }
-}
 /* ===================================================================== */
 /* === ENCABEZADO DEL CONTACTO === */
 /* ===================================================================== */

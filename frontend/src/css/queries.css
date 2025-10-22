@@ -111,6 +111,9 @@
         gap: 3rem;
         align-items: center;
    }
+   .Contact-container {
+    max-width: 28rem; /* Mismo ancho que FormContainer (448px) */
+  }
 }
 /* ===================================================================== */
 /* === DESKTOPS GRANDES (desde 1328px) === */
