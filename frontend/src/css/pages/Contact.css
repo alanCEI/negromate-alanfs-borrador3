@@ -13,7 +13,7 @@
 /* === CONTENEDOR DEL CONTACTO === */
 /* ===================================================================== */
 .Contact-container {
-  max-width: 28rem; /* Ancho máximo igual a FormContainer (448px) */
+  max-width: 42rem; /* Ancho máximo igual a FormContainer (448px) */
   width: 100%;
 }
 /* ===================================================================== */
