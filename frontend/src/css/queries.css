@@ -87,6 +87,9 @@
     .ContactInfo-title {
         font-size: 2.5rem;
     }
+    .Contact-container {
+    max-width: 28rem; /* Mismo ancho que FormContainer (448px) */
+  }
 }
 /* ===================================================================== */
 /* === TABLETS (768px - 1023px) === */
