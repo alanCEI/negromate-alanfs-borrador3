@@ -98,6 +98,9 @@
     .ShoppingCart-layout, .GraphicDesign-layout, .AboutUs-content {
        grid-template-columns: 1fr;
     }
+    .Contact-container {
+    max-width: 28rem; /* Mismo ancho que FormContainer (448px) */
+  }
 }
 /* ===================================================================== */
 /* === LAPTOPS Y DESKTOPS (desde 1024px) === */
