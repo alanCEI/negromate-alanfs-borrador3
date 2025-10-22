@@ -43,6 +43,10 @@
     .Header-mobileMenuContainer {
         flex-shrink: 0;
     }
+    /* Tarjetas de precio: 1 columna en móviles */
+    .PriceCards-grid {
+        grid-template-columns: 1fr;
+    }
 }
 /* ===================================================================== */
 /* === MENÚ MÓVIL (hasta 960px) === */
@@ -88,7 +92,7 @@
 /* === TABLETS (768px - 1023px) === */
 /* ===================================================================== */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .Products-grid, .Gallery-grid, .PriceList-grid {
+    .Products-grid, .Gallery-grid, .PriceList-grid, .PriceCards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .ShoppingCart-layout, .GraphicDesign-layout, .AboutUs-content {
@@ -99,7 +103,7 @@
 /* === LAPTOPS Y DESKTOPS (desde 1024px) === */
 /* ===================================================================== */
 @media (min-width: 1024px) {
-   .Products-grid, .Gallery-grid, .PriceList-grid {
+   .Products-grid, .Gallery-grid, .PriceList-grid, .PriceCards-grid {
         grid-template-columns: repeat(3, 1fr);
    }
    .AboutUs-content {

@@ -73,7 +73,7 @@
 /* GRID DE TARJETAS DE PRECIOS */
 .PriceCards-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 72rem;
   margin: 0 auto;
