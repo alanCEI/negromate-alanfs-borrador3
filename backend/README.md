@@ -1,4 +1,4 @@
-# Aplicación Web Negromate Creatives - Frontend
+# Aplicación Web Negromate Creatives - Backend
 
 ## Iniciar proyecto:
 

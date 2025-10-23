@@ -25,7 +25,7 @@ const GalleryItem = ({ item, onSelect, isSelected }) => (
 
 /** -------------------------------------------------------------------
  * ============================================
- * Componente principal "GraphicDesign"
+ * Componente principal
  * ============================================
  */
 const GraphicDesign = () => {

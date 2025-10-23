@@ -10,11 +10,6 @@ import PriceCard from "@/components/PriceCard";
 import "@/css/pages/CustomClothing.css";
 import "@/css/pages/GraphicDesign.css";
 
-/** -------------------------------------------------------------------
- * ============================================
- * Componente principal "CustomClothing"
- * ============================================
- */
 const CustomClothing = () => {
   const [products, setProducts] = useState([]);
   const [gallery, setGallery] = useState([]);

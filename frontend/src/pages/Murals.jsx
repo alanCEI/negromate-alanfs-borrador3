@@ -10,11 +10,6 @@ import PriceCard from "@/components/PriceCard";
 import "@/css/pages/Murals.css";
 import "@/css/pages/GraphicDesign.css";
 
-/**
- * ============================================
- * Componente principal Murals
- * ============================================
- */
 const Murals = () => {
   const [products, setProducts] = useState([]);
   const [gallery, setGallery] = useState([]);
