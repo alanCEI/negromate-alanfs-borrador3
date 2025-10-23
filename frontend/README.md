@@ -4,4 +4,4 @@
 
 - Instalar: "npm i"
 
-- Iniciar: "npm run dev"
+- Iniciar http://localhost:5173: "npm run dev"

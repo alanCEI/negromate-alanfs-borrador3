@@ -23,7 +23,7 @@ const productCategories = [
 
 /** -------------------------------------------------------------------
  * ============================================
- * Componente de servicios/productos
+ * Componente de los productos
  * ============================================
  */
 const Products = () => {
