@@ -1,4 +1,4 @@
-/**
+/** -------------------------------------------------------------------
  * ==============================================
  *  Página del ShoppingCart "Carrito de compras"
  * ==============================================
@@ -57,7 +57,13 @@ const ShoppingCart = () => {
     return (
       <div className="Contact-successMessage">
         <div className="Contact-successBox">
-          <h1 style={{ fontSize: "1.875rem", fontWeight: "700", marginBottom: "1rem" }}>
+          <h1
+            style={{
+              fontSize: "1.875rem",
+              fontWeight: "700",
+              marginBottom: "1rem",
+            }}
+          >
             ¡Orden Realizada con Éxito!
           </h1>
           <p>Gracias por tu compra. Hemos recibido tu pedido.</p>

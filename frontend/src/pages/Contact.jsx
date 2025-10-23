@@ -1,4 +1,4 @@
-/**
+/** -------------------------------------------------------------------
  * ============================================
  * Página de Contact "Contacto"
  * ============================================
@@ -18,7 +18,7 @@ const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  // Manejador de cambios en los campos del formulario
+  // Manejador de cambios en los campos del formulario 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));

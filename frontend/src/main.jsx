@@ -5,7 +5,7 @@ import App from "./App.jsx";
 // CSS
 import "./css/reset.css";
 import "./css/index.css";
-import "./css/queries.css"; 
+import "./css/queries.css";
 // CONTEXT
 import { AuthProvider } from "./context/AuthContext.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";

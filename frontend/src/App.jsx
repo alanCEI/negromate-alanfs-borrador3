@@ -1,4 +1,4 @@
-/**
+/** -------------------------------------------------------------------
  * ============================================
  * Componente Principal de la App
  * ============================================
@@ -19,7 +19,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import GuestRoute from "./components/GuestRoute";
 import "./css/App.css";
 
-// Componente principal
+// Componente principal 
 function App() {
   return (
     <div className="App-container">

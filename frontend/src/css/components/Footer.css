@@ -47,7 +47,7 @@
 .Footer-links a {
   transition: color 0.2s;
 }
-/* Estado hover de los enlaces del footer */
+/* Hover */
 .Footer-links a:hover {
   color: var(--contrast-color);
 }
@@ -63,7 +63,7 @@
   font-family: 'Spartan', sans-serif;
   transition: background-color 0.2s, color 0.2s;
 }
-/* Estado hover del botón de cambio de tema */
+/* Hover */
 .ThemeToggleButton:hover {
   background-color: var(--main-color);
   color: var(--contrast-color);

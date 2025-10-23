@@ -1,4 +1,4 @@
-/**
+/** -------------------------------------------------------------------
  * ============================================================
  * Contexto para gestionar el tema de la app (claro/oscuro).
  * ============================================================
@@ -9,7 +9,7 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 // Crea el contexto del tema
 const ThemeContext = createContext();
 
-// Componente del contexto de tema
+// Componente del context del tema
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || "light"

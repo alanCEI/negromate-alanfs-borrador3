@@ -47,12 +47,12 @@
   justify-content: space-around;
   color: var(--sub-color);
 }
-/* Hover de los enlaces en el caption */
+/* Hover */
 .Artist-figcaption a:hover {
   color: var(--contrast-color);
 }
 /* ===================================================================== */
-/* === INFORMACIÓN DEL ARTISTA === */
+/* === INFORMACIÓN DEL ARTISTA === */ 
 /* ===================================================================== */
 .Artist-info {
   background-color: var(--dark-bg);

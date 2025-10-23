@@ -55,7 +55,7 @@ body {
   padding: 5rem 1rem;
   font-size: 1.25rem;
 }
-/* Estilos específicos para mensajes de error */
+/* Estilos para mensajes de error */
 .u-errorMessage {
   color: var(--error-text);
   background-color: var(--error-bg);
@@ -109,5 +109,9 @@ body {
   border-color: transparent;
 }
 /* ESTILOS DE TEXTO */
-strong, b { font-weight: 700; }
-u { text-decoration: underline; }
+strong, b { 
+  font-weight: 700; 
+}
+u { 
+  text-decoration: underline; 
+}

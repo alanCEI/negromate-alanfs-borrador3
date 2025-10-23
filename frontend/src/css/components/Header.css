@@ -46,7 +46,7 @@
   color: var(--sub-color);
   font-weight: 700;
 }
-/* Estado hover de los enlaces */
+/* Hover */
 .NavLink:hover {
   background-color: var(--dark-bg);
   color: var(--contrast-color);
@@ -133,7 +133,7 @@
 .MobileMenuButton:hover {
   background-color: var(--dark-bg);
 }
-/* Icono hamburguesa (SVG) */
+/* Icono hamburguesa */
 .MobileMenuButton-icon {
   height: 2rem;
   width: 2rem;

@@ -29,7 +29,7 @@
   border-bottom: 2px solid var(--contrast-color);
   margin-bottom: 2rem;
 }
-/* === BOTÓN DE ALTERNANCIA === */
+/* BOTÓN DE ALTERNANCIA */
 .ToggleButton {
   flex: 1;
   padding: 0.75rem 0;

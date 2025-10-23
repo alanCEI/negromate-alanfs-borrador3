@@ -1,7 +1,7 @@
-/**
- * ============================================
- * Página de Ropa Personalizada
- * ============================================
+/** -------------------------------------------------------------------
+ * ==============================================
+ * Página de Ropa Personalizada "CustomClothing"
+ * ==============================================
  */
 
 import { useState, useEffect } from "react";
@@ -44,9 +44,9 @@ const PriceCard = ({ product }) => {
   );
 };
 
-/**
+/** -------------------------------------------------------------------
  * ============================================
- * Componente "CustomClothing"
+ * Componente principal "CustomClothing"
  * ============================================
  */
 const CustomClothing = () => {
@@ -59,7 +59,7 @@ const CustomClothing = () => {
   useEffect(() => {
     // Controlador para cancelar la petición
     const controller = new AbortController();
-
+    // Fetch
     const fetchData = async () => {
       try {
         // Llamada a la API para obtener productos y galería

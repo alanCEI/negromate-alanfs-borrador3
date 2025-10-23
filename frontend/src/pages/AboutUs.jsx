@@ -1,4 +1,4 @@
-/**
+/** -------------------------------------------------------------------
  * ============================================
  * Página AboutUs "Sobre Nosotros"
  * ============================================
@@ -13,7 +13,7 @@ const AboutUs = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  // Obtenemos contenido para AboutUs
+  // Obtenemos contenido para AboutUs 
   useEffect(() => {
     // Controlador para cancelar la petición
     const controller = new AbortController();

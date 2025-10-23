@@ -1,6 +1,6 @@
-/**
+/** -------------------------------------------------------------------
  * ============================================
- * Página de Graphic Design "Diseño Gráfico"
+ * Página de Diseño Gráfico "Graphic Design" 
  * ============================================
  */
 
@@ -9,10 +9,10 @@ import { api } from "@/services/api";
 import { useCart } from "@/context/CartContext";
 import "@/css/pages/GraphicDesign.css";
 
-/**
- * ============================================
+/** -------------------------------------------------------------------
+ * ====================================================================
  * Componente de PriceCard - Tarjeta de producto con precio y detalles
- * ============================================
+ * ====================================================================
  */
 const PriceCard = ({ product }) => {
   const { addToCart } = useCart();
@@ -47,7 +47,7 @@ const PriceCard = ({ product }) => {
   );
 };
 
-/**
+/** -------------------------------------------------------------------
  * ============================================
  * Componente GalleryItem
  * ============================================
@@ -61,9 +61,9 @@ const GalleryItem = ({ item, onSelect, isSelected }) => (
   </div>
 );
 
-/**
+/** -------------------------------------------------------------------
  * ============================================
- * Componente principal GraphicDesign
+ * Componente principal "GraphicDesign"
  * ============================================
  */
 const GraphicDesign = () => {

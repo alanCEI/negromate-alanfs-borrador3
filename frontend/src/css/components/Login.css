@@ -1,7 +1,7 @@
 /* Estilos para el componente de Login */
 
 /* ===================================================================== */
-/* === CONTENEDOR DEL FORMULARIO DE LOGIN === */
+/* === CONTENEDOR DEL FORMULARIO DE LOGIN === */ 
 /* ===================================================================== */
 .LoginFormContainer {
   width: 100%;
@@ -31,7 +31,6 @@
   flex-direction: column;
   gap: 1.5rem;
 }
-/* Estilos alternativos */
 /*
 .LoginForm .Form-group label {
   display: block;
@@ -55,7 +54,7 @@
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05);
   color: var(--dark-bg);
 }
-/* Estado focus de los inputs */
+/* Focus */
 .LoginForm input:focus {
   outline: none;
   border-color: var(--sub-contrast);

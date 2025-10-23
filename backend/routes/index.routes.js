@@ -1,4 +1,4 @@
-/**
+/** -------------------------------------------------------------------
  * ============================================
  * RUTAS DE LA API
  * ============================================
@@ -49,7 +49,7 @@ import {
 // Crear el router principal de Express
 const router = express.Router();
 
-/**
+/** -------------------------------------------------------------------
  * ========================================
  * RUTAS DE AUTENTICACIÓN
  * ========================================
@@ -61,7 +61,7 @@ router.post("/auth/login", loginUser);
 // Obtener perfil del usuario autenticado
 router.get("/auth/profile", authMiddleware, getUserProfile);
 
-/**
+/** -------------------------------------------------------------------
  * ========================================
  * RUTAS DE USUARIOS
  * ========================================
@@ -75,7 +75,7 @@ router.put("/users/:id", authMiddleware, updateUser);
 // Eliminar un usuario
 router.delete("/users/:id", authMiddleware, adminMiddleware, deleteUser);
 
-/**
+/** -------------------------------------------------------------------
  * ========================================
  * RUTAS DE PRODUCTOS
  * ========================================
@@ -93,7 +93,7 @@ router.put("/products/:id", authMiddleware, adminMiddleware, updateProduct);
 // Eliminar un producto
 router.delete("/products/:id", authMiddleware, adminMiddleware, deleteProduct);
 
-/**
+/** -------------------------------------------------------------------
  * ========================================
  * RUTAS DE ÓRDENES
  * ========================================
@@ -111,7 +111,7 @@ router.put("/orders/:id", authMiddleware, adminMiddleware, updateOrderStatus);
 // Eliminar una orden
 router.delete("/orders/:id", authMiddleware, adminMiddleware, deleteOrder);
 
-/**
+/** -------------------------------------------------------------------
  * ========================================
  * RUTAS DE CONTENIDO
  * ========================================

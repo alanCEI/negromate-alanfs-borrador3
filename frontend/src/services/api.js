@@ -1,4 +1,4 @@
-/**
+/** -------------------------------------------------------------------
  * ============================================
  * Comunicación con el Backend
  * ============================================
@@ -14,7 +14,7 @@ const handleResponse = async (response) => {
     const error = (data && data.msg) || response.statusText;
     throw new Error(error);
   }
-  // Return si los datos estan correctos
+  // Return si los datos estan correctos 
   return data;
 };
 
